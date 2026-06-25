@@ -1,0 +1,69 @@
+@import "maplibre-gl/dist/maplibre-gl.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: theme("colors.paper");
+  color: theme("colors.ink");
+  font-family: theme("fontFamily.sans");
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.lang-th {
+  font-family: theme("fontFamily.thai");
+  line-height: 1.55;
+}
+
+/* Numbered route markers */
+.route-pin {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 9999px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 12px;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.route-pin.is-active,
+.route-pin:hover {
+  transform: scale(1.2);
+}
+
+.route-pin.is-dimmed {
+  opacity: 0.5;
+}
+
+/* MapLibre popup tuned to the paper theme */
+.maplibregl-popup-content {
+  border-radius: 10px;
+  padding: 6px 10px;
+  font-family: theme("fontFamily.sans");
+  font-size: 12px;
+  font-weight: 600;
+  color: theme("colors.ink");
+  box-shadow: theme("boxShadow.panel");
+}
+
+.maplibregl-ctrl-attrib {
+  font-size: 10px;
+}

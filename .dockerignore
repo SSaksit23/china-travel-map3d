@@ -1,0 +1,14 @@
+node_modules
+dist
+.git
+.gitignore
+docs
+terminals
+.env
+.env.*
+*.log
+.vscode
+.cursor
+.DS_Store
+netlify.toml
+vercel.json
