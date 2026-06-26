@@ -171,6 +171,45 @@ export type ItineraryDay = {
   hotel?: ProgramHotel;
 };
 
+/** Customer audiences a place suits, shown as chips on the detail card. */
+export type AudienceId =
+  | "family"
+  | "couple"
+  | "solo"
+  | "adventure"
+  | "retiree"
+  | "culture"
+  | "cuisine"
+  | "photography";
+
+/** A video shown in the place detail card (YouTube embed or a local mp4). */
+export type PlaceVideo = {
+  type: "youtube" | "mp4";
+  /** YouTube watch/embed URL, or a static path like "/media/<id>.mp4". */
+  url: string;
+  title?: Localized;
+};
+
+/**
+ * Optional rich, manually-authored content for a stop (city or attraction),
+ * keyed by stop id in src/data/places.ts. Every field is optional; the card
+ * only renders the sections that have data.
+ */
+export type PlaceDetail = {
+  /** Richer description that overrides stop.blurb / the Wikipedia extract. */
+  description?: Localized;
+  /** Seasons this place is best visited (drives the "recommended season" pills). */
+  recommendedSeasons?: ("spring" | "summer" | "autumn" | "winter")[];
+  /** Audiences this place suits. */
+  audiences?: AudienceId[];
+  /** "What to expect" bullet lines. */
+  whatToExpect?: Localized[];
+  /** Optional video player. */
+  video?: PlaceVideo;
+  /** Extra image paths (public/ paths or img-pipeline URLs). */
+  gallery?: string[];
+};
+
 /** Generated per-stop attraction media (committed by scripts/build-images.ts). */
 export type AttractionMedia = {
   thumb?: string;

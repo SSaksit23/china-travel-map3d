@@ -86,6 +86,12 @@ const resources = {
       photoCredit: "ที่มาภาพ",
       readMore: "อ่านเพิ่มเติม",
       noImage: "ยังไม่มีภาพประกอบ",
+      recommendedSeason: "ฤดูที่แนะนำ",
+      tempBySeason: "อุณหภูมิแต่ละฤดู",
+      suitableFor: "เหมาะสำหรับ",
+      whatToExpect: "สิ่งที่จะได้พบ",
+      watchVideo: "ดูวิดีโอ",
+      showPhoto: "ดูรูปภาพ",
 
       // Hotels (Trip.com / Ctrip)
       hotelsTitle: "โรงแรมแนะนำ",
@@ -189,6 +195,12 @@ const resources = {
       photoCredit: "Photo",
       readMore: "Read more",
       noImage: "No photo yet",
+      recommendedSeason: "Recommended season",
+      tempBySeason: "Temperature by season",
+      suitableFor: "Suitable for",
+      whatToExpect: "What to expect",
+      watchVideo: "Watch video",
+      showPhoto: "Show photo",
 
       // Hotels (Trip.com / Ctrip)
       hotelsTitle: "Recommended hotels",

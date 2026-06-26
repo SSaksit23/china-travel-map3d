@@ -1,10 +1,37 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { ExternalLink, ImageOff, Hotel, Star, Thermometer, X } from "lucide-react";
+import {
+  CalendarRange,
+  ExternalLink,
+  Hotel,
+  Image as ImageIcon,
+  ImageOff,
+  Play,
+  Sparkles,
+  Star,
+  Thermometer,
+  Users,
+  X,
+} from "lucide-react";
 import type { HotelInfo, Lang, ProgramHotel, StopCategory } from "../types";
 import { getStop } from "../data/stops";
+import { getPlace } from "../data/places";
 import { getHotels, getImage, seasonTemp } from "../data/media";
-import { monthRangeLabel } from "../lib/season";
+import {
+  SEASON_COLOR,
+  SEASON_LABEL,
+  SEASON_MONTHS,
+  SEASON_ORDER,
+  monthRangeLabel,
+} from "../lib/season";
+import { AUDIENCE_ICON, AUDIENCE_LABEL } from "../lib/audience";
 import { L } from "../lib/localize";
+
+/** Convert a YouTube watch/short URL into an embeddable URL. */
+const youTubeEmbed = (url: string) => {
+  const m = url.match(/(?:youtu\.be\/|[?&]v=|\/embed\/)([\w-]{6,})/);
+  return m ? `https://www.youtube.com/embed/${m[1]}` : url;
+};
 
 type Props = {
   stopId: string;
@@ -38,27 +65,55 @@ const categoryKey: Record<StopCategory, string> = {
 
 export default function AttractionCard({ stopId, lang, months, programHotel, onClose }: Props) {
   const { t } = useTranslation();
+  const [showVideo, setShowVideo] = useState(false);
   const stop = getStop(stopId);
   if (!stop) return null;
 
   const media = getImage(stopId);
+  const place = getPlace(stopId);
+  const video = place?.video;
   const tempMonths = months.length ? months : [6, 7, 8, 9];
   const temp = seasonTemp(stopId, tempMonths);
   const tempRange = monthRangeLabel(tempMonths);
+  const recSeasons = place?.recommendedSeasons ?? [];
+  const seasonTemps = SEASON_ORDER.map((s) => ({
+    s,
+    t: seasonTemp(stopId, SEASON_MONTHS[s]),
+  }));
+  const hasSeasonTemps = seasonTemps.some((x) => x.t);
   // Prefer the hotel the program actually books; fall back to Ctrip picks.
   const hotels = programHotel ? [] : getHotels(stopId);
   const cat = stop.category;
   const catColor = cat ? categoryColor[cat] : "#1565c0";
 
-  const description = stop.blurb
+  const description = place?.description
+    ? L(place.description, lang)
+    : stop.blurb
     ? L(stop.blurb, lang)
     : media?.extract ?? "";
 
   return (
-    <div className={`overflow-hidden rounded-2xl bg-white shadow-card ${lang === "th" ? "lang-th" : ""}`}>
-      {/* Photo */}
-      <div className="relative h-44 w-full bg-line">
-        {media?.thumb ? (
+    <div className={`flex max-h-[80vh] flex-col overflow-hidden rounded-2xl bg-white shadow-card ${lang === "th" ? "lang-th" : ""}`}>
+      {/* Photo / video */}
+      <div className="relative h-44 w-full shrink-0 bg-line">
+        {showVideo && video ? (
+          video.type === "youtube" ? (
+            <iframe
+              src={youTubeEmbed(video.url)}
+              title={L(stop.name, lang)}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="h-full w-full border-0"
+            />
+          ) : (
+            <video
+              src={video.url}
+              controls
+              autoPlay
+              className="h-full w-full bg-black object-contain"
+            />
+          )
+        ) : media?.thumb ? (
           <img
             src={media.full ?? media.thumb}
             alt={L(stop.name, lang)}
@@ -90,9 +145,26 @@ export default function AttractionCard({ stopId, lang, months, programHotel, onC
             {t(categoryKey[cat])}
           </span>
         )}
+        {video && (
+          <button
+            type="button"
+            onClick={() => setShowVideo((v) => !v)}
+            className="absolute bottom-2 right-2 inline-flex items-center gap-1 rounded-full bg-black/55 px-2.5 py-1 text-[11px] font-semibold text-white shadow hover:bg-black/75"
+          >
+            {showVideo ? (
+              <>
+                <ImageIcon size={12} /> {t("showPhoto")}
+              </>
+            ) : (
+              <>
+                <Play size={12} /> {t("watchVideo")}
+              </>
+            )}
+          </button>
+        )}
       </div>
 
-      <div className="space-y-2.5 p-3.5">
+      <div className="space-y-2.5 overflow-y-auto p-3.5">
         <div>
           <h3 className="text-base font-bold leading-tight text-ink">{L(stop.name, lang)}</h3>
           {stop.name.zh && <p className="text-xs text-muted">{stop.name.zh}</p>}
@@ -110,6 +182,103 @@ export default function AttractionCard({ stopId, lang, months, programHotel, onC
             <span className="font-bold text-diff-high">{temp.hi}°</span>
             <span className="text-muted">/</span>
             <span className="font-bold text-region-north">{temp.lo}°</span>
+          </div>
+        )}
+
+        {recSeasons.length > 0 && (
+          <div className="space-y-1">
+            <div className="flex items-center gap-1.5 text-xs font-bold text-ink">
+              <CalendarRange size={13} className="text-region-north" />
+              {t("recommendedSeason")}
+            </div>
+            <div className="flex flex-wrap gap-1">
+              {recSeasons.map((s) => (
+                <span
+                  key={s}
+                  className="rounded-full px-2 py-0.5 text-[10px] font-bold text-white"
+                  style={{ backgroundColor: SEASON_COLOR[s] }}
+                >
+                  {L(SEASON_LABEL[s], lang)}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {hasSeasonTemps && (
+          <div className="space-y-1">
+            <div className="flex items-center gap-1.5 text-xs font-bold text-ink">
+              <Thermometer size={13} className="text-diff-high" />
+              {t("tempBySeason")}
+            </div>
+            <div className="grid grid-cols-4 gap-1">
+              {seasonTemps.map(({ s, t: st }) => {
+                const rec = recSeasons.includes(s);
+                return (
+                  <div
+                    key={s}
+                    className={`rounded-lg px-1 py-1 text-center ${
+                      rec ? "ring-1 ring-offset-0" : "bg-paper"
+                    }`}
+                    style={
+                      rec
+                        ? { backgroundColor: `${SEASON_COLOR[s]}1a`, color: SEASON_COLOR[s] }
+                        : undefined
+                    }
+                  >
+                    <div className="text-[9px] font-bold uppercase tracking-wide text-muted">
+                      {L(SEASON_LABEL[s], lang)}
+                    </div>
+                    {st ? (
+                      <div className="text-[11px] font-bold leading-tight">
+                        <span className="text-diff-high">{st.hi}°</span>
+                        <span className="text-muted">/</span>
+                        <span className="text-region-north">{st.lo}°</span>
+                      </div>
+                    ) : (
+                      <div className="text-[11px] text-muted">—</div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {place?.audiences && place.audiences.length > 0 && (
+          <div className="space-y-1">
+            <div className="flex items-center gap-1.5 text-xs font-bold text-ink">
+              <Users size={13} className="text-region-north" />
+              {t("suitableFor")}
+            </div>
+            <div className="flex flex-wrap gap-1">
+              {place.audiences.map((a) => {
+                const Icon = AUDIENCE_ICON[a];
+                return (
+                  <span
+                    key={a}
+                    className="inline-flex items-center gap-1 rounded-full bg-paper px-2 py-0.5 text-[11px] font-semibold text-ink"
+                  >
+                    <Icon size={12} className="text-muted" />
+                    {L(AUDIENCE_LABEL[a], lang)}
+                  </span>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {place?.whatToExpect && place.whatToExpect.length > 0 && (
+          <div className="space-y-1">
+            <div className="flex items-center gap-1.5 text-xs font-bold text-ink">
+              <Sparkles size={13} className="text-region-north" />
+              {t("whatToExpect")}
+            </div>
+            <ul className="list-disc space-y-0.5 pl-4 text-sm text-ink/85">
+              {place.whatToExpect.map((line, i) => (
+                <li key={i}>{L(line, lang)}</li>
+              ))}
+            </ul>
           </div>
         )}
 
