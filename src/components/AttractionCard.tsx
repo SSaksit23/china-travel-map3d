@@ -1,22 +1,19 @@
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
   CalendarRange,
   ExternalLink,
   Hotel,
-  Image as ImageIcon,
-  ImageOff,
-  Play,
   Sparkles,
   Star,
   Thermometer,
   Users,
-  X,
 } from "lucide-react";
-import type { HotelInfo, Lang, ProgramHotel, StopCategory } from "../types";
+import type { HotelInfo, Lang, PlaceVideo, ProgramHotel, StopCategory } from "../types";
 import { getStop } from "../data/stops";
 import { getPlace } from "../data/places";
-import { getHotels, getImage, seasonTemp } from "../data/media";
+import { getHotels, getImage, getLocationMedia, getRednote, seasonTemp } from "../data/media";
+import MediaViewer from "./MediaViewer";
+import { type Slide } from "./MediaLightbox";
 import {
   SEASON_COLOR,
   SEASON_LABEL,
@@ -26,12 +23,6 @@ import {
 } from "../lib/season";
 import { AUDIENCE_ICON, AUDIENCE_LABEL } from "../lib/audience";
 import { L } from "../lib/localize";
-
-/** Convert a YouTube watch/short URL into an embeddable URL. */
-const youTubeEmbed = (url: string) => {
-  const m = url.match(/(?:youtu\.be\/|[?&]v=|\/embed\/)([\w-]{6,})/);
-  return m ? `https://www.youtube.com/embed/${m[1]}` : url;
-};
 
 type Props = {
   stopId: string;
@@ -65,13 +56,31 @@ const categoryKey: Record<StopCategory, string> = {
 
 export default function AttractionCard({ stopId, lang, months, programHotel, onClose }: Props) {
   const { t } = useTranslation();
-  const [showVideo, setShowVideo] = useState(false);
   const stop = getStop(stopId);
   if (!stop) return null;
 
   const media = getImage(stopId);
   const place = getPlace(stopId);
-  const video = place?.video;
+  const rednote = getRednote(stopId);
+  const loc = getLocationMedia(stopId);
+
+  // Unified media list. Prefer the curated manifest's images; fall back to the
+  // Wikipedia/local hero. Then fold in RedNote + places.ts galleries and videos.
+  const heroSrc = media?.full ?? media?.thumb;
+  const primary = loc?.images?.length ? loc.images : heroSrc ? [heroSrc] : [];
+  const images: string[] = [];
+  for (const src of [...primary, ...(rednote?.gallery ?? []), ...(place?.gallery ?? [])]) {
+    if (src && !images.includes(src)) images.push(src);
+  }
+  const videos: PlaceVideo[] = [];
+  for (const v of [loc?.video, rednote?.video, place?.video]) {
+    if (v && !videos.some((x) => x.url === v.url)) videos.push(v);
+  }
+  const slides: Slide[] = [
+    ...images.map((src): Slide => ({ kind: "image", src })),
+    ...videos.map((video): Slide => ({ kind: "video", video })),
+  ];
+
   const tempMonths = months.length ? months : [6, 7, 8, 9];
   const temp = seasonTemp(stopId, tempMonths);
   const tempRange = monthRangeLabel(tempMonths);
@@ -94,75 +103,14 @@ export default function AttractionCard({ stopId, lang, months, programHotel, onC
 
   return (
     <div className={`flex max-h-[80vh] flex-col overflow-hidden rounded-2xl bg-white shadow-card ${lang === "th" ? "lang-th" : ""}`}>
-      {/* Photo / video */}
-      <div className="relative h-44 w-full shrink-0 bg-line">
-        {showVideo && video ? (
-          video.type === "youtube" ? (
-            <iframe
-              src={youTubeEmbed(video.url)}
-              title={L(stop.name, lang)}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="h-full w-full border-0"
-            />
-          ) : (
-            <video
-              src={video.url}
-              controls
-              autoPlay
-              className="h-full w-full bg-black object-contain"
-            />
-          )
-        ) : media?.thumb ? (
-          <img
-            src={media.full ?? media.thumb}
-            alt={L(stop.name, lang)}
-            loading="lazy"
-            className="h-full w-full object-cover"
-          />
-        ) : (
-          <div
-            className="flex h-full w-full flex-col items-center justify-center gap-1 text-white"
-            style={{ backgroundColor: catColor }}
-          >
-            <ImageOff size={22} />
-            <span className="text-[11px] opacity-90">{t("noImage")}</span>
-          </div>
-        )}
-        <button
-          type="button"
-          onClick={onClose}
-          aria-label={t("close")}
-          className="absolute right-2 top-2 rounded-full bg-black/40 p-1 text-white hover:bg-black/60"
-        >
-          <X size={16} />
-        </button>
-        {cat && (
-          <span
-            className="absolute bottom-2 left-2 rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white shadow"
-            style={{ backgroundColor: catColor }}
-          >
-            {t(categoryKey[cat])}
-          </span>
-        )}
-        {video && (
-          <button
-            type="button"
-            onClick={() => setShowVideo((v) => !v)}
-            className="absolute bottom-2 right-2 inline-flex items-center gap-1 rounded-full bg-black/55 px-2.5 py-1 text-[11px] font-semibold text-white shadow hover:bg-black/75"
-          >
-            {showVideo ? (
-              <>
-                <ImageIcon size={12} /> {t("showPhoto")}
-              </>
-            ) : (
-              <>
-                <Play size={12} /> {t("watchVideo")}
-              </>
-            )}
-          </button>
-        )}
-      </div>
+      <MediaViewer
+        slides={slides}
+        alt={L(stop.name, lang)}
+        lang={lang}
+        accentColor={catColor}
+        categoryLabel={cat ? t(categoryKey[cat]) : undefined}
+        onClose={onClose}
+      />
 
       <div className="space-y-2.5 overflow-y-auto p-3.5">
         <div>
@@ -326,6 +274,18 @@ export default function AttractionCard({ stopId, lang, months, programHotel, onC
             </ul>
             <p className="text-[10px] text-muted">{t("hotelsSource")}</p>
           </div>
+        )}
+
+        {rednote?.sourceUrl && (
+          <a
+            href={rednote.sourceUrl}
+            target="_blank"
+            rel="noreferrer noopener"
+            className="inline-flex items-center gap-1 text-[11px] font-medium text-muted hover:text-ink"
+          >
+            <ExternalLink size={11} />
+            {t("photoCredit")}: {rednote.credit ?? "小红书 / RedNote"}
+          </a>
         )}
 
         {media?.sourceUrl && (

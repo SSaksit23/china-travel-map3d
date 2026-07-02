@@ -1,0 +1,46 @@
+# Decap CMS configuration — graphical media manager for each location.
+# Uploads commit to GitHub; a GitHub Actions build publishes to Firebase Hosting.
+backend:
+  name: github
+  repo: SSaksit23/china-travel-map3d
+  branch: main
+  # GitHub OAuth proxy (Cloud Run). See oauth/README.md.
+  base_url: https://decap-oauth-191920990617.asia-southeast1.run.app
+
+# Commit straight to main so the deploy runs immediately (rebuild-to-publish).
+publish_mode: simple
+
+# Uploaded images land exactly where the app + build script expect them.
+media_folder: "public/attractions"
+public_folder: "/attractions"
+
+collections:
+  - name: media
+    label: "Location media"
+    label_singular: "Location"
+    description: "Add photos and a video URL for each attraction/city."
+    folder: "content/media"
+    extension: json
+    format: json
+    # One file per location already exists (seeded by scaffold:media); edit, don't create.
+    create: false
+    delete: false
+    identifier_field: name
+    summary: "{{name}} ({{id}})"
+    sortable_fields: ["name", "id"]
+    fields:
+      - { name: id, label: ID, widget: hidden }
+      - { name: name, label: Location, widget: string }
+      - name: images
+        label: "Images (first = hero)"
+        label_singular: "Image"
+        widget: list
+        required: false
+        field: { name: image, label: Image, widget: image, choose_url: false }
+      - { name: video, label: "Video URL (external / YouTube)", widget: string, required: false }
+      - name: orientation
+        label: "Video orientation"
+        widget: select
+        options: ["horizontal", "vertical"]
+        default: "horizontal"
+        required: false

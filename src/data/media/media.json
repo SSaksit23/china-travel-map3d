@@ -1,0 +1,330 @@
+{
+  "urumqi": {
+    "images": [],
+    "video": null
+  },
+  "tianchi": {
+    "images": [],
+    "video": null
+  },
+  "sayram": {
+    "images": [],
+    "video": null
+  },
+  "yining": {
+    "images": [],
+    "video": null
+  },
+  "kalajun": {
+    "images": [
+      "/attractions/kalajun.jpg"
+    ],
+    "video": null
+  },
+  "nalati": {
+    "images": [
+      "/attractions/nalati.jpg"
+    ],
+    "video": null
+  },
+  "kuytun": {
+    "images": [],
+    "video": null
+  },
+  "dushanzi-canyon": {
+    "images": [],
+    "video": null
+  },
+  "guozigou-bridge": {
+    "images": [],
+    "video": null
+  },
+  "tekes": {
+    "images": [],
+    "video": null
+  },
+  "tianshan-flower-sea": {
+    "images": [],
+    "video": null
+  },
+  "urumqi-bazaar": {
+    "images": [],
+    "video": null
+  },
+  "chengdu": {
+    "images": [],
+    "video": null
+  },
+  "fuyun": {
+    "images": [],
+    "video": null
+  },
+  "koktokay": {
+    "images": [],
+    "video": null
+  },
+  "burqin": {
+    "images": [],
+    "video": null
+  },
+  "kanas": {
+    "images": [],
+    "video": null
+  },
+  "hemu": {
+    "images": [
+      "/attractions/hemu.jpg"
+    ],
+    "video": null
+  },
+  "wucaitan": {
+    "images": [],
+    "video": null
+  },
+  "wuerhe": {
+    "images": [],
+    "video": null
+  },
+  "shihezi": {
+    "images": [],
+    "video": null
+  },
+  "kashgar": {
+    "images": [],
+    "video": null
+  },
+  "karakul": {
+    "images": [
+      "/attractions/karakul.jpg"
+    ],
+    "video": null
+  },
+  "tashkurgan": {
+    "images": [],
+    "video": null
+  },
+  "khunjerab": {
+    "images": [],
+    "video": null
+  },
+  "yarkand": {
+    "images": [],
+    "video": null
+  },
+  "bachu": {
+    "images": [],
+    "video": null
+  },
+  "lanzhou": {
+    "images": [],
+    "video": null
+  },
+  "bingling": {
+    "images": [],
+    "video": null
+  },
+  "xiahe": {
+    "images": [],
+    "video": null
+  },
+  "songpan": {
+    "images": [],
+    "video": null
+  },
+  "jiuzhaigou": {
+    "images": [],
+    "video": null
+  },
+  "zhagana": {
+    "images": [],
+    "video": null
+  },
+  "hezuo": {
+    "images": [],
+    "video": null
+  },
+  "xining": {
+    "images": [],
+    "video": null
+  },
+  "kumbum": {
+    "images": [],
+    "video": null
+  },
+  "lhasa": {
+    "images": [],
+    "video": null
+  },
+  "nyingchi": {
+    "images": [],
+    "video": null
+  },
+  "basum-tso": {
+    "images": [],
+    "video": null
+  },
+  "lulang": {
+    "images": [],
+    "video": null
+  },
+  "qingdao": {
+    "images": [],
+    "video": null
+  },
+  "penglai": {
+    "images": [],
+    "video": null
+  },
+  "yantai": {
+    "images": [],
+    "video": null
+  },
+  "weihai": {
+    "images": [],
+    "video": null
+  },
+  "shenyang": {
+    "images": [],
+    "video": null
+  },
+  "benxi": {
+    "images": [],
+    "video": null
+  },
+  "dandong": {
+    "images": [],
+    "video": null
+  },
+  "dalian": {
+    "images": [],
+    "video": null
+  },
+  "lvshun": {
+    "images": [],
+    "video": null
+  },
+  "panjin": {
+    "images": [],
+    "video": null
+  },
+  "harbin": {
+    "images": [],
+    "video": null
+  },
+  "hengdaohezi": {
+    "images": [],
+    "video": null
+  },
+  "mudanjiang": {
+    "images": [],
+    "video": null
+  },
+  "snowtown": {
+    "images": [],
+    "video": null
+  },
+  "yanji": {
+    "images": [],
+    "video": null
+  },
+  "dunhua": {
+    "images": [],
+    "video": null
+  },
+  "jilin-city": {
+    "images": [],
+    "video": null
+  },
+  "changchun": {
+    "images": [],
+    "video": null
+  },
+  "yuncheng": {
+    "images": [],
+    "video": null
+  },
+  "pingyao": {
+    "images": [],
+    "video": null
+  },
+  "wutaishan": {
+    "images": [],
+    "video": null
+  },
+  "datong": {
+    "images": [],
+    "video": null
+  },
+  "taiyuan": {
+    "images": [],
+    "video": null
+  },
+  "hukou": {
+    "images": [],
+    "video": null
+  },
+  "jixian": {
+    "images": [],
+    "video": null
+  },
+  "ordos": {
+    "images": [],
+    "video": null
+  },
+  "hohhot": {
+    "images": [],
+    "video": null
+  },
+  "dalad": {
+    "images": [],
+    "video": null
+  },
+  "xiangshawan": {
+    "images": [],
+    "video": null
+  },
+  "xian": {
+    "images": [],
+    "video": null
+  },
+  "sanmenxia": {
+    "images": [],
+    "video": null
+  },
+  "luoyang": {
+    "images": [],
+    "video": null
+  },
+  "dengfeng": {
+    "images": [],
+    "video": null
+  },
+  "jiaozuo": {
+    "images": [],
+    "video": null
+  },
+  "zhengzhou": {
+    "images": [],
+    "video": null
+  },
+  "zhangye": {
+    "images": [],
+    "video": null
+  },
+  "jiayuguan": {
+    "images": [],
+    "video": null
+  },
+  "dunhuang": {
+    "images": [],
+    "video": null
+  },
+  "qinghai-lake": {
+    "images": [],
+    "video": null
+  },
+  "chaka": {
+    "images": [],
+    "video": null
+  }
+}

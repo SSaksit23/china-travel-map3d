@@ -57,6 +57,8 @@ type Props = {
   onSelect: (id: string) => void;
   layers: MapLayers;
   onSelectAttraction: (stopId: string) => void;
+  /** Stop the detail card is open on — the map gently flies to it. */
+  focusedStopId: string | null;
   /** Ordered IATA codes of a flight to highlight on the map (or null). */
   focusedFlight: string[] | null;
   /** A single itinerary day to zoom into (start → overnight stops), or null. */
@@ -86,6 +88,7 @@ export default function MapView({
   onSelect,
   layers,
   onSelectAttraction,
+  focusedStopId,
   focusedFlight,
   focusedDay,
   panelOpen,
@@ -205,9 +208,25 @@ export default function MapView({
     }
   }, [layers.buildings3d, loaded]);
 
+  // Camera framing, in priority order: a clicked attraction flies to its pin;
+  // otherwise a focused flight / day / program fits its bounds; nothing selected
+  // fits the whole map. Because clearing the attraction (closing its card) re-runs
+  // this, dismissing a pin returns the camera to the itinerary — not the globe.
   useEffect(() => {
     const map = mapRef.current;
     if (!map || !loaded) return;
+    if (focusedStopId) {
+      const stop = getStop(focusedStopId);
+      if (stop) {
+        map.flyTo({
+          center: stop.coords,
+          zoom: Math.max(map.getZoom(), 8.5),
+          duration: 700,
+          padding: fitPadding(),
+        });
+        return;
+      }
+    }
     if (flightArc) {
       let w = Infinity,
         s = Infinity,
@@ -255,7 +274,7 @@ export default function MapView({
     } else {
       fitAll();
     }
-  }, [selected, loaded, flightArc, dayFocus, fitAll, fitPadding]);
+  }, [focusedStopId, selected, loaded, flightArc, dayFocus, fitAll, fitPadding]);
 
   const handleClick = useCallback(
     (e: MapLayerMouseEvent) => {

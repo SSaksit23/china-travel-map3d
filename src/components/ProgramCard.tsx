@@ -168,6 +168,7 @@ export default function ProgramCard({
                     isLast={isLast}
                     active={focusedDay === d.day}
                     onFocusDay={onFocusDay}
+                    onSelectStop={onSelectStop}
                   />
                 );
               })}
@@ -393,6 +394,7 @@ function DayRow({
   isLast,
   active,
   onFocusDay,
+  onSelectStop,
 }: {
   programId: string;
   day: ItineraryDay;
@@ -402,6 +404,7 @@ function DayRow({
   isLast: boolean;
   active: boolean;
   onFocusDay?: (day: number) => void;
+  onSelectStop?: (stopId: string) => void;
 }) {
   const { t } = useTranslation();
   const thai = lang === "th";
@@ -452,15 +455,31 @@ function DayRow({
         </button>
         {day.along.length > 0 && (
           <ul className="mt-1 space-y-0.5">
-            {day.along.map((a, i) => (
-              <li key={i} className="flex gap-1.5 text-[12px] leading-snug text-ink/80">
-                <span
-                  className="mt-1.5 h-1 w-1 shrink-0 rounded-full"
-                  style={{ backgroundColor: color }}
-                />
-                <span>{L(a, lang)}</span>
-              </li>
-            ))}
+            {day.along.map((a, i) => {
+              const linked = a.stopId && onSelectStop && getStop(a.stopId) ? a.stopId : null;
+              return (
+                <li key={i} className="flex gap-1.5 text-[12px] leading-snug text-ink/80">
+                  <span
+                    className="mt-1.5 h-1 w-1 shrink-0 rounded-full"
+                    style={{ backgroundColor: color }}
+                  />
+                  {linked ? (
+                    <button
+                      type="button"
+                      onClick={() => onSelectStop?.(linked)}
+                      className="group inline-flex items-start gap-1 text-left hover:text-ink"
+                    >
+                      <span className="underline decoration-dotted underline-offset-2 group-hover:decoration-solid">
+                        {L(a, lang)}
+                      </span>
+                      <MapPin size={11} className="mt-0.5 shrink-0" style={{ color }} />
+                    </button>
+                  ) : (
+                    <span>{L(a, lang)}</span>
+                  )}
+                </li>
+              );
+            })}
           </ul>
         )}
         {travelKm > 0 && route && (

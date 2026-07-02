@@ -19,8 +19,10 @@ const DEFAULT_LAYERS: MapLayers = {
   railways: false,
   airports: false,
   attractions: false,
-  buildings3d: true,
-  terrain3d: true,
+  // 3D terrain + building extrusions are heavy (DEM tiles + extra draw calls);
+  // start flat for fast load and let the user opt in via the Layers control.
+  buildings3d: false,
+  terrain3d: false,
 };
 
 export default function App() {
@@ -98,6 +100,7 @@ export default function App() {
             onSelect={(id) => setSelectedId((cur) => (cur === id ? null : id))}
             layers={layers}
             onSelectAttraction={(stopId) => setSelectedAttractionId(stopId)}
+            focusedStopId={selectedAttractionId}
             focusedFlight={focusedFlight}
             focusedDay={focusedDayInfo}
             panelOpen={panelOpen}

@@ -92,6 +92,11 @@ const resources = {
       whatToExpect: "สิ่งที่จะได้พบ",
       watchVideo: "ดูวิดีโอ",
       showPhoto: "ดูรูปภาพ",
+      prevSlide: "ก่อนหน้า",
+      nextSlide: "ถัดไป",
+      enlarge: "ขยาย",
+      shrink: "ย่อ",
+      fullscreen: "เต็มจอ",
 
       // Hotels (Trip.com / Ctrip)
       hotelsTitle: "โรงแรมแนะนำ",
@@ -201,6 +206,11 @@ const resources = {
       whatToExpect: "What to expect",
       watchVideo: "Watch video",
       showPhoto: "Show photo",
+      prevSlide: "Previous",
+      nextSlide: "Next",
+      enlarge: "Enlarge",
+      shrink: "Shrink",
+      fullscreen: "Full screen",
 
       // Hotels (Trip.com / Ctrip)
       hotelsTitle: "Recommended hotels",

@@ -100,6 +100,50 @@ export const stops: Stop[] = [
     },
   },
   {
+    id: "guozigou-bridge",
+    name: { th: "สะพานกั่วจื่อโกว", en: "Guozigou Bridge", zh: "果子沟大桥" },
+    coords: [81.14028, 44.47075],
+    category: "heritage",
+    wiki: "Guozigou Bridge",
+    blurb: {
+      th: "สะพานขึงข้ามหุบเขากั่วจื่อโกวสูงเหนือพื้น ~200 ม. หนึ่งในสะพานทางหลวงที่สวยที่สุดของจีน",
+      en: "A cable-stayed bridge soaring ~200 m over the Guozigou valley — one of China's most scenic highway bridges.",
+    },
+  },
+  {
+    id: "tekes",
+    name: { th: "เมืองเทอเค่อซือ (นคร 8 แฉก)", en: "Tekes Eight-Trigram City", zh: "特克斯八卦城" },
+    coords: [81.8371, 43.2137],
+    category: "city",
+    wiki: "Tekes County",
+    blurb: {
+      th: "เมืองผังแปดทิศ (ปากั้ว) ถนนวงแหวนแผ่รัศมีจากใจกลาง เมืองไร้ไฟจราจรที่ใหญ่และสมบูรณ์ที่สุดในโลก",
+      en: "A radial 'bagua' (eight-trigram) town whose ring roads fan out from the centre — the world's largest, best-preserved traffic-light-free city.",
+    },
+  },
+  {
+    id: "tianshan-flower-sea",
+    // APPROX — verify: Kashi Township, Yining County, along G218; no exact GPS found.
+    name: { th: "อุทยานทะเลดอกไม้เทียนซาน", en: "Tianshan Flower Sea", zh: "天山花海" },
+    coords: [81.65, 43.8],
+    category: "nature",
+    blurb: {
+      th: "ทุ่งดอกไม้กว้างสุดลูกหูลูกตาเชิงเขาเทียนซานในอำเภออี้หนิง บานสะพรั่งช่วงต้นฤดูร้อน",
+      en: "A vast sea of wildflowers at the foot of the Tianshan in Yining County, in full bloom in early summer.",
+    },
+  },
+  {
+    id: "urumqi-bazaar",
+    name: { th: "ตลาดแกรนด์บาซาร์ (ต้าปาจา)", en: "Xinjiang Grand Bazaar", zh: "新疆国际大巴扎" },
+    coords: [87.61583, 43.77917],
+    category: "heritage",
+    wiki: "Grand Bazaar (Ürümqi)",
+    blurb: {
+      th: "ตลาดใหญ่ที่สุดในโลกด้านขนาด ศูนย์รวมของฝาก อาหาร และวัฒนธรรมอุยกูร์กลางเมืองอูลู่มู่ฉี",
+      en: "The world's largest bazaar by scale — a hub of Silk Road souvenirs, food and Uyghur culture in central Urumqi.",
+    },
+  },
+  {
     id: "chengdu",
     name: { th: "เฉิงตู", en: "Chengdu", zh: "成都" },
     coords: [104.066, 30.572],

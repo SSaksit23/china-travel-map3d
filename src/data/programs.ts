@@ -93,7 +93,7 @@ export const programs: Program[] = [
         stops: ["urumqi"],
         along: [
           { th: "บินสุวรรณภูมิ–กว่างโจว (CZ362) ต่อเครื่องสู่อูลู่มู่ฉี (CZ6892)", en: "Fly Suvarnabhumi–Guangzhou (CZ362), connect to Urumqi (CZ6892)" },
-          { th: "ถึงอูลู่มู่ฉี เมืองเอกซินเจียง ประตูสู่เส้นทางสายไหม เข้าที่พัก", en: "Arrive Urumqi, Xinjiang's capital and Silk Road gateway, and check in" },
+          { th: "ถึงอูลู่มู่ฉี เมืองเอกซินเจียง ประตูสู่เส้นทางสายไหม เข้าที่พัก", en: "Arrive Urumqi, Xinjiang's capital and Silk Road gateway, and check in", stopId: "urumqi" },
         ],
         hotel: { name: "URUMQI HILTON GARDEN INN", star: 4, cityId: "urumqi", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -102,8 +102,7 @@ export const programs: Program[] = [
         title: { th: "เขาเทียนซาน – ทะเลสาบเทียนฉือ – ขุยถุน", en: "Tianshan – Tianchi Lake – Kuytun" },
         stops: ["tianchi"],
         along: [
-          { th: "ทะเลสาบเทียนฉือ ‘ทะเลสาบสวรรค์’ น้ำมรกตใต้ยอดเขาโป๋เก๋อต๋า", en: "Tianchi 'Heavenly Lake', emerald water below snow-capped Bogda Peak" },
-          { th: "ผ่านชมทะเลทรายกู่เอ๋อปานทง และเขตอนุรักษ์คาลาไมลี่", en: "Pass the Gurbantünggüt Desert and the Kalamaili nature reserve" },
+          { th: "ทะเลสาบเทียนฉือ ‘ทะเลสาบสวรรค์’ น้ำมรกตใต้ยอดเขาโป๋เก๋อต๋า", en: "Tianchi 'Heavenly Lake', emerald water below snow-capped Bogda Peak", stopId: "tianchi" },
         ],
         drive: { th: "เทียนฉือ → ขุยถุน", en: "Tianchi → Kuytun" },
         hotel: { name: "KUYTUN WANDA JINHUA HOTEL", star: 4, cityId: "kuytun", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -113,8 +112,10 @@ export const programs: Program[] = [
         title: { th: "ทะเลสาบไซ่หลี่มู่ – ทุ่งหญ้าไห่ซี – อี้หนิง", en: "Sayram Lake – Haixi grassland – Yining" },
         stops: ["sayram", "yining"],
         along: [
-          { th: "ทะเลสาบไซ่หลี่มู่ น้ำสีฟ้าคราม + จุดประกาศศึกเจงกิสข่าน", en: "Sayram Lake's deep-blue water + the Genghis Khan proclamation site" },
-          { th: "ทุ่งหญ้าไห่ซี ผ่านชมสะพานกั่วจื่อโกว สู่อี้หนิง ถนนหกดาว", en: "Haixi grassland, the Guozigou bridge, on to Yining's Six Star Street" },
+          { th: "ทะเลสาบไซ่หลี่มู่ น้ำสีฟ้าคราม + จุดประกาศศึกเจงกิสข่าน", en: "Sayram Lake, deep-blue water & the Genghis Khan proclamation site", stopId: "sayram" },
+          { th: "ผ่านชมทุ่งหญ้าไห่ซี", en: "Pass the Haixi grassland" },
+          { th: "สะพานกั่วจื่อโกว สะพานขึงข้ามหุบเขากลางเทียนซาน", en: "Guozigou Bridge, a cable-stayed span across the Tianshan valley", stopId: "guozigou-bridge" },
+          { th: "เมืองอี้หนิง เดินถนนหกดาวสีสันสดใส", en: "Yining — the colourful Six Star Street", stopId: "yining" },
         ],
         drive: { th: "ไซ่หลี่มู่ → อี้หนิง", en: "Sayram → Yining" },
         hotel: { name: "YINING ADEN CLOUD HOTEL", star: 4, cityId: "yining", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -124,8 +125,8 @@ export const programs: Program[] = [
         title: { th: "ทุ่งหญ้าคาลาจุ้น – เมืองเทอเค่อซือ (นคร 8 แฉก)", en: "Kalajun Grassland – Tekes (8-trigram city)" },
         stops: ["kalajun"],
         along: [
-          { th: "ทุ่งหญ้าคาลาจุ้น (รวมรถอุทยาน) ลานชมบุปผา + แท่นล่าเหยี่ยว", en: "Kalajun Grassland (park bus) — flower terrace + falcon viewpoint" },
-          { th: "เมืองเทอเค่อซือ ผ่านชมวิวผังเมืองรูปแปดทิศ 8 แฉก", en: "Tekes, the eight-trigram (bagua) city with its radial street plan" },
+          { th: "ทุ่งหญ้าคาลาจุ้น (รวมรถอุทยาน) ลานชมบุปผา + แท่นล่าเหยี่ยว", en: "Kalajun Grassland (park bus) — flower terrace + falcon viewpoint", stopId: "kalajun" },
+          { th: "เมืองเทอเค่อซือ ผ่านชมวิวผังเมืองรูปแปดทิศ 8 แฉก", en: "Tekes, the eight-trigram (bagua) city with its radial street plan", stopId: "tekes" },
         ],
         drive: { th: "อี้หนิง → คาลาจุ้น", en: "Yining → Kalajun" },
         hotel: { name: "TURKS FENGHUANG INTER HOTEL", star: 4, cityId: "kalajun", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -135,8 +136,8 @@ export const programs: Program[] = [
         title: { th: "อุทยานทะเลดอกไม้เทียนซาน – ทุ่งหญ้านาลาถี", en: "Tianshan flower-sea park – Nalati Grassland" },
         stops: ["nalati"],
         along: [
-          { th: "อุทยานทะเลดอกไม้เทียนซาน ทุ่งดอกไม้สุดลูกหูลูกตา", en: "The Tianshan flower-sea park, endless wildflower meadows" },
-          { th: "ทุ่งหญ้านาลาถี (รวมรถอุทยาน) หนึ่งในทุ่งหญ้าที่สวยที่สุดของจีน", en: "Nalati Grassland (park bus), one of China's most beautiful" },
+          { th: "อุทยานทะเลดอกไม้เทียนซาน ทุ่งดอกไม้สุดลูกหูลูกตา", en: "The Tianshan flower-sea park, endless wildflower meadows", stopId: "tianshan-flower-sea" },
+          { th: "ทุ่งหญ้านาลาถี (รวมรถอุทยาน) หนึ่งในทุ่งหญ้าที่สวยที่สุดของจีน", en: "Nalati Grassland (park bus), one of China's most beautiful", stopId: "nalati" },
         ],
         drive: { th: "คาลาจุ้น → นาลาถี", en: "Kalajun → Nalati" },
         hotel: { name: "NALATI YIMEI GRAND HOTEL", star: 4, cityId: "nalati", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -147,7 +148,7 @@ export const programs: Program[] = [
         stops: ["dushanzi-canyon"],
         along: [
           { th: "ล่องถนนตู๋คู่ (นั่งรถเล็ก 7 ที่นั่ง) เส้นทางภูเขาที่สวยที่สุดสายหนึ่ง", en: "The Duku Highway (7-seat vans), one of the most scenic mountain roads" },
-          { th: "แกรนด์แคนยอนตูซ๋านจื่อ หุบเหวหินหลากสีริมถนน", en: "Dushanzi Grand Canyon, multicoloured rock chasms beside the road" },
+          { th: "แกรนด์แคนยอนตูซ๋านจื่อ หุบเหวหินหลากสีริมถนน", en: "Dushanzi Grand Canyon, multicoloured rock chasms beside the road", stopId: "dushanzi-canyon" },
         ],
         drive: { th: "นาลาถี → ขุยถุน → ตูซ๋านจื่อ", en: "Nalati → Kuytun → Dushanzi" },
         hotel: { name: "KUYTUN WANDA JINHUA HOTEL", star: 4, cityId: "kuytun", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -157,8 +158,8 @@ export const programs: Program[] = [
         title: { th: "ขุยถุน – อูลู่มู่ฉี – ตลาดแกรนด์บาซาร์", en: "Kuytun – Urumqi – Grand Bazaar" },
         stops: ["urumqi"],
         along: [
-          { th: "เดินทางกลับอูลู่มู่ฉี", en: "Return to Urumqi" },
-          { th: "ตลาดแกรนด์บาซาร์ (ต้าปาจา) ช้อปของฝากและสัมผัสวัฒนธรรมอุยกูร์", en: "The Grand Bazaar (Da Bazaar) — souvenirs and Uyghur culture" },
+          { th: "เดินทางกลับอูลู่มู่ฉี", en: "Return to Urumqi", stopId: "urumqi" },
+          { th: "ตลาดแกรนด์บาซาร์ (ต้าปาจา) ช้อปของฝากและสัมผัสวัฒนธรรมอุยกูร์", en: "The Grand Bazaar (Da Bazaar) — souvenirs and Uyghur culture", stopId: "urumqi-bazaar" },
         ],
         drive: { th: "ขุยถุน → อูลู่มู่ฉี", en: "Kuytun → Urumqi" },
         hotel: { name: "URUMQI HILTON GARDEN INN", star: 4, cityId: "urumqi", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -272,7 +273,7 @@ export const programs: Program[] = [
         stops: ["dushanzi-canyon"],
         along: [
           { th: "นิคมเกษตรปิงถวน (Xinjiang Production & Construction Corps)", en: "A Bingtuan (Production & Construction Corps) farm settlement" },
-          { th: "แกรนด์แคนยอนตูซ๋านจื่อ หุบเหวหินหลากสี", en: "Dushanzi Grand Canyon, multicoloured rock chasms" },
+          { th: "แกรนด์แคนยอนตูซ๋านจื่อ หุบเหวหินหลากสี", en: "Dushanzi Grand Canyon, multicoloured rock chasms", stopId: "dushanzi-canyon" },
         ],
         drive: { th: "อูลู่มู่ฉี → ตูซ๋านจื่อ → ขุยถุน", en: "Urumqi → Dushanzi → Kuytun" },
         hotel: { name: "MEIHAO YIZHI HOTEL KUYTUN", star: 4, cityId: "kuytun", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -282,8 +283,10 @@ export const programs: Program[] = [
         title: { th: "ทะเลสาบไซ่หลี่มู่ – ทุ่งลาเวนเดอร์ – อี้หนิง", en: "Sayram Lake – lavender fields – Yining" },
         stops: ["sayram", "yining"],
         along: [
-          { th: "ทะเลสาบไซ่หลี่มู่ น้ำสีฟ้าคราม และทุ่งลาเวนเดอร์", en: "Sayram Lake's deep-blue water and the lavender fields" },
-          { th: "ผ่านชมสะพานกั่วจื่อโกว สู่อี้หนิง ถนนหกดาว", en: "Pass the Guozigou bridge on to Yining's Six Star Street" },
+          { th: "ทะเลสาบไซ่หลี่มู่ น้ำสีฟ้าคราม", en: "Sayram Lake, deep-blue alpine water", stopId: "sayram" },
+          { th: "ผ่านชมทุ่งลาเวนเดอร์เมืองฮั่วเฉิง", en: "Pass the Huocheng lavender fields" },
+          { th: "สะพานกั่วจื่อโกว สะพานขึงข้ามหุบเขากลางเทียนซาน", en: "Guozigou Bridge, a cable-stayed span across the Tianshan valley", stopId: "guozigou-bridge" },
+          { th: "เมืองอี้หนิง เดินถนนหกดาวสีสันสดใส", en: "Yining — the colourful Six Star Street", stopId: "yining" },
         ],
         drive: { th: "ขุยถุน → ไซ่หลี่มู่ → อี้หนิง", en: "Kuytun → Sayram → Yining" },
         hotel: { name: "HOME2 SUITES BY HILTON XINJIANG YINING", star: 4, cityId: "yining", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -293,7 +296,7 @@ export const programs: Program[] = [
         title: { th: "ทุ่งหญ้าคาลาจุ้น – พักกลางทุ่งหญ้า", en: "Kalajun Grassland – grassland overnight" },
         stops: ["kalajun"],
         along: [
-          { th: "ทุ่งหญ้าคาลาจุ้น (รวมรถอุทยาน) ลานชมบุปผา + แท่นล่าเหยี่ยว", en: "Kalajun Grassland (park bus) — flower terrace + falcon viewpoint" },
+          { th: "ทุ่งหญ้าคาลาจุ้น (รวมรถอุทยาน) ลานชมบุปผา + แท่นล่าเหยี่ยว", en: "Kalajun Grassland (park bus) — flower terrace + falcon viewpoint", stopId: "kalajun" },
           { th: "พักโฮมสเตย์/แคมป์กลางทุ่งหญ้า สัมผัสวิถีคาซัค", en: "Stay in a grassland homestay/camp, Kazakh herding life" },
         ],
         drive: { th: "อี้หนิง → คาลาจุ้น", en: "Yining → Kalajun" },
@@ -304,7 +307,7 @@ export const programs: Program[] = [
         title: { th: "ซินหยวน – ทุ่งหญ้านาลาถี – เมืองนาลาถี", en: "Xinyuan – Nalati Grassland – Nalati town" },
         stops: ["nalati"],
         along: [
-          { th: "ทุ่งหญ้านาลาถี (รวมรถอุทยาน) และทุ่งหญ้าลอยฟ้า", en: "Nalati Grassland (park bus) and the 'floating' sky meadow" },
+          { th: "ทุ่งหญ้านาลาถี (รวมรถอุทยาน) และทุ่งหญ้าลอยฟ้า", en: "Nalati Grassland (park bus) and the 'floating' sky meadow", stopId: "nalati" },
         ],
         drive: { th: "คาลาจุ้น → ซินหยวน → นาลาถี", en: "Kalajun → Xinyuan → Nalati" },
         hotel: { name: "XINJIANG CULTURAL TOURISM NALATI HOTEL", star: 4, cityId: "nalati", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -315,7 +318,7 @@ export const programs: Program[] = [
         stops: ["kuytun"],
         along: [
           { th: "ล่องถนนตู๋คู่ (นั่งรถเล็ก 7 ที่นั่ง) เส้นทางภูเขาสุดอลังการ", en: "The Duku Highway (7-seat vans), a spectacular mountain road" },
-          { th: "เดินทางสู่เมืองสือเหอจื่อ", en: "Continue to Shihezi" },
+          { th: "เดินทางสู่เมืองสือเหอจื่อ เมืองปิงถวนผังเป็นระเบียบ", en: "Continue to Shihezi, the tidy Bingtuan-built city", stopId: "shihezi" },
         ],
         drive: { th: "นาลาถี → สือเหอจื่อ", en: "Nalati → Shihezi" },
         hotel: { name: "SHIHEZI HAOZHOU HOTEL", star: 4, cityId: "kuytun", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -325,7 +328,8 @@ export const programs: Program[] = [
         title: { th: "ขุยถุน – อูลู่มู่ฉี – ตลาดแกรนด์บาซาร์", en: "Kuytun – Urumqi – Grand Bazaar" },
         stops: ["urumqi"],
         along: [
-          { th: "เดินทางกลับอูลู่มู่ฉี เดินตลาดแกรนด์บาซาร์ (ต้าปาจา)", en: "Return to Urumqi and stroll the Grand Bazaar (Da Bazaar)" },
+          { th: "เดินทางกลับอูลู่มู่ฉี", en: "Return to Urumqi", stopId: "urumqi" },
+          { th: "เดินตลาดแกรนด์บาซาร์ (ต้าปาจา) ช้อปของฝากและวัฒนธรรมอุยกูร์", en: "Stroll the Grand Bazaar (Da Bazaar) for souvenirs and Uyghur culture", stopId: "urumqi-bazaar" },
         ],
         drive: { th: "สือเหอจื่อ → อูลู่มู่ฉี", en: "Shihezi → Urumqi" },
         hotel: { name: "MERCURE URUMQI HOTEL", star: 4, cityId: "urumqi", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -433,7 +437,7 @@ export const programs: Program[] = [
         stops: ["urumqi"],
         along: [
           { th: "บินสุวรรณภูมิ–นานกิง (MU2804) ต่อเครื่องนานกิง–อูลู่มู่ฉี (MU2959)", en: "Fly Suvarnabhumi–Nanjing (MU2804), connect Nanjing–Urumqi (MU2959)" },
-          { th: "ถึงอูลู่มู่ฉี ประตูสู่เส้นทางสายไหม รับประทานอาหารค่ำ เข้าที่พัก", en: "Arrive Urumqi, the Silk Road gateway — dinner and check in" },
+          { th: "ถึงอูลู่มู่ฉี ประตูสู่เส้นทางสายไหม รับประทานอาหารค่ำ เข้าที่พัก", en: "Arrive Urumqi, the Silk Road gateway — dinner and check in", stopId: "urumqi" },
         ],
         hotel: { name: "URUMQI TINGRAN YUNJU HOTEL", star: 4, cityId: "urumqi", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -443,7 +447,7 @@ export const programs: Program[] = [
         stops: ["burqin", "wucaitan"],
         along: [
           { th: "ผ่านชมทะเลทรายกูร์บันทุงกูต ‘โอเอซิสกลางทะเลทราย’ บนถนนสาย S21", en: "Pass the Gurbantünggüt Desert, a 'desert oasis' along the S21 road" },
-          { th: "เบอร์จิ้น ‘เมืองเทพนิยาย’ ริมแม่น้ำเออร์ทีช และหาดห้าสี (อู่ไฉ่ทาน)", en: "Burqin, the 'fairytale town' on the Irtysh, and Five Color Beach (Wucaitan)" },
+          { th: "เบอร์จิ้น ‘เมืองเทพนิยาย’ ริมแม่น้ำเออร์ทีช และหาดห้าสี (อู่ไฉ่ทาน)", en: "Burqin, the 'fairytale town' on the Irtysh, and Five Color Beach (Wucaitan)", stopId: "wucaitan" },
         ],
         drive: { th: "อูลู่มู่ฉี → เบอร์จิ้น (524 ก.ม. ~7 ชม.)", en: "Urumqi → Burqin (524 km, ~7h)" },
         hotel: { name: "LANTING HOLIDAY INN BURQIN HOTEL", star: 4, cityId: "burqin", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -453,9 +457,9 @@ export const programs: Program[] = [
         title: { th: "เบอร์จิ้น – อุทยานคานาสือ – สามอ่าว – หมู่บ้านเหอมู่", en: "Burqin – Kanas park – the three bays – Hemu village" },
         stops: ["kanas", "hemu"],
         along: [
-          { th: "เปลี่ยนนั่งรถตู้เล็ก 7 ที่นั่ง สู่อุทยานคานาสือ ‘จานสีของพระเจ้า’", en: "Switch to 7-seat vans to Kanas park, 'the palette of God'" },
-          { th: "ศาลาชมปลาบนยอดเขาฮาราไคต์ (เดิน 1,068 ขั้น) ชมทะเลสาบคานาสแบบพาโนรามา", en: "The Fish-Watching Pavilion atop Haraket (1,068 steps), a panorama of Kanas Lake" },
-          { th: "อ่าวเทพเทวดา – อ่าวเสี้ยวจันทรา – อ่าวซ่อนมังกร และบ้านชาวเผ่าตูวา", en: "Divine Lake Bay – Moon Bay – Sleeping Dragon Bay, and a Tuvan home visit" },
+          { th: "เปลี่ยนนั่งรถตู้เล็ก 7 ที่นั่ง สู่อุทยานคานาสือ ‘จานสีของพระเจ้า’", en: "Switch to 7-seat vans to Kanas park, 'the palette of God'", stopId: "kanas" },
+          { th: "ศาลาชมปลาบนยอดเขาฮาราไคต์ (เดิน 1,068 ขั้น) ชมทะเลสาบคานาสแบบพาโนรามา", en: "The Fish-Watching Pavilion atop Haraket (1,068 steps), a panorama of Kanas Lake", stopId: "kanas" },
+          { th: "อ่าวเทพเทวดา – อ่าวเสี้ยวจันทรา – อ่าวซ่อนมังกร และบ้านชาวเผ่าตูวา", en: "Divine Lake Bay – Moon Bay – Sleeping Dragon Bay, and a Tuvan home visit", stopId: "kanas" },
         ],
         drive: { th: "เบอร์จิ้น → คานาสือ (121 ก.ม. ~2 ชม.) → เหอมู่ (69 ก.ม. ~1 ชม.)", en: "Burqin → Kanas (121 km, ~2h) → Hemu (69 km, ~1h)" },
         hotel: { name: "HEMU FOLK GUEST HOUSE", star: 3, cityId: "hemu", note: { th: "กระท่อมไม้ภายในหมู่บ้านเหอมู่ (ระดับ 3 ดาว)", en: "log cabin inside Hemu village (3-star level)" } },
@@ -465,8 +469,8 @@ export const programs: Program[] = [
         title: { th: "หมู่บ้านเหอมู่ – จุดชมวิวฮาเติน – ธารน้ำห้าสี – เบอร์จิ้น", en: "Hemu village – Hatten viewpoint – Five Color River – Burqin" },
         stops: ["hemu", "burqin"],
         along: [
-          { th: "จุดชมวิวฮาเติน ชมหมู่บ้านเหอมู่ในสายหมอกยามเช้าแบบพาโนรามา", en: "The Hatten viewpoint — a misty-morning panorama of Hemu village" },
-          { th: "ธารน้ำห้าสี เนินดินริมแม่น้ำเออร์ทีชหลากสีแบบ ‘ย่าตาน’", en: "The Five Color River, multicoloured 'yardang' banks along the Irtysh" },
+          { th: "จุดชมวิวฮาเติน ชมหมู่บ้านเหอมู่ในสายหมอกยามเช้าแบบพาโนรามา", en: "The Hatten viewpoint — a misty-morning panorama of Hemu village", stopId: "hemu" },
+          { th: "ธารน้ำห้าสี เนินดินริมแม่น้ำเออร์ทีชหลากสีแบบ ‘ย่าตาน’", en: "The Five Color River, multicoloured 'yardang' banks along the Irtysh", stopId: "burqin" },
         ],
         drive: { th: "เหอมู่ → เบอร์จิ้น (121 ก.ม. ~2 ชม.)", en: "Hemu → Burqin (121 km, ~2h)" },
         hotel: { name: "LANTING HOLIDAY INN BURQIN HOTEL", star: 4, cityId: "burqin", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -476,7 +480,7 @@ export const programs: Program[] = [
         title: { th: "เบอร์จิ้น – นครปีศาจอูเหอ – สือเหอจื่อ", en: "Burqin – Wuerhe Ghost City – Shihezi" },
         stops: ["wuerhe", "shihezi"],
         along: [
-          { th: "นครปีศาจอูเหอ ‘เมืองแห่งสายลม’ กลางทะเลทรายโกบี (รวมรถไฟชมวิว)", en: "The Wuerhe Ghost City, the 'city of winds' in the Gobi (sightseeing train included)" },
+          { th: "นครปีศาจอูเหอ ‘เมืองแห่งสายลม’ กลางทะเลทรายโกบี (รวมรถไฟชมวิว)", en: "The Wuerhe Ghost City, the 'city of winds' in the Gobi (sightseeing train included)", stopId: "wuerhe" },
           { th: "ผ่านชมทุ่งน้ำมันร้อยลี้ ทะเลปั๊มน้ำมัน ‘โค่วโถวจี’ แห่งเมืองคาราไม", en: "Pass the 'hundred-li oilfield' — a sea of nodding pumpjacks near Karamay" },
         ],
         drive: { th: "เบอร์จิ้น → อูเหอ (229 ก.ม. ~3 ชม.) → สือเหอจื่อ (307 ก.ม. ~4 ชม.)", en: "Burqin → Wuerhe (229 km, ~3h) → Shihezi (307 km, ~4h)" },
@@ -488,7 +492,7 @@ export const programs: Program[] = [
         stops: ["urumqi"],
         along: [
           { th: "สวนนิเวศโบราณซินเจียง ศูนย์เพาะพันธุ์ม้าเซ็กเทา และไม้ฟอสซิลล้านปี", en: "The Xinjiang ancient ecology park — the Akhal-Teke horse centre and million-year fossil wood" },
-          { th: "อิสระช็อปปิ้งตลาดแกรนด์บาซาร์ (ต้าปาจา) บาซาร์ที่ใหญ่ที่สุดในโลก", en: "Free time at the Grand Bazaar (Da Bazaar), the world's largest bazaar" },
+          { th: "อิสระช็อปปิ้งตลาดแกรนด์บาซาร์ (ต้าปาจา) บาซาร์ที่ใหญ่ที่สุดในโลก", en: "Free time at the Grand Bazaar (Da Bazaar), the world's largest bazaar", stopId: "urumqi-bazaar" },
         ],
         drive: { th: "สือเหอจื่อ → อูลู่มู่ฉี (292 ก.ม. ~4.5 ชม.)", en: "Shihezi → Urumqi (292 km, ~4.5h)" },
         hotel: { name: "URUMQI TINGRAN YUNJU HOTEL", star: 4, cityId: "urumqi", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -588,7 +592,7 @@ export const programs: Program[] = [
         stops: ["urumqi"],
         along: [
           { th: "บินสุวรรณภูมิ–กว่างโจว (CZ362) ต่อเครื่องสู่อูลู่มู่ฉี (CZ6892)", en: "Fly Suvarnabhumi–Guangzhou (CZ362), connect to Urumqi (CZ6892)" },
-          { th: "ถึงอูลู่มู่ฉี เข้าที่พัก", en: "Arrive Urumqi and check in" },
+          { th: "ถึงอูลู่มู่ฉี เข้าที่พัก", en: "Arrive Urumqi and check in", stopId: "urumqi" },
         ],
         hotel: { name: "HILTON GARDEN INN HOTEL", star: 4, cityId: "urumqi", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -597,8 +601,8 @@ export const programs: Program[] = [
         title: { th: "เขาเทียนซาน – ทะเลสาบเทียนฉือ – ฝูหยุน", en: "Tianshan – Tianchi Lake – Fuyun" },
         stops: ["fuyun"],
         along: [
-          { th: "ทะเลสาบเทียนฉือ ‘ทะเลสาบสวรรค์’ ใต้ยอดเขาโป๋เก๋อต๋า", en: "Tianchi 'Heavenly Lake' below Bogda Peak" },
-          { th: "ผ่านชมทะเลทรายกู่เอ๋อปานทง สู่เมืองฝูหยุน", en: "Pass the Gurbantünggüt Desert on the way to Fuyun" },
+          { th: "ทะเลสาบเทียนฉือ ‘ทะเลสาบสวรรค์’ ใต้ยอดเขาโป๋เก๋อต๋า", en: "Tianchi 'Heavenly Lake' below Bogda Peak", stopId: "tianchi" },
+          { th: "ผ่านชมทะเลทรายกู่เอ๋อปานทง สู่เมืองฝูหยุน", en: "Pass the Gurbantünggüt Desert on the way to Fuyun", stopId: "fuyun" },
         ],
         drive: { th: "อูลู่มู่ฉี → ฝูหยุน", en: "Urumqi → Fuyun" },
         hotel: { name: "FUYUN VIENNA INTER HOTEL", star: 4, cityId: "fuyun", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -608,8 +612,8 @@ export const programs: Program[] = [
         title: { th: "อุทยานธรณีเคอเคอทัวไห่ – หุบเขาเออร์ทีช – เบอร์จิ้น", en: "Koktokay geopark – Irtysh canyon – Burqin" },
         stops: ["koktokay"],
         along: [
-          { th: "ผ่านชมทะเลสาบโคโคสุริ และอุทยานธรณีเคอเคอทัวไห่ ภูผาหินแกรนิตยักษ์", en: "Pass Kekesuli Lake and the Koktokay geopark's giant granite peaks" },
-          { th: "หุบเขาเออร์ทีช และเขาเสินจง สู่เมืองเบอร์จิ้น", en: "The Irtysh canyon and Shenzhong Mountain, on to Burqin" },
+          { th: "ผ่านชมทะเลสาบโคโคสุริ และอุทยานธรณีเคอเคอทัวไห่ ภูผาหินแกรนิตยักษ์", en: "Pass Kekesuli Lake and the Koktokay geopark's giant granite peaks", stopId: "koktokay" },
+          { th: "หุบเขาเออร์ทีช และเขาเสินจง สู่เมืองเบอร์จิ้น", en: "The Irtysh canyon and Shenzhong Mountain, on to Burqin", stopId: "burqin" },
         ],
         drive: { th: "ฝูหยุน → เคอเคอทัวไห่ → เบอร์จิ้น", en: "Fuyun → Koktokay → Burqin" },
         hotel: { name: "BURQIN SUTONG HOLIDAY HOTEL", star: 4, cityId: "burqin", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -619,8 +623,8 @@ export const programs: Program[] = [
         title: { th: "อุทยานคานาสือ – ศาลาชมปลา – หมู่บ้านตูวา", en: "Kanas park – fish-viewing pavilion – Tuva village" },
         stops: ["kanas"],
         along: [
-          { th: "อุทยานคานาสือ ศาลาชมปลา และบ้านชาวเผ่าตูวา", en: "Kanas park, the fish-viewing pavilion and a Tuva village" },
-          { th: "ทะเลสาบเทวดา ทะเลสาบวงพระจันทร์ และทะเลสาบมังกรหลับ", en: "Heavenly Lake, Crescent Moon Lake and Sleeping-Dragon Bay" },
+          { th: "อุทยานคานาสือ ศาลาชมปลา และบ้านชาวเผ่าตูวา", en: "Kanas park, the fish-viewing pavilion and a Tuva village", stopId: "kanas" },
+          { th: "ทะเลสาบเทวดา ทะเลสาบวงพระจันทร์ และทะเลสาบมังกรหลับ", en: "Heavenly Lake, Crescent Moon Lake and Sleeping-Dragon Bay", stopId: "tianchi" },
         ],
         drive: { th: "เบอร์จิ้น → คานาสือ", en: "Burqin → Kanas" },
         hotel: { name: "KANAS HONGFU ECO RESORT HOTEL", star: 4, cityId: "kanas", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -630,8 +634,8 @@ export const programs: Program[] = [
         title: { th: "หมู่บ้านเหอมู่ – จุดชมวิวฮาเติน – ธารน้ำห้าสี", en: "Hemu village – Hadeng viewpoint – Five-Colour River" },
         stops: ["hemu"],
         along: [
-          { th: "หมู่บ้านเหอมู่ หมู่บ้านไม้ซุงในสายหมอกยามเช้า + จุดชมวิวฮาเติน", en: "Hemu, the misty log-cabin village + the Hadeng viewpoint" },
-          { th: "เดินทางกลับเบอร์จิ้น ชมธารน้ำห้าสี (Five-Colour River)", en: "Back to Burqin for the Five-Colour River" },
+          { th: "หมู่บ้านเหอมู่ หมู่บ้านไม้ซุงในสายหมอกยามเช้า + จุดชมวิวฮาเติน", en: "Hemu, the misty log-cabin village + the Hadeng viewpoint", stopId: "hemu" },
+          { th: "เดินทางกลับเบอร์จิ้น ชมธารน้ำห้าสี (Five-Colour River)", en: "Back to Burqin for the Five-Colour River", stopId: "burqin" },
         ],
         drive: { th: "คานาสือ → เหอมู่ → เบอร์จิ้น", en: "Kanas → Hemu → Burqin" },
         hotel: { name: "BURQIN SUTONG HOLIDAY HOTEL", star: 4, cityId: "burqin", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -641,8 +645,8 @@ export const programs: Program[] = [
         title: { th: "เมืองปีศาจอูเหอ – ขุยถุน", en: "Wuerhe Ghost City – Kuytun" },
         stops: ["kuytun"],
         along: [
-          { th: "เมืองปีศาจอูเหอ ภูมิประเทศหินแกะสลักโดยลม (yardang)", en: "The Wuerhe 'Ghost City', wind-carved yardang rock formations" },
-          { th: "ผ่านชมบ่อน้ำมันร้อยลี้ สู่เมืองขุยถุน", en: "Pass the 'hundred-li' oil field on the way to Kuytun" },
+          { th: "เมืองปีศาจอูเหอ ภูมิประเทศหินแกะสลักโดยลม (yardang)", en: "The Wuerhe 'Ghost City', wind-carved yardang rock formations", stopId: "wuerhe" },
+          { th: "ผ่านชมบ่อน้ำมันร้อยลี้ สู่เมืองขุยถุน", en: "Pass the 'hundred-li' oil field on the way to Kuytun", stopId: "kuytun" },
         ],
         drive: { th: "เบอร์จิ้น → ขุยถุน", en: "Burqin → Kuytun" },
         hotel: { name: "KUYTUN HAMPTON BY HILTON HOTEL", star: 4, cityId: "kuytun", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -653,7 +657,7 @@ export const programs: Program[] = [
         stops: ["urumqi"],
         along: [
           { th: "สวนนิเวศโบราณซินเจียง", en: "The Xinjiang ancient ecology garden" },
-          { th: "ตลาดต้าปาจา (แกรนด์บาซาร์) ช้อปของฝากและวัฒนธรรมอุยกูร์", en: "The Da Bazaar (Grand Bazaar) for souvenirs and Uyghur culture" },
+          { th: "ตลาดต้าปาจา (แกรนด์บาซาร์) ช้อปของฝากและวัฒนธรรมอุยกูร์", en: "The Da Bazaar (Grand Bazaar) for souvenirs and Uyghur culture", stopId: "urumqi-bazaar" },
         ],
         drive: { th: "ขุยถุน → อูลู่มู่ฉี", en: "Kuytun → Urumqi" },
         hotel: { name: "HILTON GARDEN INN HOTEL", star: 4, cityId: "urumqi", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -749,7 +753,7 @@ export const programs: Program[] = [
         stops: ["kashgar"],
         along: [
           { th: "บินสุวรรณภูมิ–กว่างโจว (CZ362) ต่อเครื่องสู่คัชการ์ (CZ6836)", en: "Fly Suvarnabhumi–Guangzhou (CZ362), connect to Kashgar (CZ6836)" },
-          { th: "ถึงสนามบินคัชการ์ไหลหนิงช่วงค่ำ เข้าที่พัก", en: "Arrive Kashgar (Laining) airport in the evening, transfer to hotel" },
+          { th: "ถึงสนามบินคัชการ์ไหลหนิงช่วงค่ำ เข้าที่พัก", en: "Arrive Kashgar (Laining) airport in the evening, transfer to hotel", stopId: "kashgar" },
         ],
         hotel: { name: "HYATT PLACE KASHGAR", star: 4, cityId: "kashgar", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -758,9 +762,9 @@ export const programs: Program[] = [
         title: { th: "เมืองโบราณคัชการ์ – พิธีเปิดเมือง – สวนเซียงเฟย", en: "Kashgar Old City – opening ceremony – Xiangfei Garden" },
         stops: ["kashgar"],
         along: [
-          { th: "พิธีเปิดประตูเมืองโบราณคัชการ์ + ถนนช่างฝีมือ ตรอกสายรุ้ง", en: "Old City gate-opening ceremony + artisans' street and 'rainbow alley'" },
-          { th: "โรงน้ำชาโบราณร้อยปี และจัตุรัสมัสยิดอิดกาห์ (ชมภายนอก)", en: "Century-old teahouse and Id Kah Mosque square (exterior)" },
-          { th: "สวนพระสนมเซียงเฟย อนุสรณ์รักแห่งราชวงศ์ชิง", en: "Xiangfei (Fragrant Concubine) Garden, a Qing-era love memorial" },
+          { th: "พิธีเปิดประตูเมืองโบราณคัชการ์ + ถนนช่างฝีมือ ตรอกสายรุ้ง", en: "Old City gate-opening ceremony + artisans' street and 'rainbow alley'", stopId: "kashgar" },
+          { th: "โรงน้ำชาโบราณร้อยปี และจัตุรัสมัสยิดอิดกาห์ (ชมภายนอก)", en: "Century-old teahouse and Id Kah Mosque square (exterior)", stopId: "kashgar" },
+          { th: "สวนพระสนมเซียงเฟย อนุสรณ์รักแห่งราชวงศ์ชิง", en: "Xiangfei (Fragrant Concubine) Garden, a Qing-era love memorial", stopId: "kashgar" },
         ],
         hotel: { name: "HYATT PLACE KASHGAR", star: 4, cityId: "kashgar", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -770,8 +774,8 @@ export const programs: Program[] = [
         stops: ["tashkurgan"],
         along: [
           { th: "ถนนมิตรภาพจีน-ปากีสถาน (คาราโครัม) ผ่านชมแกรนด์แคนยอนไก้จื่อ", en: "China–Pakistan Friendship (Karakoram) Hwy past Ghez Canyon" },
-          { th: "ทะเลสาบคาราคูลสะท้อนยอดเขามุซทังก์อาต้า", en: "Karakul Lake mirroring Muztagh Ata peak" },
-          { th: "อุทยานทุ่งหญ้าสีทอง และนครศิลา (Stone City) เมืองทาชคอร์กัน", en: "Golden grassland wetland park and the Stone City of Tashkurgan" },
+          { th: "ทะเลสาบคาราคูลสะท้อนยอดเขามุซทังก์อาต้า", en: "Karakul Lake mirroring Muztagh Ata peak", stopId: "karakul" },
+          { th: "อุทยานทุ่งหญ้าสีทอง และนครศิลา (Stone City) เมืองทาชคอร์กัน", en: "Golden grassland wetland park and the Stone City of Tashkurgan", stopId: "tashkurgan" },
         ],
         drive: { th: "ไก้จื่อ 54 กม. · คาราคูล 163 กม. · ทาชคอร์กัน 99 กม.", en: "Ghez 54 km · Karakul 163 km · Tashkurgan 99 km" },
         hotel: { name: "PANORAMA STARRY SKY HOTEL", star: 4, cityId: "tashkurgan", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -782,7 +786,7 @@ export const programs: Program[] = [
         stops: ["kashgar"],
         along: [
           { th: "ถนนโบราณผานหลง ‘สันหลังมังกร’ กว่า 600 โค้ง ที่ 4,100 ม.", en: "Panlong 'dragon-back' road, 600+ switchbacks at 4,100 m" },
-          { th: "ชายแดนจีน-ปากีสถาน ด่านคุนจีราบพาส ~4,600 ม. (ขึ้นกับสภาพอากาศ/ราชการ)", en: "China–Pakistan Khunjerab Pass ~4,600 m (weather/authority permitting)" },
+          { th: "ชายแดนจีน-ปากีสถาน ด่านคุนจีราบพาส ~4,600 ม. (ขึ้นกับสภาพอากาศ/ราชการ)", en: "China–Pakistan Khunjerab Pass ~4,600 m (weather/authority permitting)", stopId: "khunjerab" },
           { th: "ผ่านชมทะเลสาบสีฟ้าปันเดียร์ และทะเลสาบไป๋ซาหูริมทะเลทราย", en: "Bulunkou blue lake and the desert-side Baisha (White Sand) Lake" },
         ],
         drive: { th: "ผานหลง 106 กม. · ปันเดียร์ 64 กม. · ไป๋ซาหู 146 กม. · คัชการ์ 151 กม.", en: "Panlong 106 km · Bulunkou 64 km · Baisha 146 km · Kashgar 151 km" },
@@ -793,8 +797,8 @@ export const programs: Program[] = [
         title: { th: "คัชการ์ – ปาฉู่ – อุทยานทะเลแดง", en: "Kashgar – Bachu – Red Sea Park" },
         stops: ["bachu"],
         along: [
-          { th: "เดินทางเลียบขอบทะเลทรายตากลามากันสู่เมืองปาฉู่", en: "Drive along the edge of the Taklamakan Desert to Bachu" },
-          { th: "อุทยานทะเลแดง ป่าต้นหูหยาง ‘วีรบุรุษแห่งทะเลทราย’ นั่งรถชมอุทยาน", en: "Red Sea park — Euphrates poplar forest, the 'desert hero', by park shuttle" },
+          { th: "เดินทางเลียบขอบทะเลทรายตากลามากันสู่เมืองปาฉู่", en: "Drive along the edge of the Taklamakan Desert to Bachu", stopId: "bachu" },
+          { th: "อุทยานทะเลแดง ป่าต้นหูหยาง ‘วีรบุรุษแห่งทะเลทราย’ นั่งรถชมอุทยาน", en: "Red Sea park — Euphrates poplar forest, the 'desert hero', by park shuttle", stopId: "bachu" },
         ],
         drive: { th: "คัชการ์–ปาฉู่ 273 กม. · ~3.5 ชม.", en: "Kashgar–Bachu 273 km · ~3.5h" },
         hotel: { name: "BACHU LAVENDER HOTEL", star: 4, cityId: "bachu", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -804,8 +808,8 @@ export const programs: Program[] = [
         title: { th: "ทะเลทรายต๋าหว่าคุน – ขี่อูฐ/ตะลุยทราย – ซาเช่อ", en: "Dawakun Desert – camel ride / dune drive – Yarkand" },
         stops: ["yarkand"],
         along: [
-          { th: "ทะเลทรายต๋าหว่าคุน โอเอซิสกลางทราย ขับรถตะลุยทรายหรือขี่อูฐ", en: "Dawakun Desert oasis — dune driving or camel riding" },
-          { th: "เดินทางสู่เมืองซาเช่อ (ยาร์คันด์) อดีตราชธานีข่านาเตะ", en: "Continue to Yarkand (Shache), former khanate capital" },
+          { th: "ทะเลทรายต๋าหว่าคุน โอเอซิสกลางทราย ขับรถตะลุยทรายหรือขี่อูฐ", en: "Dawakun Desert oasis — dune driving or camel riding", stopId: "bachu" },
+          { th: "เดินทางสู่เมืองซาเช่อ (ยาร์คันด์) อดีตราชธานีข่านาเตะ", en: "Continue to Yarkand (Shache), former khanate capital", stopId: "yarkand" },
         ],
         drive: { th: "ต๋าหว่าคุน 178 กม. · ซาเช่อ 136 กม.", en: "Dawakun 178 km · Yarkand 136 km" },
         hotel: { name: "VIENNA HOTEL SHACHE", star: 4, cityId: "yarkand", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -815,8 +819,8 @@ export const programs: Program[] = [
         title: { th: "ซาเช่อ – ตลาดคาจ้านฉี – สุสานข่าน/อามานนิซา – เกาไถ – คัชการ์", en: "Yarkand – Kazanqi market – royal tombs – Gaotai – Kashgar" },
         stops: ["kashgar"],
         along: [
-          { th: "ย่านเมืองเก่าคาจ้านฉี และสุสานหลวงข่านแห่งซาเช่อ", en: "Kazanqi old quarter and the royal Yarkand Khan tombs" },
-          { th: "สุสานอนุสรณ์พระนางอามานนิซาคาน กวีเอกแห่งอุยกูร์", en: "Tomb of Amannisa Khan, the great Uyghur poet-queen" },
+          { th: "ย่านเมืองเก่าคาจ้านฉี และสุสานหลวงข่านแห่งซาเช่อ", en: "Kazanqi old quarter and the royal Yarkand Khan tombs", stopId: "yarkand" },
+          { th: "สุสานอนุสรณ์พระนางอามานนิซาคาน กวีเอกแห่งอุยกูร์", en: "Tomb of Amannisa Khan, the great Uyghur poet-queen", stopId: "yarkand" },
           { th: "ชุมชนโบราณเกาไถริมแม่น้ำทูหมัน หมู่บ้านช่างปั้นกว่า 600 ปี", en: "Gaotai ancient riverside community, a 600-year potters' village" },
         ],
         drive: { th: "ซาเช่อ–คัชการ์ 191 กม. · ~3 ชม.", en: "Yarkand–Kashgar 191 km · ~3h" },
@@ -909,7 +913,7 @@ export const programs: Program[] = [
         stops: ["lanzhou"],
         along: [
           { th: "บินสุวรรณภูมิ–คุนหมิง ต่อเครื่องสู่หลานโจว (MU)", en: "Fly Suvarnabhumi–Kunming, connect to Lanzhou (MU)" },
-          { th: "ถึงหลานโจว เมืองริมแม่น้ำเหลืองบนเส้นทางสายไหม เข้าที่พัก", en: "Arrive Lanzhou, the Yellow River city on the Silk Road, and check in" },
+          { th: "ถึงหลานโจว เมืองริมแม่น้ำเหลืองบนเส้นทางสายไหม เข้าที่พัก", en: "Arrive Lanzhou, the Yellow River city on the Silk Road, and check in", stopId: "lanzhou" },
         ],
       },
       {
@@ -917,8 +921,8 @@ export const programs: Program[] = [
         title: { th: "หลานโจว – ถ้ำปิงหลิง (ล่องเรือหลิวเจียเสีย) – เซี่ยเหอ", en: "Lanzhou – Bingling Grottoes (Liujiaxia boat) – Xiahe" },
         stops: ["bingling", "xiahe"],
         along: [
-          { th: "ล่องเรือทะเลสาบหลิวเจียเสียสู่ถ้ำปิงหลิง พระพุทธรูปแกะสลักริมน้ำ", en: "Boat across Liujiaxia reservoir to the Bingling grottoes, riverside carved Buddhas" },
-          { th: "เดินทางสู่เซี่ยเหอ ชุมชนทิเบตอัมโดบนที่ราบสูง", en: "Continue to Xiahe, an Amdo-Tibetan town on the plateau" },
+          { th: "ล่องเรือทะเลสาบหลิวเจียเสียสู่ถ้ำปิงหลิง พระพุทธรูปแกะสลักริมน้ำ", en: "Boat across Liujiaxia reservoir to the Bingling grottoes, riverside carved Buddhas", stopId: "bingling" },
+          { th: "เดินทางสู่เซี่ยเหอ ชุมชนทิเบตอัมโดบนที่ราบสูง", en: "Continue to Xiahe, an Amdo-Tibetan town on the plateau", stopId: "xiahe" },
         ],
         drive: { th: "หลานโจว → ปิงหลิง → เซี่ยเหอ", en: "Lanzhou → Bingling → Xiahe" },
       },
@@ -927,8 +931,8 @@ export const programs: Program[] = [
         title: { th: "วัดลาบรัง – ทุ่งหญ้าซางเคอ – ซงพาน", en: "Labrang Monastery – Sangke grassland – Songpan" },
         stops: ["xiahe", "songpan"],
         along: [
-          { th: "วัดลาบรัง หนึ่งในวัดทิเบตใหญ่ที่สุดนอกทิเบต เดินกงล้อมนตรายาวที่สุด", en: "Labrang, one of the largest Tibetan monasteries outside Tibet, with its long prayer-wheel corridor" },
-          { th: "ทุ่งหญ้าซางเคอ แล้วเดินทางข้ามสู่มณฑลเสฉวนสู่เมืองซงพาน", en: "The Sangke grassland, then cross into Sichuan toward Songpan" },
+          { th: "วัดลาบรัง หนึ่งในวัดทิเบตใหญ่ที่สุดนอกทิเบต เดินกงล้อมนตรายาวที่สุด", en: "Labrang, one of the largest Tibetan monasteries outside Tibet, with its long prayer-wheel corridor", stopId: "xiahe" },
+          { th: "ทุ่งหญ้าซางเคอ แล้วเดินทางข้ามสู่มณฑลเสฉวนสู่เมืองซงพาน", en: "The Sangke grassland, then cross into Sichuan toward Songpan", stopId: "songpan" },
         ],
         drive: { th: "เซี่ยเหอ → ซงพาน", en: "Xiahe → Songpan" },
       },
@@ -937,8 +941,8 @@ export const programs: Program[] = [
         title: { th: "เมืองโบราณซงพาน – อุทยานจิ่วไจ้โกว", en: "Songpan ancient town – Jiuzhaigou" },
         stops: ["songpan", "jiuzhaigou"],
         along: [
-          { th: "เมืองโบราณซงพาน กำแพงเมืองสมัยราชวงศ์หมิงริมแม่น้ำหมินเจียง", en: "Songpan's Ming-dynasty walled old town on the Min River" },
-          { th: "เดินทางสู่อุทยานจิ่วไจ้โกว มรดกโลกทางธรรมชาติ", en: "Continue to Jiuzhaigou, a natural World Heritage site" },
+          { th: "เมืองโบราณซงพาน กำแพงเมืองสมัยราชวงศ์หมิงริมแม่น้ำหมินเจียง", en: "Songpan's Ming-dynasty walled old town on the Min River", stopId: "songpan" },
+          { th: "เดินทางสู่อุทยานจิ่วไจ้โกว มรดกโลกทางธรรมชาติ", en: "Continue to Jiuzhaigou, a natural World Heritage site", stopId: "jiuzhaigou" },
         ],
         drive: { th: "ซงพาน → จิ่วไจ้โกว", en: "Songpan → Jiuzhaigou" },
       },
@@ -947,8 +951,8 @@ export const programs: Program[] = [
         title: { th: "เจาะลึกอุทยานจิ่วไจ้โกว (เต็มวัน)", en: "Jiuzhaigou valley in depth (full day)" },
         stops: ["jiuzhaigou"],
         along: [
-          { th: "ทะเลสาบสีเทอร์ควอยซ์ ทะเลสาบห้าสี และสระน้ำหลากสี (รวมรถอุทยาน)", en: "Turquoise lakes, the Five-Colour Pond and multicoloured pools (park bus included)" },
-          { th: "น้ำตกธารไข่มุกและน้ำตกหนัวรื่อหลั่ง ป่าน้ำตกขั้นบันได", en: "Pearl Shoal and Nuorilang waterfalls, terraced cascades" },
+          { th: "ทะเลสาบสีเทอร์ควอยซ์ ทะเลสาบห้าสี และสระน้ำหลากสี (รวมรถอุทยาน)", en: "Turquoise lakes, the Five-Colour Pond and multicoloured pools (park bus included)", stopId: "jiuzhaigou" },
+          { th: "น้ำตกธารไข่มุกและน้ำตกหนัวรื่อหลั่ง ป่าน้ำตกขั้นบันได", en: "Pearl Shoal and Nuorilang waterfalls, terraced cascades", stopId: "jiuzhaigou" },
         ],
       },
       {
@@ -956,7 +960,7 @@ export const programs: Program[] = [
         title: { th: "จิ่วไจ้โกว – หมู่บ้านหินจากาน่า", en: "Jiuzhaigou – Zhagana stone village" },
         stops: ["zhagana"],
         along: [
-          { th: "เดินทางสู่จากาน่า หมู่บ้านหินทิเบตกลางหุบเขาหินปูน", en: "Drive to Zhagana, a Tibetan stone village cradled by limestone peaks" },
+          { th: "เดินทางสู่จากาน่า หมู่บ้านหินทิเบตกลางหุบเขาหินปูน", en: "Drive to Zhagana, a Tibetan stone village cradled by limestone peaks", stopId: "zhagana" },
           { th: "ชมวิวทุ่งนาขั้นบันไดและยอดเขารูปปราการธรรมชาติ", en: "Terraced fields and the natural fortress-like rock walls" },
         ],
         drive: { th: "จิ่วไจ้โกว → จากาน่า", en: "Jiuzhaigou → Zhagana" },
@@ -966,7 +970,7 @@ export const programs: Program[] = [
         title: { th: "จากาน่า – เหอจั้ว (วังมิลาเรปา) – หลานโจว – กลับ", en: "Zhagana – Hezuo (Milarepa Palace) – Lanzhou – fly home" },
         stops: ["hezuo", "lanzhou"],
         along: [
-          { th: "พระราชวังมิลาเรปาเก้าชั้นที่เหอจั้ว ศูนย์รวมศิลปะพุทธทิเบต", en: "The nine-storey Milarepa Palace at Hezuo, a treasury of Tibetan Buddhist art" },
+          { th: "พระราชวังมิลาเรปาเก้าชั้นที่เหอจั้ว ศูนย์รวมศิลปะพุทธทิเบต", en: "The nine-storey Milarepa Palace at Hezuo, a treasury of Tibetan Buddhist art", stopId: "hezuo" },
           { th: "เดินทางกลับหลานโจว บินคุนหมิงต่อเครื่องกลับกรุงเทพฯ (MU)", en: "Return to Lanzhou, fly via Kunming connecting home to Bangkok (MU)" },
         ],
         drive: { th: "จากาน่า → เหอจั้ว → หลานโจว", en: "Zhagana → Hezuo → Lanzhou" },
@@ -1056,7 +1060,7 @@ export const programs: Program[] = [
         stops: ["xining"],
         along: [
           { th: "บินตรงสุวรรณภูมิ–ซีหนิง (VZ3690) ไม่ต้องต่อเครื่อง", en: "Direct flight Suvarnabhumi–Xining (VZ3690), no transfer" },
-          { th: "ถึงซีหนิง ประตูสู่ที่ราบสูงชิงไห่–ทิเบต เข้าที่พัก", en: "Arrive Xining, gateway to the Qinghai–Tibet plateau, and check in" },
+          { th: "ถึงซีหนิง ประตูสู่ที่ราบสูงชิงไห่–ทิเบต เข้าที่พัก", en: "Arrive Xining, gateway to the Qinghai–Tibet plateau, and check in", stopId: "xining" },
         ],
         hotel: { name: "XINING YONGHE INTERNATIONAL HOTEL", star: 4, cityId: "xining", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -1075,8 +1079,8 @@ export const programs: Program[] = [
         title: { th: "พระราชวังฤดูร้อนนอร์บูลิงคา – พิพิธภัณฑ์ทิเบต", en: "Norbulingka summer palace – Tibet Museum" },
         stops: ["lhasa"],
         along: [
-          { th: "พระราชวังฤดูร้อนนอร์บูลิงคา สวนและที่ประทับฤดูร้อนของดาไลลามะ", en: "Norbulingka, the Dalai Lamas' summer palace and gardens" },
-          { th: "พิพิธภัณฑ์ทิเบต เรียนรู้ประวัติศาสตร์และวัฒนธรรมทิเบต", en: "The Tibet Museum for Tibetan history and culture" },
+          { th: "พระราชวังฤดูร้อนนอร์บูลิงคา สวนและที่ประทับฤดูร้อนของดาไลลามะ", en: "Norbulingka, the Dalai Lamas' summer palace and gardens", stopId: "lhasa" },
+          { th: "พิพิธภัณฑ์ทิเบต เรียนรู้ประวัติศาสตร์และวัฒนธรรมทิเบต", en: "The Tibet Museum for Tibetan history and culture", stopId: "lhasa" },
         ],
         hotel: { name: "LA WEI INTERNATIONAL HOTEL", star: 4, cityId: "lhasa", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -1085,8 +1089,8 @@ export const programs: Program[] = [
         title: { th: "ลาซา – หลินจือ (รถไฟความเร็วสูง) – ป่าโบราณ", en: "Lhasa – Nyingchi (high-speed rail) – ancient forest" },
         stops: ["nyingchi"],
         along: [
-          { th: "นั่งรถไฟความเร็วสูงลาซา–หลินจือ เส้นทางใหม่กลางหุบเขา", en: "Ride the new Lhasa–Nyingchi high-speed railway through the gorges" },
-          { th: "ป่าโบราณจวี้ป๋อ และหุบเขาคาติ้งโกว ‘สวิตเซอร์แลนด์แห่งทิเบต’", en: "The Juebo ancient forest and Kading valley, the 'Switzerland of Tibet'" },
+          { th: "นั่งรถไฟความเร็วสูงลาซา–หลินจือ เส้นทางใหม่กลางหุบเขา", en: "Ride the new Lhasa–Nyingchi high-speed railway through the gorges", stopId: "nyingchi" },
+          { th: "ป่าโบราณจวี้ป๋อ และหุบเขาคาติ้งโกว ‘สวิตเซอร์แลนด์แห่งทิเบต’", en: "The Juebo ancient forest and Kading valley, the 'Switzerland of Tibet'", stopId: "nyingchi" },
         ],
         drive: { th: "ลาซา → หลินจือ (รถไฟความเร็วสูง)", en: "Lhasa → Nyingchi (HSR)" },
         hotel: { name: "LINZHI YUNXI HOTEL", star: 4, cityId: "nyingchi", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -1096,8 +1100,8 @@ export const programs: Program[] = [
         title: { th: "หลินจือ – ทะเลสาบปาซง – ลาซา", en: "Nyingchi – Basum Tso – Lhasa" },
         stops: ["basum-tso"],
         along: [
-          { th: "ทะเลสาบปาซง (Basum Tso) ทะเลสาบศักดิ์สิทธิ์กลางป่าสน เกาะกลางน้ำ", en: "Basum Tso, a sacred alpine lake with a forested island" },
-          { th: "เดินทางกลับลาซาตามทางหลวงหลินลา", en: "Return to Lhasa along the Lhasa–Nyingchi highway" },
+          { th: "ทะเลสาบปาซง (Basum Tso) ทะเลสาบศักดิ์สิทธิ์กลางป่าสน เกาะกลางน้ำ", en: "Basum Tso, a sacred alpine lake with a forested island", stopId: "basum-tso" },
+          { th: "เดินทางกลับลาซาตามทางหลวงหลินลา", en: "Return to Lhasa along the Lhasa–Nyingchi highway", stopId: "lhasa" },
         ],
         drive: { th: "หลินจือ → ปาซง → ลาซา", en: "Nyingchi → Basum Tso → Lhasa" },
         hotel: { name: "LA WEI INTERNATIONAL HOTEL", star: 4, cityId: "lhasa", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -1107,8 +1111,8 @@ export const programs: Program[] = [
         title: { th: "พระราชวังโปตาลา – วัดโจคัง – ตลาดบาคอร์", en: "Potala Palace – Jokhang – Barkhor" },
         stops: ["lhasa"],
         along: [
-          { th: "พระราชวังโปตาลา สัญลักษณ์ของทิเบต (bucket-list)", en: "Potala Palace, the symbol of Tibet (bucket-list)" },
-          { th: "วัดโจคัง หัวใจศรัทธาทิเบต + ตลาดบาคอร์รอบวัด", en: "Jokhang Temple, the heart of Tibetan faith + the Barkhor market" },
+          { th: "พระราชวังโปตาลา สัญลักษณ์ของทิเบต (bucket-list)", en: "Potala Palace, the symbol of Tibet (bucket-list)", stopId: "lhasa" },
+          { th: "วัดโจคัง หัวใจศรัทธาทิเบต + ตลาดบาคอร์รอบวัด", en: "Jokhang Temple, the heart of Tibetan faith + the Barkhor market", stopId: "lhasa" },
         ],
         hotel: { name: "LA WEI INTERNATIONAL HOTEL", star: 4, cityId: "lhasa", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -1127,7 +1131,7 @@ export const programs: Program[] = [
         title: { th: "ซีหนิง – พิพิธภัณฑ์ชิงไห่ – กรุงเทพฯ", en: "Xining – Qinghai Museum – Bangkok" },
         stops: ["xining"],
         along: [
-          { th: "ถึงซีหนิง ชมพิพิธภัณฑ์ชิงไห่", en: "Arrive Xining and visit the Qinghai Museum" },
+          { th: "ถึงซีหนิง ชมพิพิธภัณฑ์ชิงไห่", en: "Arrive Xining and visit the Qinghai Museum", stopId: "xining" },
           { th: "บินตรงซีหนิง–สุวรรณภูมิ (VZ3691 23:40)", en: "Direct flight Xining–Suvarnabhumi (VZ3691 23:40)" },
         ],
       },
@@ -1218,7 +1222,7 @@ export const programs: Program[] = [
         stops: ["lhasa"],
         along: [
           { th: "บินภายในซีหนิง–ลาซา (3U3453 12:45-15:05)", en: "Domestic flight Xining–Lhasa (3U3453 12:45-15:05)" },
-          { th: "ชมวิวพระราชวังโปตาลายามค่ำคืน", en: "Evening view of the floodlit Potala Palace" },
+          { th: "ชมวิวพระราชวังโปตาลายามค่ำคืน", en: "Evening view of the floodlit Potala Palace", stopId: "lhasa" },
         ],
         hotel: { name: "LHASA CHAMOLUNG HOTEL", star: 4, cityId: "lhasa", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -1227,8 +1231,8 @@ export const programs: Program[] = [
         title: { th: "พระราชวังโปตาลา – วัดโจคัง – ถนนแปดเหลี่ยม", en: "Potala Palace – Jokhang – Barkhor" },
         stops: ["lhasa"],
         along: [
-          { th: "พระราชวังโปตาลา สัญลักษณ์ของทิเบต (bucket-list)", en: "Potala Palace, the symbol of Tibet (bucket-list)" },
-          { th: "วัดโจคัง และตลาดถนนแปดเหลี่ยม (บาคอร์) หัวใจศรัทธาทิเบต", en: "Jokhang Temple and the Barkhor (eight-corner) market" },
+          { th: "พระราชวังโปตาลา สัญลักษณ์ของทิเบต (bucket-list)", en: "Potala Palace, the symbol of Tibet (bucket-list)", stopId: "lhasa" },
+          { th: "วัดโจคัง และตลาดถนนแปดเหลี่ยม (บาคอร์) หัวใจศรัทธาทิเบต", en: "Jokhang Temple and the Barkhor (eight-corner) market", stopId: "lhasa" },
         ],
         hotel: { name: "LHASA CHAMOLUNG HOTEL", star: 4, cityId: "lhasa", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -1237,8 +1241,8 @@ export const programs: Program[] = [
         title: { th: "ลาซา – หลินจือ (รถไฟ) – ป่าทะเลหลู่ล่าง – เมืองหลู่ล่าง", en: "Lhasa – Nyingchi (train) – Lulang forest-sea – Lulang town" },
         stops: ["nyingchi", "lulang"],
         along: [
-          { th: "นั่งรถไฟลาซา–หลินจือ (ที่นั่งชั้น 2) ผ่านช่องเขาซีจีล่า", en: "Train Lhasa–Nyingchi (2nd-class) over the Sejila Pass" },
-          { th: "ป่าทะเลหลู่ล่าง ทุ่งหญ้าบนที่สูงหิมาลัย สู่เมืองหลู่ล่าง", en: "The Lulang forest-sea and Himalayan alpine meadows, into Lulang town" },
+          { th: "นั่งรถไฟลาซา–หลินจือ (ที่นั่งชั้น 2) ผ่านช่องเขาซีจีล่า", en: "Train Lhasa–Nyingchi (2nd-class) over the Sejila Pass", stopId: "nyingchi" },
+          { th: "ป่าทะเลหลู่ล่าง ทุ่งหญ้าบนที่สูงหิมาลัย สู่เมืองหลู่ล่าง", en: "The Lulang forest-sea and Himalayan alpine meadows, into Lulang town", stopId: "lulang" },
         ],
         drive: { th: "ลาซา → หลินจือ (รถไฟ) → หลู่ล่าง", en: "Lhasa → Nyingchi (train) → Lulang" },
         hotel: { name: "LULANG XILU HOTEL", star: 4, cityId: "lulang", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -1248,8 +1252,8 @@ export const programs: Program[] = [
         title: { th: "เมืองหลู่ล่าง – ทะเลสาบบาซง – ลาซา", en: "Lulang town – Basum Tso – Lhasa" },
         stops: ["basum-tso"],
         along: [
-          { th: "ทะเลสาบบาซง (Basum Tso) ทะเลสาบศักดิ์สิทธิ์กลางป่าสน", en: "Basum Tso, a sacred alpine lake amid pine forest" },
-          { th: "เดินทางกลับลาซา", en: "Return to Lhasa" },
+          { th: "ทะเลสาบบาซง (Basum Tso) ทะเลสาบศักดิ์สิทธิ์กลางป่าสน", en: "Basum Tso, a sacred alpine lake amid pine forest", stopId: "basum-tso" },
+          { th: "เดินทางกลับลาซา", en: "Return to Lhasa", stopId: "lhasa" },
         ],
         drive: { th: "หลู่ล่าง → ปาซง → ลาซา", en: "Lulang → Basum Tso → Lhasa" },
         hotel: { name: "LHASA CHAMOLUNG HOTEL", star: 4, cityId: "lhasa", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -1259,8 +1263,8 @@ export const programs: Program[] = [
         title: { th: "ตำหนักนอร์บูลิงคา – พิพิธภัณฑ์ทิเบต", en: "Norbulingka – Tibet Museum" },
         stops: ["lhasa"],
         along: [
-          { th: "ตำหนักนอร์บูลิงคา (รวมรถกอล์ฟ) พระราชวังฤดูร้อนของดาไลลามะ", en: "Norbulingka (golf cart), the Dalai Lamas' summer palace" },
-          { th: "พิพิธภัณฑ์ทิเบต", en: "The Tibet Museum" },
+          { th: "ตำหนักนอร์บูลิงคา (รวมรถกอล์ฟ) พระราชวังฤดูร้อนของดาไลลามะ", en: "Norbulingka (golf cart), the Dalai Lamas' summer palace", stopId: "lhasa" },
+          { th: "พิพิธภัณฑ์ทิเบต", en: "The Tibet Museum", stopId: "lhasa" },
         ],
         hotel: { name: "LHASA CHAMOLUNG HOTEL", star: 4, cityId: "lhasa", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -1279,7 +1283,7 @@ export const programs: Program[] = [
         title: { th: "ถึงซีหนิง – วัดถาเอ่อร์ (Kumbum) – กรุงเทพฯ", en: "Arrive Xining – Kumbum Monastery – Bangkok" },
         stops: ["kumbum", "xining"],
         along: [
-          { th: "วัดถาเอ่อร์ซื่อ (Kumbum) (รวมรถกอล์ฟ) วัดสำคัญพุทธทิเบต", en: "Kumbum (Ta'er) Monastery (golf cart), a major Tibetan-Buddhist site" },
+          { th: "วัดถาเอ่อร์ซื่อ (Kumbum) (รวมรถกอล์ฟ) วัดสำคัญพุทธทิเบต", en: "Kumbum (Ta'er) Monastery (golf cart), a major Tibetan-Buddhist site", stopId: "kumbum" },
           { th: "สตรีทฟู้ดสุ่ยจิ่ง / ถนนคนเดินลี่เหมิง แล้วบินกลับ (VZ3691 23:40)", en: "Shuijing street food / Limeng pedestrian street, then fly home (VZ3691 23:40)" },
         ],
         drive: { th: "ซีหนิง → วัดถาเอ่อร์ → สนามบินซีหนิง", en: "Xining → Kumbum → Xining airport" },
@@ -1361,7 +1365,7 @@ export const programs: Program[] = [
         stops: ["qingdao"],
         along: [
           { th: "บินตรงสุวรรณภูมิ–ชิงเต่า (QW) ไม่ต้องต่อเครื่อง", en: "Direct Suvarnabhumi–Qingdao (QW), no transfer" },
-          { th: "เดินเล่นย่านเมืองเก่าเยอรมัน ถ่ายรูปโบสถ์เซนต์ไมเคิล", en: "Stroll the German old town and photograph St Michael's Cathedral" },
+          { th: "เดินเล่นย่านเมืองเก่าเยอรมัน ถ่ายรูปโบสถ์เซนต์ไมเคิล", en: "Stroll the German old town and photograph St Michael's Cathedral", stopId: "qingdao" },
         ],
       },
       {
@@ -1369,8 +1373,8 @@ export const programs: Program[] = [
         title: { th: "ชิงเต่า: สะพานจ้านเฉียว ปาต้ากวน พิพิธภัณฑ์เบียร์", en: "Qingdao: Zhanqiao Pier, Badaguan & the Beer Museum" },
         stops: ["qingdao"],
         along: [
-          { th: "สะพานจ้านเฉียว ศาลาหุยหลาน และจัตุรัสอู่ซื่อ (May Fourth) ริมอ่าว", en: "Zhanqiao Pier, Huilan Pavilion and May Fourth Square along the bay" },
-          { th: "ย่านปาต้ากวน ‘พิพิธภัณฑ์สถาปัตยกรรมโลก’ + พิพิธภัณฑ์เบียร์ชิงเต่า (ชิมเบียร์สด)", en: "Badaguan villa quarter + Tsingtao Beer Museum with a fresh draught" },
+          { th: "สะพานจ้านเฉียว ศาลาหุยหลาน และจัตุรัสอู่ซื่อ (May Fourth) ริมอ่าว", en: "Zhanqiao Pier, Huilan Pavilion and May Fourth Square along the bay", stopId: "qingdao" },
+          { th: "ย่านปาต้ากวน ‘พิพิธภัณฑ์สถาปัตยกรรมโลก’ + พิพิธภัณฑ์เบียร์ชิงเต่า (ชิมเบียร์สด)", en: "Badaguan villa quarter + Tsingtao Beer Museum with a fresh draught", stopId: "qingdao" },
         ],
       },
       {
@@ -1378,8 +1382,8 @@ export const programs: Program[] = [
         title: { th: "ชิงเต่า – เผิงไหล (ศาลาเผิงไหล) – เยียนไถ", en: "Qingdao – Penglai Pavilion – Yantai" },
         stops: ["penglai", "yantai"],
         along: [
-          { th: "ศาลาเผิงไหล ‘แดนเซียน’ จุดชมวิวทะเลโป๋ไห่", en: "Penglai Pavilion 'fairyland' overlooking the Bohai Sea" },
-          { th: "เดินทางต่อสู่เยียนไถ เมืองริมทะเลบรรยากาศสบาย", en: "Continue to the relaxed seaside city of Yantai" },
+          { th: "ศาลาเผิงไหล ‘แดนเซียน’ จุดชมวิวทะเลโป๋ไห่", en: "Penglai Pavilion 'fairyland' overlooking the Bohai Sea", stopId: "penglai" },
+          { th: "เดินทางต่อสู่เยียนไถ เมืองริมทะเลบรรยากาศสบาย", en: "Continue to the relaxed seaside city of Yantai", stopId: "yantai" },
         ],
       },
       {
@@ -1387,8 +1391,8 @@ export const programs: Program[] = [
         title: { th: "เยียนไถ: ไร่ไวน์จางยู่ – เว่ยไห่", en: "Yantai: Changyu wine château – Weihai" },
         stops: ["yantai", "weihai"],
         along: [
-          { th: "ชาโตว์ไวน์จางยู่ ชิมไวน์และชมประวัติไวน์จีน", en: "Changyu wine château — a tasting and the story of Chinese wine" },
-          { th: "เขาเยียนไถซาน แล้วเดินทางสู่เว่ยไห่", en: "Yantai Hill, then transfer to Weihai" },
+          { th: "ชาโตว์ไวน์จางยู่ ชิมไวน์และชมประวัติไวน์จีน", en: "Changyu wine château — a tasting and the story of Chinese wine", stopId: "yantai" },
+          { th: "เขาเยียนไถซาน แล้วเดินทางสู่เว่ยไห่", en: "Yantai Hill, then transfer to Weihai", stopId: "yantai" },
         ],
       },
       {
@@ -1396,8 +1400,8 @@ export const programs: Program[] = [
         title: { th: "เว่ยไห่: ถนนคบเพลิง ประตูแห่งความสุข – กลับชิงเต่า", en: "Weihai: Torch Road & Happiness Gate – back to Qingdao" },
         stops: ["weihai", "qingdao"],
         along: [
-          { th: "ถนนคบเพลิงริมทะเล ประตูแห่งความสุข และประติมากรรมวาฬเกยตื้น", en: "The seaside Torch Road, the Gate of Happiness and the beached-whale sculpture" },
-          { th: "เดินทางกลับชิงเต่า", en: "Drive back to Qingdao" },
+          { th: "ถนนคบเพลิงริมทะเล ประตูแห่งความสุข และประติมากรรมวาฬเกยตื้น", en: "The seaside Torch Road, the Gate of Happiness and the beached-whale sculpture", stopId: "weihai" },
+          { th: "เดินทางกลับชิงเต่า", en: "Drive back to Qingdao", stopId: "qingdao" },
         ],
       },
       {
@@ -1485,7 +1489,7 @@ export const programs: Program[] = [
         stops: ["qingdao"],
         along: [
           { th: "บินตรงเช้ามืดสุวรรณภูมิ–ชิงเต่า (SC) ถึงช่วงเช้า", en: "Red-eye direct Suvarnabhumi–Qingdao (SC), arriving in the morning" },
-          { th: "สะพานจ้านเฉียว ย่านปาต้ากวน และโบสถ์เซนต์ไมเคิล", en: "Zhanqiao Pier, the Badaguan quarter and St Michael's Cathedral" },
+          { th: "สะพานจ้านเฉียว ย่านปาต้ากวน และโบสถ์เซนต์ไมเคิล", en: "Zhanqiao Pier, the Badaguan quarter and St Michael's Cathedral", stopId: "qingdao" },
         ],
       },
       {
@@ -1493,8 +1497,8 @@ export const programs: Program[] = [
         title: { th: "ชิงเต่า – เผิงไหล (ศาลาเผิงไหล) – เยียนไถ", en: "Qingdao – Penglai Pavilion – Yantai" },
         stops: ["penglai", "yantai"],
         along: [
-          { th: "พิพิธภัณฑ์เบียร์ชิงเต่า (ชิมเบียร์สด) ก่อนออกเดินทาง", en: "Tsingtao Beer Museum (fresh draught) before setting off" },
-          { th: "ศาลาเผิงไหล ‘แดนเซียน’ แล้วต่อสู่เยียนไถ", en: "Penglai Pavilion 'fairyland', then on to Yantai" },
+          { th: "พิพิธภัณฑ์เบียร์ชิงเต่า (ชิมเบียร์สด) ก่อนออกเดินทาง", en: "Tsingtao Beer Museum (fresh draught) before setting off", stopId: "qingdao" },
+          { th: "ศาลาเผิงไหล ‘แดนเซียน’ แล้วต่อสู่เยียนไถ", en: "Penglai Pavilion 'fairyland', then on to Yantai", stopId: "penglai" },
         ],
       },
       {
@@ -1502,8 +1506,8 @@ export const programs: Program[] = [
         title: { th: "เยียนไถ: ไร่ไวน์จางยู่ – เว่ยไห่", en: "Yantai: Changyu wine château – Weihai" },
         stops: ["yantai", "weihai"],
         along: [
-          { th: "ชาโตว์ไวน์จางยู่ ชิมไวน์ชื่อดังของจีน", en: "Changyu wine château — a tasting of China's famous wine" },
-          { th: "เว่ยไห่ ประตูแห่งความสุข และประติมากรรมวาฬเกยตื้น", en: "Weihai's Gate of Happiness and the beached-whale sculpture" },
+          { th: "ชาโตว์ไวน์จางยู่ ชิมไวน์ชื่อดังของจีน", en: "Changyu wine château — a tasting of China's famous wine", stopId: "yantai" },
+          { th: "เว่ยไห่ ประตูแห่งความสุข และประติมากรรมวาฬเกยตื้น", en: "Weihai's Gate of Happiness and the beached-whale sculpture", stopId: "weihai" },
         ],
       },
       {
@@ -1511,8 +1515,8 @@ export const programs: Program[] = [
         title: { th: "เว่ยไห่ – กลับชิงเต่า", en: "Weihai – back to Qingdao" },
         stops: ["qingdao"],
         along: [
-          { th: "เดินเล่นริมทะเลเว่ยไห่ ก่อนเดินทางกลับชิงเต่า", en: "A last Weihai seafront walk before returning to Qingdao" },
-          { th: "จัตุรัสอู่ซื่อ (May Fourth) และศูนย์เรือใบโอลิมปิก", en: "May Fourth Square and the Olympic Sailing Center" },
+          { th: "เดินเล่นริมทะเลเว่ยไห่ ก่อนเดินทางกลับชิงเต่า", en: "A last Weihai seafront walk before returning to Qingdao", stopId: "qingdao" },
+          { th: "จัตุรัสอู่ซื่อ (May Fourth) และศูนย์เรือใบโอลิมปิก", en: "May Fourth Square and the Olympic Sailing Center", stopId: "qingdao" },
         ],
       },
       {
@@ -1607,7 +1611,7 @@ export const programs: Program[] = [
         stops: ["qingdao"],
         along: [
           { th: "บินสุวรรณภูมิ–กว่างโจว ต่อเครื่องสู่ชิงเต่า (CZ)", en: "Fly Suvarnabhumi–Guangzhou, connect to Qingdao (CZ)" },
-          { th: "ถึงชิงเต่า เดินเล่นย่านเมืองเก่าเยอรมัน", en: "Arrive Qingdao and stroll the German old town" },
+          { th: "ถึงชิงเต่า เดินเล่นย่านเมืองเก่าเยอรมัน", en: "Arrive Qingdao and stroll the German old town", stopId: "qingdao" },
         ],
       },
       {
@@ -1615,8 +1619,8 @@ export const programs: Program[] = [
         title: { th: "ชิงเต่า: จ้านเฉียว ปาต้ากวน เบียร์ชิงเต่า – เว่ยไห่", en: "Qingdao: Zhanqiao, Badaguan, Tsingtao beer – Weihai" },
         stops: ["qingdao", "weihai"],
         along: [
-          { th: "สะพานจ้านเฉียว ย่านปาต้ากวน โบสถ์เซนต์ไมเคิล และพิพิธภัณฑ์เบียร์ชิงเต่า", en: "Zhanqiao Pier, Badaguan, St Michael's and the Tsingtao Beer Museum" },
-          { th: "เดินทางสู่เว่ยไห่ ถนนคบเพลิงริมทะเล", en: "Transfer to Weihai and its seaside Torch Road" },
+          { th: "สะพานจ้านเฉียว ย่านปาต้ากวน โบสถ์เซนต์ไมเคิล และพิพิธภัณฑ์เบียร์ชิงเต่า", en: "Zhanqiao Pier, Badaguan, St Michael's and the Tsingtao Beer Museum", stopId: "qingdao" },
+          { th: "เดินทางสู่เว่ยไห่ ถนนคบเพลิงริมทะเล", en: "Transfer to Weihai and its seaside Torch Road", stopId: "weihai" },
         ],
       },
       {
@@ -1624,8 +1628,8 @@ export const programs: Program[] = [
         title: { th: "เว่ยไห่ – เยียนไถ – ล่องเรือข้ามอ่าวโป๋ไห่ (ค้างคืนบนเรือ)", en: "Weihai – Yantai – overnight Bohai ferry" },
         stops: ["yantai", "dalian"],
         along: [
-          { th: "ประตูแห่งความสุขเว่ยไห่ แล้วสู่เยียนไถ ชาโตว์ไวน์จางยู่", en: "Weihai's Gate of Happiness, then Yantai and the Changyu wine château" },
-          { th: "ลงเรือเฟอร์รี่ข้ามอ่าวโป๋ไห่ เยียนไถ–ต้าเหลียน ออก ~22:20 ค้างคืนบนเรือ", en: "Board the Bohai-crossing ferry Yantai–Dalian (~22:20 departure), overnight aboard" },
+          { th: "ประตูแห่งความสุขเว่ยไห่ แล้วสู่เยียนไถ ชาโตว์ไวน์จางยู่", en: "Weihai's Gate of Happiness, then Yantai and the Changyu wine château", stopId: "yantai" },
+          { th: "ลงเรือเฟอร์รี่ข้ามอ่าวโป๋ไห่ เยียนไถ–ต้าเหลียน ออก ~22:20 ค้างคืนบนเรือ", en: "Board the Bohai-crossing ferry Yantai–Dalian (~22:20 departure), overnight aboard", stopId: "yantai" },
         ],
       },
       {
@@ -1633,7 +1637,7 @@ export const programs: Program[] = [
         title: { th: "ถึงต้าเหลียน – จัตุรัสซิงไห่ – รถรางร้อยปี", en: "Arrive Dalian – Xinghai Square – heritage trams" },
         stops: ["dalian"],
         along: [
-          { th: "เรือถึงต้าเหลียน ~06:00 เที่ยวจัตุรัสซิงไห่และถนนรัสเซีย ‘เวนิสตะวันออก’", en: "Ferry arrives Dalian ~06:00 — Xinghai Square and the Russian street, the 'Eastern Venice'" },
+          { th: "เรือถึงต้าเหลียน ~06:00 เที่ยวจัตุรัสซิงไห่และถนนรัสเซีย ‘เวนิสตะวันออก’", en: "Ferry arrives Dalian ~06:00 — Xinghai Square and the Russian street, the 'Eastern Venice'", stopId: "dalian" },
           { th: "นั่งรถรางร้อยปี ชมเมืองท่าต้าเหลียน", en: "Ride the century-old trams through the port city" },
         ],
       },
@@ -1642,8 +1646,8 @@ export const programs: Program[] = [
         title: { th: "ต้าเหลียน – หลี่ซุ่น (พอร์ต อาร์เธอร์)", en: "Dalian – Lüshun (Port Arthur)" },
         stops: ["lvshun", "dalian"],
         along: [
-          { th: "หลี่ซุ่น สถานีรถไฟรัสเซียและพิพิธภัณฑ์ประวัติศาสตร์", en: "Lüshun's Russian railway station and history museum" },
-          { th: "กลับต้าเหลียน อิสระริมอ่าว", en: "Return to Dalian for free time by the bay" },
+          { th: "หลี่ซุ่น สถานีรถไฟรัสเซียและพิพิธภัณฑ์ประวัติศาสตร์", en: "Lüshun's Russian railway station and history museum", stopId: "lvshun" },
+          { th: "กลับต้าเหลียน อิสระริมอ่าว", en: "Return to Dalian for free time by the bay", stopId: "dalian" },
         ],
       },
       {
@@ -1739,7 +1743,7 @@ export const programs: Program[] = [
         stops: ["shenyang"],
         along: [
           { th: "บินสุวรรณภูมิ–กว่างโจว (CZ8080) ต่อเครื่องสู่เสิ่นหยาง (CZ3640)", en: "Fly Suvarnabhumi–Guangzhou (CZ8080), connect to Shenyang (CZ3640)" },
-          { th: "ถึงเสิ่นหยาง ‘มุกเดน’ บ้านเกิดราชวงศ์ชิงช่วงค่ำ เข้าที่พัก", en: "Arrive Shenyang ('Mukden'), the Qing cradle, in the evening" },
+          { th: "ถึงเสิ่นหยาง ‘มุกเดน’ บ้านเกิดราชวงศ์ชิงช่วงค่ำ เข้าที่พัก", en: "Arrive Shenyang ('Mukden'), the Qing cradle, in the evening", stopId: "shenyang" },
         ],
         hotel: { name: "SHENYANG HOLIDAY INN EXPRESS", star: 4, cityId: "shenyang", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -1748,9 +1752,9 @@ export const programs: Program[] = [
         title: { th: "พระราชวังเสิ่นหยางกู้กง – ถ้ำน้ำเปิ่นซี – ตานตง", en: "Mukden Palace – Benxi Water Cave – Dandong" },
         stops: ["shenyang"],
         along: [
-          { th: "พระราชวังเสิ่นหยางกู้กง วังหลวงราชวงศ์ชิงตอนต้น", en: "Mukden Imperial Palace, the early-Qing court" },
-          { th: "ถ้ำน้ำเปิ่นซี ล่องเรือชมถ้ำหินปูนแม่น้ำใต้ดิน", en: "Benxi Water Cave — boat through the underground limestone river" },
-          { th: "เดินทางสู่ตานตง ชมถนนโบราณอันตง", en: "Continue to Dandong, stroll the Andong ancient street" },
+          { th: "พระราชวังเสิ่นหยางกู้กง วังหลวงราชวงศ์ชิงตอนต้น", en: "Mukden Imperial Palace, the early-Qing court", stopId: "shenyang" },
+          { th: "ถ้ำน้ำเปิ่นซี ล่องเรือชมถ้ำหินปูนแม่น้ำใต้ดิน", en: "Benxi Water Cave — boat through the underground limestone river", stopId: "benxi" },
+          { th: "เดินทางสู่ตานตง ชมถนนโบราณอันตง", en: "Continue to Dandong, stroll the Andong ancient street", stopId: "dandong" },
         ],
         hotel: { name: "DANDONG RIVER PEARL ISLAND RIVERSIDE HOTEL", star: 4, cityId: "dandong", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -1759,9 +1763,9 @@ export const programs: Program[] = [
         title: { th: "สะพานหักยาลู – ชายแดนเกาหลีเหนือ – ต้าเหลียน", en: "Broken Bridge – N. Korea border – Dalian" },
         stops: ["dandong", "dalian"],
         along: [
-          { th: "สะพานหักต้วนเฉียว และล่องเรือแม่น้ำยาลูเลียบชายแดนเกาหลีเหนือ", en: "The broken Yalu bridge and a Yalu River cruise along the N. Korea border" },
+          { th: "สะพานหักต้วนเฉียว และล่องเรือแม่น้ำยาลูเลียบชายแดนเกาหลีเหนือ", en: "The broken Yalu bridge and a Yalu River cruise along the N. Korea border", stopId: "dandong" },
           { th: "เกาะฉวนเฉียว + ชมการแสดงนาฏกรรมเกาหลีเหนือ", en: "Chuanqiao island + a North Korean dance performance" },
-          { th: "สู่ต้าเหลียน นั่งรถรางเมืองเก่า และนครเวนิสตะวันออก", en: "On to Dalian — heritage tram ride and the 'Eastern Venice'" },
+          { th: "สู่ต้าเหลียน นั่งรถรางเมืองเก่า และนครเวนิสตะวันออก", en: "On to Dalian — heritage tram ride and the 'Eastern Venice'", stopId: "dalian" },
         ],
         hotel: { name: "DALIAN ORIENTAL INTERNATIONAL HOTEL", star: 4, cityId: "dalian", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -1770,9 +1774,9 @@ export const programs: Program[] = [
         title: { th: "เขาดอกบัวเหลียนฮัว – ท่าเรือประมง – จัตุรัสซิงไห่ – ผานจิ่น", en: "Lianhua Mountain – fishing wharf – Xinghai Square – Panjin" },
         stops: ["dalian", "panjin"],
         along: [
-          { th: "จุดชมวิวเขาเหลียนฮัว (เขาดอกบัว) และวิวสะพานซิงไห่", en: "Lianhua (Lotus) Mountain viewpoint and the Xinghai Bay Bridge view" },
-          { th: "อ่าวหลิงเจียว ท่าเรือประมงต้าเหลียน และจัตุรัสซิงไห่", en: "Lingjiao Bay, Dalian fishing wharf and Xinghai Square" },
-          { th: "เดินทางสู่ผานจิ่น เมืองพื้นที่ชุ่มน้ำปากแม่น้ำเหลียวเหอ", en: "Continue to Panjin, the Liao River wetland city" },
+          { th: "จุดชมวิวเขาเหลียนฮัว (เขาดอกบัว) และวิวสะพานซิงไห่", en: "Lianhua (Lotus) Mountain viewpoint and the Xinghai Bay Bridge view", stopId: "dalian" },
+          { th: "อ่าวหลิงเจียว ท่าเรือประมงต้าเหลียน และจัตุรัสซิงไห่", en: "Lingjiao Bay, Dalian fishing wharf and Xinghai Square", stopId: "dalian" },
+          { th: "เดินทางสู่ผานจิ่น เมืองพื้นที่ชุ่มน้ำปากแม่น้ำเหลียวเหอ", en: "Continue to Panjin, the Liao River wetland city", stopId: "panjin" },
         ],
         hotel: { name: "PANJIN XIANGHAI AVENUE INTERCITY HOTEL", star: 4, cityId: "panjin", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -1781,8 +1785,8 @@ export const programs: Program[] = [
         title: { th: "หาดแดงผานจิ่น – เสิ่นหยาง – วัดเซิงซื่อ – ตลาดเหลาเป่ย", en: "Panjin Red Beach – Shenyang – Shengshi Temple – Laobei market" },
         stops: ["panjin", "shenyang"],
         along: [
-          { th: "หาดแดงผานจิ่น ทุ่งชะครามแดงสุดลูกหูลูกตา (ปลายก.ย.–ต้นต.ค.)", en: "Panjin Red Beach — vast crimson seepweed marsh (late Sep–early Oct)" },
-          { th: "กลับเสิ่นหยาง สักการะวัดเซิงซื่อ และเดินตลาดเก่าเหลาเป่ย", en: "Back to Shenyang for Shengshi Temple and the Laobei old market" },
+          { th: "หาดแดงผานจิ่น ทุ่งชะครามแดงสุดลูกหูลูกตา (ปลายก.ย.–ต้นต.ค.)", en: "Panjin Red Beach — vast crimson seepweed marsh (late Sep–early Oct)", stopId: "panjin" },
+          { th: "กลับเสิ่นหยาง สักการะวัดเซิงซื่อ และเดินตลาดเก่าเหลาเป่ย", en: "Back to Shenyang for Shengshi Temple and the Laobei old market", stopId: "shenyang" },
         ],
         hotel: { name: "SHENYANG HOLIDAY INN EXPRESS", star: 4, cityId: "shenyang", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -1886,7 +1890,7 @@ export const programs: Program[] = [
         stops: ["harbin"],
         along: [
           { th: "บินต่อปักกิ่ง–ฮาร์บิน (CA1621 06:50-08:45)", en: "Connect Beijing–Harbin (CA1621 06:50-08:45)" },
-          { th: "จัตุรัสมหาวิหารเซนต์โซเฟีย ถนนคนเดินจงยาง (แถมไอติม) ตรอกเซียวเข่อ", en: "St Sophia Cathedral square, Central Street (free ice cream) and Xiaoke lane" },
+          { th: "จัตุรัสมหาวิหารเซนต์โซเฟีย ถนนคนเดินจงยาง (แถมไอติม) ตรอกเซียวเข่อ", en: "St Sophia Cathedral square, Central Street (free ice cream) and Xiaoke lane", stopId: "harbin" },
         ],
         hotel: { name: "HARBIN HUIMA HOTEL", star: 4, cityId: "harbin", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -1895,8 +1899,8 @@ export const programs: Program[] = [
         title: { th: "เมืองรถไฟเหิงเต้าเหอจื่อ – มู่ตานเจียง", en: "Hengdaohezi railway town – Mudanjiang" },
         stops: ["hengdaohezi", "mudanjiang"],
         along: [
-          { th: "โรงเก็บหัวรถจักรทรงพัด + โบสถ์ออร์โธดอกซ์ (ถ่ายรูปด้านนอก)", en: "The fan-shaped locomotive shed + the Orthodox church (photo stop)" },
-          { th: "ถนนรัสเซีย และหมู่บ้านภาพเขียนสีน้ำมัน", en: "The Russian street and the oil-painting village" },
+          { th: "โรงเก็บหัวรถจักรทรงพัด + โบสถ์ออร์โธดอกซ์ (ถ่ายรูปด้านนอก)", en: "The fan-shaped locomotive shed + the Orthodox church (photo stop)", stopId: "hengdaohezi" },
+          { th: "ถนนรัสเซีย และหมู่บ้านภาพเขียนสีน้ำมัน", en: "The Russian street and the oil-painting village", stopId: "hengdaohezi" },
         ],
         drive: { th: "ฮาร์บิน → เหิงเต้าเหอจื่อ → มู่ตานเจียง", en: "Harbin → Hengdaohezi → Mudanjiang" },
         hotel: { name: "MUDANJIANG SUNNY DATE HOTEL", star: 4, cityId: "mudanjiang", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -1906,8 +1910,8 @@ export const programs: Program[] = [
         title: { th: "หมู่บ้านหิมะ (Snow Town) – พาเหรดหิมะราตรี", en: "Snow Town – night snow parade" },
         stops: ["snowtown"],
         along: [
-          { th: "หมู่บ้านหิมะ ป้ายหินหมู่บ้าน ไปรษณีย์หิมะ บ้านแห่งความฝัน", en: "Snow Town — the village stone, snow post office and 'Dream Home'" },
-          { th: "ถนนคนเดินเสน่ห์หิมะ และขบวนพาเหรดหิมะราตรี", en: "The snow-charm street and the night snow parade" },
+          { th: "หมู่บ้านหิมะ ป้ายหินหมู่บ้าน ไปรษณีย์หิมะ บ้านแห่งความฝัน", en: "Snow Town — the village stone, snow post office and 'Dream Home'", stopId: "snowtown" },
+          { th: "ถนนคนเดินเสน่ห์หิมะ และขบวนพาเหรดหิมะราตรี", en: "The snow-charm street and the night snow parade", stopId: "snowtown" },
         ],
         drive: { th: "มู่ตานเจียง → หมู่บ้านหิมะ", en: "Mudanjiang → Snow Town" },
         hotel: { name: "SNOWTOWN FOLK GUESTHOUSE", star: 3, cityId: "snowtown", note: { th: "ที่พักภายในหมู่บ้านหิมะ", en: "lodging inside Snow Town" } },
@@ -1917,7 +1921,7 @@ export const programs: Program[] = [
         title: { th: "ภาพเขียนหิมะสิบลี้ – กลับฮาร์บิน", en: "Ten-li snow painting – back to Harbin" },
         stops: ["harbin"],
         along: [
-          { th: "ป้ายหินหมู่บ้านหิมะ ภาพเขียนหิมะสิบลี้ และม้าหมุนล้อยาง", en: "The Snow Town stone marker, the 'ten-li snow painting' ridge and the tyre carousel" },
+          { th: "ป้ายหินหมู่บ้านหิมะ ภาพเขียนหิมะสิบลี้ และม้าหมุนล้อยาง", en: "The Snow Town stone marker, the 'ten-li snow painting' ridge and the tyre carousel", stopId: "snowtown" },
         ],
         drive: { th: "หมู่บ้านหิมะ → ฮาร์บิน", en: "Snow Town → Harbin" },
         hotel: { name: "HARBIN HUIMA HOTEL", star: 4, cityId: "harbin", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -1927,8 +1931,8 @@ export const programs: Program[] = [
         title: { th: "คฤหาสน์วอลการ์ – เกาะพระอาทิตย์ – เทศกาลน้ำแข็ง", en: "Volga Manor – Sun Island – Ice & Snow Festival" },
         stops: ["harbin"],
         along: [
-          { th: "คฤหาสน์วอลการ์ โบสถ์เซนต์นิโคลัส ห้องวอดก้า หอศิลป์เปตรอฟ", en: "Volga Manor, St Nicholas church, the vodka hall and Petrov gallery" },
-          { th: "นิทรรศการแกะสลักหิมะ เกาะพระอาทิตย์ + เทศกาลน้ำแข็งฮาร์บิน", en: "The Sun Island snow-sculpture expo + the Harbin Ice & Snow Festival" },
+          { th: "คฤหาสน์วอลการ์ โบสถ์เซนต์นิโคลัส ห้องวอดก้า หอศิลป์เปตรอฟ", en: "Volga Manor, St Nicholas church, the vodka hall and Petrov gallery", stopId: "harbin" },
+          { th: "นิทรรศการแกะสลักหิมะ เกาะพระอาทิตย์ + เทศกาลน้ำแข็งฮาร์บิน", en: "The Sun Island snow-sculpture expo + the Harbin Ice & Snow Festival", stopId: "harbin" },
         ],
         hotel: { name: "HARBIN HUIMA HOTEL", star: 4, cityId: "harbin", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -2032,7 +2036,7 @@ export const programs: Program[] = [
         stops: ["harbin"],
         along: [
           { th: "บินต่อปักกิ่ง–ฮาร์บิน (CA1621 06:50-08:45) แวะร้านเสื้อกันหนาว", en: "Connect Beijing–Harbin (CA1621 06:50-08:45), stop at a winter-wear shop" },
-          { th: "มนุษย์หิมะยักษ์ 19 ม. ถนนบาร็อค จัตุรัสเซนต์โซเฟีย ถนนจงยาง (แถมไอติม) ตรอกเซียวเข่อ", en: "The 19 m snowman, Baroque Street, St Sophia square, Central Street (free ice cream) and Xiaoke lane" },
+          { th: "มนุษย์หิมะยักษ์ 19 ม. ถนนบาร็อค จัตุรัสเซนต์โซเฟีย ถนนจงยาง (แถมไอติม) ตรอกเซียวเข่อ", en: "The 19 m snowman, Baroque Street, St Sophia square, Central Street (free ice cream) and Xiaoke lane", stopId: "harbin" },
         ],
         hotel: { name: "HARBIN HUIMA HOTEL", star: 4, cityId: "harbin", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -2041,8 +2045,8 @@ export const programs: Program[] = [
         title: { th: "เมืองรถไฟเหิงเต้าเหอจื่อ – มู่ตานเจียง", en: "Hengdaohezi railway town – Mudanjiang" },
         stops: ["hengdaohezi", "mudanjiang"],
         along: [
-          { th: "โรงเก็บหัวรถจักรทรงพัด + โบสถ์ออร์โธดอกซ์ (ถ่ายรูปด้านนอก)", en: "The fan-shaped locomotive shed + the Orthodox church (photo stop)" },
-          { th: "ถนนรัสเซีย และหมู่บ้านภาพเขียนสีน้ำมัน", en: "The Russian street and the oil-painting village" },
+          { th: "โรงเก็บหัวรถจักรทรงพัด + โบสถ์ออร์โธดอกซ์ (ถ่ายรูปด้านนอก)", en: "The fan-shaped locomotive shed + the Orthodox church (photo stop)", stopId: "hengdaohezi" },
+          { th: "ถนนรัสเซีย และหมู่บ้านภาพเขียนสีน้ำมัน", en: "The Russian street and the oil-painting village", stopId: "hengdaohezi" },
         ],
         drive: { th: "ฮาร์บิน → เหิงเต้าเหอจื่อ → มู่ตานเจียง", en: "Harbin → Hengdaohezi → Mudanjiang" },
         hotel: { name: "MUDANJIANG SUNNY DATE HOTEL", star: 4, cityId: "mudanjiang", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -2052,8 +2056,8 @@ export const programs: Program[] = [
         title: { th: "หมู่บ้านหิมะ (Snow Town) – พาเหรดหิมะราตรี", en: "Snow Town – night snow parade" },
         stops: ["snowtown"],
         along: [
-          { th: "หมู่บ้านหิมะ ป้ายหินหมู่บ้าน ไปรษณีย์หิมะ บ้านแห่งความฝัน", en: "Snow Town — the village stone, snow post office and 'Dream Home'" },
-          { th: "ถนนคนเดินเสน่ห์หิมะ และขบวนพาเหรดหิมะราตรี", en: "The snow-charm street and the night snow parade" },
+          { th: "หมู่บ้านหิมะ ป้ายหินหมู่บ้าน ไปรษณีย์หิมะ บ้านแห่งความฝัน", en: "Snow Town — the village stone, snow post office and 'Dream Home'", stopId: "snowtown" },
+          { th: "ถนนคนเดินเสน่ห์หิมะ และขบวนพาเหรดหิมะราตรี", en: "The snow-charm street and the night snow parade", stopId: "snowtown" },
         ],
         drive: { th: "มู่ตานเจียง → หมู่บ้านหิมะ", en: "Mudanjiang → Snow Town" },
         hotel: { name: "SNOWTOWN FOLK GUESTHOUSE", star: 3, cityId: "snowtown", note: { th: "ที่พักภายในหมู่บ้านหิมะ", en: "lodging inside Snow Town" } },
@@ -2063,8 +2067,8 @@ export const programs: Program[] = [
         title: { th: "ภาพเขียนหิมะสิบลี้ – ฮาร์บิน – เทศกาลน้ำแข็ง", en: "Ten-li snow painting – Harbin – Ice & Snow Festival" },
         stops: ["harbin"],
         along: [
-          { th: "ป้ายหินหมู่บ้านหิมะ ภาพเขียนหิมะสิบลี้ ม้าหมุนล้อยาง", en: "The Snow Town stone marker, 'ten-li snow painting' ridge and tyre carousel" },
-          { th: "กลับฮาร์บิน เข้าชมเทศกาลแกะสลักน้ำแข็งฮาร์บิน (ใหญ่ที่สุดในโลก)", en: "Back to Harbin for the Harbin Ice & Snow Festival (the world's largest)" },
+          { th: "ป้ายหินหมู่บ้านหิมะ ภาพเขียนหิมะสิบลี้ ม้าหมุนล้อยาง", en: "The Snow Town stone marker, 'ten-li snow painting' ridge and tyre carousel", stopId: "snowtown" },
+          { th: "กลับฮาร์บิน เข้าชมเทศกาลแกะสลักน้ำแข็งฮาร์บิน (ใหญ่ที่สุดในโลก)", en: "Back to Harbin for the Harbin Ice & Snow Festival (the world's largest)", stopId: "harbin" },
         ],
         drive: { th: "หมู่บ้านหิมะ → ฮาร์บิน", en: "Snow Town → Harbin" },
         hotel: { name: "HARBIN HUIMA HOTEL", star: 4, cityId: "harbin", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -2074,8 +2078,8 @@ export const programs: Program[] = [
         title: { th: "หมู่บ้านรัสเซีย – แกะสลักหิมะ เกาะพระอาทิตย์", en: "Russian village – Sun Island snow sculptures" },
         stops: ["harbin"],
         along: [
-          { th: "หมู่บ้านรัสเซีย (เกาะพระอาทิตย์) บรรยากาศยุโรปกลางหิมะ", en: "The Russian village on Sun Island, a European feel in the snow" },
-          { th: "นิทรรศการแกะสลักหิมะ เกาะพระอาทิตย์ (รวมรถอุทยาน)", en: "The Sun Island snow-sculpture expo (park shuttle included)" },
+          { th: "หมู่บ้านรัสเซีย (เกาะพระอาทิตย์) บรรยากาศยุโรปกลางหิมะ", en: "The Russian village on Sun Island, a European feel in the snow", stopId: "harbin" },
+          { th: "นิทรรศการแกะสลักหิมะ เกาะพระอาทิตย์ (รวมรถอุทยาน)", en: "The Sun Island snow-sculpture expo (park shuttle included)", stopId: "harbin" },
         ],
         hotel: { name: "HARBIN HUIMA HOTEL", star: 4, cityId: "harbin", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -2176,7 +2180,7 @@ export const programs: Program[] = [
         stops: ["dalian"],
         along: [
           { th: "บินสุวรรณภูมิ–เซินเจิ้น (CZ8158) ต่อเครื่องสู่ต้าเหลียน (CZ6300)", en: "Fly Suvarnabhumi–Shenzhen (CZ8158), connect to Dalian (CZ6300)" },
-          { th: "ถึงต้าเหลียน ‘ไข่มุกแห่งแดนเหนือ’ จัตุรัสจงซานเมืองเก่า", en: "Arrive Dalian, 'Pearl of the North' — Zhongshan Square old town" },
+          { th: "ถึงต้าเหลียน ‘ไข่มุกแห่งแดนเหนือ’ จัตุรัสจงซานเมืองเก่า", en: "Arrive Dalian, 'Pearl of the North' — Zhongshan Square old town", stopId: "dalian" },
         ],
         hotel: { name: "DALIAN FURONG INTERNATIONAL HOTEL", star: 4, cityId: "dalian", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -2185,9 +2189,9 @@ export const programs: Program[] = [
         title: { th: "จัตุรัสซิงไห่ – รูปสลักร้อยปี – ตงกั่ง/เวนิส – ถนนบิ่นไห่", en: "Xinghai Square – Centennial sculpture – Donggang/Venice – Binhai Rd" },
         stops: ["dalian"],
         along: [
-          { th: "จัตุรัสซิงไห่ จัตุรัสริมทะเลที่ใหญ่ที่สุดในเอเชีย + ประติมากรรมร้อยปี", en: "Xinghai Square, Asia's largest seaside plaza + the Centennial sculpture" },
-          { th: "ย่านตงกั่ง นครเวนิสจำลอง และท่าเรือประมงต้าเหลียน", en: "Donggang district, the 'Eastern Venice' canals and the fishing wharf" },
-          { th: "ถนนบิ่นไห่เลียบทะเล ผ่านชมสะพานเป่ยต้า", en: "Coastal Binhai Road past the Beida Bridge viewpoint" },
+          { th: "จัตุรัสซิงไห่ จัตุรัสริมทะเลที่ใหญ่ที่สุดในเอเชีย + ประติมากรรมร้อยปี", en: "Xinghai Square, Asia's largest seaside plaza + the Centennial sculpture", stopId: "dalian" },
+          { th: "ย่านตงกั่ง นครเวนิสจำลอง และท่าเรือประมงต้าเหลียน", en: "Donggang district, the 'Eastern Venice' canals and the fishing wharf", stopId: "dalian" },
+          { th: "ถนนบิ่นไห่เลียบทะเล ผ่านชมสะพานเป่ยต้า", en: "Coastal Binhai Road past the Beida Bridge viewpoint", stopId: "dalian" },
         ],
         hotel: { name: "DALIAN FURONG INTERNATIONAL HOTEL", star: 4, cityId: "dalian", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -2196,8 +2200,8 @@ export const programs: Program[] = [
         title: { th: "ต้าเหลียน – ตานตง – ชายแดนเกาหลีเหนือ – ล่องเรือยาลู", en: "Dalian – Dandong – N. Korea border – Yalu cruise" },
         stops: ["dandong"],
         along: [
-          { th: "เดินทางสู่ตานตง เมืองชายแดนที่ใหญ่ที่สุดของจีน", en: "Drive to Dandong, China's largest border city" },
-          { th: "ด่านชายแดนจีน–เกาหลีเหนือ ล่องเรือแม่น้ำยาลู และสะพานหักต้วนเฉียว", en: "China–N.Korea border, Yalu River cruise and the broken bridge" },
+          { th: "เดินทางสู่ตานตง เมืองชายแดนที่ใหญ่ที่สุดของจีน", en: "Drive to Dandong, China's largest border city", stopId: "dandong" },
+          { th: "ด่านชายแดนจีน–เกาหลีเหนือ ล่องเรือแม่น้ำยาลู และสะพานหักต้วนเฉียว", en: "China–N.Korea border, Yalu River cruise and the broken bridge", stopId: "dandong" },
         ],
         hotel: { name: "DANDONG PEARL ISLAND HOTEL", star: 4, cityId: "dandong", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -2206,8 +2210,8 @@ export const programs: Program[] = [
         title: { th: "ตานตง – เปิ่นซี (ถ้ำน้ำ) – เสิ่นหยาง – ถนนคนเดินจงเจีย", en: "Dandong – Benxi Water Cave – Shenyang – Zhongjie street" },
         stops: ["shenyang"],
         along: [
-          { th: "ถ้ำน้ำเปิ่นซี ล่องเรือชมหินงอกหินย้อยในถ้ำแม่น้ำใต้ดิน", en: "Benxi Water Cave — boat past stalactites in the underground river" },
-          { th: "เสิ่นหยาง เดินถนนคนเดินจงเจีย และตลาดเก่าเหลาเป่ย", en: "Shenyang — the Zhongjie pedestrian street and Laobei old market" },
+          { th: "ถ้ำน้ำเปิ่นซี ล่องเรือชมหินงอกหินย้อยในถ้ำแม่น้ำใต้ดิน", en: "Benxi Water Cave — boat past stalactites in the underground river", stopId: "benxi" },
+          { th: "เสิ่นหยาง เดินถนนคนเดินจงเจีย และตลาดเก่าเหลาเป่ย", en: "Shenyang — the Zhongjie pedestrian street and Laobei old market", stopId: "shenyang" },
         ],
         hotel: { name: "SHENYANG COUNTRY GARDEN PHOENIX HOTEL", star: 4, cityId: "shenyang", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -2216,8 +2220,8 @@ export const programs: Program[] = [
         title: { th: "พระราชวังเสิ่นหยางกู้กง – พระหยกอันซาน – ต้าเหลียน – ว่านต๋า", en: "Mukden Palace – Anshan Jade Buddha – Dalian – Wanda" },
         stops: ["shenyang", "dalian"],
         along: [
-          { th: "พระราชวังเสิ่นหยางกู้กง วังหลวงราชวงศ์ชิงตอนต้น", en: "Mukden Imperial Palace, the early-Qing court" },
-          { th: "ผ่านชมพระหยกอันซาน ก่อนกลับต้าเหลียน ช้อปห้างว่านต๋า", en: "Stop at the Anshan Jade Buddha, then back to Dalian for Wanda mall" },
+          { th: "พระราชวังเสิ่นหยางกู้กง วังหลวงราชวงศ์ชิงตอนต้น", en: "Mukden Imperial Palace, the early-Qing court", stopId: "shenyang" },
+          { th: "ผ่านชมพระหยกอันซาน ก่อนกลับต้าเหลียน ช้อปห้างว่านต๋า", en: "Stop at the Anshan Jade Buddha, then back to Dalian for Wanda mall", stopId: "dalian" },
         ],
         hotel: { name: "DALIAN FURONG INTERNATIONAL HOTEL", star: 4, cityId: "dalian", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -2317,7 +2321,7 @@ export const programs: Program[] = [
         stops: ["dalian"],
         along: [
           { th: "บินสุวรรณภูมิ–เซินเจิ้น (CZ8158) ต่อเครื่องสู่ต้าเหลียน (CZ6300)", en: "Fly Suvarnabhumi–Shenzhen (CZ8158), connect to Dalian (CZ6300)" },
-          { th: "ถึงต้าเหลียน ‘ไข่มุกแห่งแดนเหนือ’ เข้าที่พัก", en: "Arrive Dalian, the 'Pearl of the North', transfer to hotel" },
+          { th: "ถึงต้าเหลียน ‘ไข่มุกแห่งแดนเหนือ’ เข้าที่พัก", en: "Arrive Dalian, the 'Pearl of the North', transfer to hotel", stopId: "dalian" },
         ],
         hotel: { name: "DALIAN FURONG INTERNATIONAL HOTEL", star: 4, cityId: "dalian", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -2326,8 +2330,8 @@ export const programs: Program[] = [
         title: { th: "เขาเหลียนฮัว – จัตุรัสซิงไห่ – ตานตง – เกาะพระจันทร์", en: "Lianhua Mtn – Xinghai Square – Dandong – Moon Island" },
         stops: ["dandong"],
         along: [
-          { th: "จุดชมวิวเขาเหลียนฮัว (เขาดอกบัว) และจัตุรัสซิงไห่", en: "Lianhua (Lotus) Mountain viewpoint and Xinghai Square" },
-          { th: "สู่ตานตง ชมเกาะพระจันทร์ และถนนโบราณอันตง", en: "On to Dandong — Moon Island and the Andong ancient street" },
+          { th: "จุดชมวิวเขาเหลียนฮัว (เขาดอกบัว) และจัตุรัสซิงไห่", en: "Lianhua (Lotus) Mountain viewpoint and Xinghai Square", stopId: "dalian" },
+          { th: "สู่ตานตง ชมเกาะพระจันทร์ และถนนโบราณอันตง", en: "On to Dandong — Moon Island and the Andong ancient street", stopId: "dandong" },
         ],
         hotel: { name: "DANDONG PEARL ISLAND HOTEL", star: 4, cityId: "dandong", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -2336,8 +2340,8 @@ export const programs: Program[] = [
         title: { th: "ชายแดนเกาหลีเหนือ – ล่องเรือยาลู – วัดต้ากูซาน – ผานจิ่น", en: "N. Korea border – Yalu cruise – Dagushan Temple – Panjin" },
         stops: ["panjin"],
         along: [
-          { th: "ด่านชายแดนจีน–เกาหลีเหนือ และล่องเรือแม่น้ำยาลู", en: "China–N.Korea border and a Yalu River cruise" },
-          { th: "วัดต้ากูซาน วัดบนภูเขาริมทะเล ก่อนเดินทางสู่ผานจิ่น", en: "Dagushan, a seaside mountain temple, then on to Panjin" },
+          { th: "ด่านชายแดนจีน–เกาหลีเหนือ และล่องเรือแม่น้ำยาลู", en: "China–N.Korea border and a Yalu River cruise", stopId: "dandong" },
+          { th: "วัดต้ากูซาน วัดบนภูเขาริมทะเล ก่อนเดินทางสู่ผานจิ่น", en: "Dagushan, a seaside mountain temple, then on to Panjin", stopId: "panjin" },
         ],
         hotel: { name: "PANJIN CITY CENTER HOLIDAY INN EXPRESS", star: 4, cityId: "panjin", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -2346,8 +2350,8 @@ export const programs: Program[] = [
         title: { th: "ผานจิ่น – หาดหญ้าแดง – ต้าเหลียน – นั่งรถราง", en: "Panjin – Red Beach – Dalian – tram ride" },
         stops: ["panjin", "dalian"],
         along: [
-          { th: "หาดแดงผานจิ่น ทุ่งชะครามแดงสุดลูกหูลูกตา", en: "Panjin Red Beach — a vast crimson seepweed marsh" },
-          { th: "กลับต้าเหลียน นั่งรถรางร้อยปีชมเมือง", en: "Back to Dalian for a heritage tram city tour" },
+          { th: "หาดแดงผานจิ่น ทุ่งชะครามแดงสุดลูกหูลูกตา", en: "Panjin Red Beach — a vast crimson seepweed marsh", stopId: "panjin" },
+          { th: "กลับต้าเหลียน นั่งรถรางร้อยปีชมเมือง", en: "Back to Dalian for a heritage tram city tour", stopId: "dalian" },
         ],
         hotel: { name: "DALIAN FURONG INTERNATIONAL HOTEL", star: 4, cityId: "dalian", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -2356,8 +2360,8 @@ export const programs: Program[] = [
         title: { th: "ตงกั่ง/เวนิส – ท่าเรือประมง – ถนนญี่ปุ่น + ถนนรัสเซีย", en: "Donggang/Venice – fishing wharf – Japan & Russia streets" },
         stops: ["dalian"],
         along: [
-          { th: "ย่านตงกั่ง นครเวนิสจำลอง และท่าเรือประมงต้าเหลียน", en: "Donggang district, the 'Eastern Venice' and the fishing wharf" },
-          { th: "ถนนญี่ปุ่นและถนนรัสเซีย ย่านอาณานิคมเก่าของต้าเหลียน", en: "Dalian's colonial-era Japan Street and Russia Street" },
+          { th: "ย่านตงกั่ง นครเวนิสจำลอง และท่าเรือประมงต้าเหลียน", en: "Donggang district, the 'Eastern Venice' and the fishing wharf", stopId: "dalian" },
+          { th: "ถนนญี่ปุ่นและถนนรัสเซีย ย่านอาณานิคมเก่าของต้าเหลียน", en: "Dalian's colonial-era Japan Street and Russia Street", stopId: "dalian" },
         ],
         hotel: { name: "DALIAN FURONG INTERNATIONAL HOTEL", star: 4, cityId: "dalian", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -2458,7 +2462,7 @@ export const programs: Program[] = [
         stops: ["dalian"],
         along: [
           { th: "บินสุวรรณภูมิ–เซี่ยงไฮ้ผู่ตง (MU548) ต่อเครื่องสู่ต้าเหลียน (MU9095)", en: "Fly Suvarnabhumi–Shanghai Pudong (MU548), connect to Dalian (MU9095)" },
-          { th: "จัตุรัสซิงไห่ ท่าเรือประมง ถนนญี่ปุ่น/รัสเซีย และตงกั่ง/เวนิส", en: "Xinghai Square, the fishing wharf, Japan/Russia streets and Donggang/Venice" },
+          { th: "จัตุรัสซิงไห่ ท่าเรือประมง ถนนญี่ปุ่น/รัสเซีย และตงกั่ง/เวนิส", en: "Xinghai Square, the fishing wharf, Japan/Russia streets and Donggang/Venice", stopId: "dalian" },
         ],
         hotel: { name: "DALIAN FURONG INTERNATIONAL HOTEL", star: 4, cityId: "dalian", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -2467,7 +2471,7 @@ export const programs: Program[] = [
         title: { th: "ต้าเหลียน – หาดหญ้าแดงผานจิ่น – เกาะคู่รัก – นาข้าวต้าเมิ่ง", en: "Dalian – Panjin Red Beach – Couple Island – Damen paddies" },
         stops: ["panjin"],
         along: [
-          { th: "หาดหญ้าทะเลแดงผานจิ่น (รวมรถอุทยาน) เกาะคู่รัก สะพานเฉียวอ้าย", en: "Panjin Red Beach (with park bus), Couple Island and Qiao'ai Bridge" },
+          { th: "หาดหญ้าทะเลแดงผานจิ่น (รวมรถอุทยาน) เกาะคู่รัก สะพานเฉียวอ้าย", en: "Panjin Red Beach (with park bus), Couple Island and Qiao'ai Bridge", stopId: "panjin" },
           { th: "สะพานไม้ซุ่ยเยี่ย จุดชมวิวนาข้าวต้าเมิ่ง ผ่านชมทุ่งบ่อน้ำมัน", en: "The Suiye boardwalk, the Damen rice-paddy viewpoint, past the oilfields" },
         ],
         hotel: { name: "PANJIN CITY CENTER HOLIDAY INN EXPRESS", star: 4, cityId: "panjin", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -2478,7 +2482,7 @@ export const programs: Program[] = [
         stops: ["shenyang"],
         along: [
           { th: "ทุ่งหญ้าหยุนตวน เล่นสไลเดอร์หญ้า 1 รอบ และบ้านฮอบบิท", en: "Yunduan grassland — one grass-sled run and the Hobbit House" },
-          { th: "ตลาดกลางคืนซีถ่า ย่านเกาหลีของเสิ่นหยาง", en: "Xita night market, Shenyang's Koreatown" },
+          { th: "ตลาดกลางคืนซีถ่า ย่านเกาหลีของเสิ่นหยาง", en: "Xita night market, Shenyang's Koreatown", stopId: "shenyang" },
         ],
         hotel: { name: "SHENYANG COUNTRY GARDEN PHOENIX HOTEL", star: 4, cityId: "shenyang", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -2488,7 +2492,7 @@ export const programs: Program[] = [
         stops: ["dandong"],
         along: [
           { th: "ชมศิลปะน้ำตาลตระกูลหลี่ และโบสถ์คาทอลิกหนานกวน", en: "The Li-family sugar art and the Nanguan Catholic Church" },
-          { th: "เดินทางสู่ตานตง เมืองชายแดนริมแม่น้ำยาลู", en: "Drive to Dandong, the border city on the Yalu River" },
+          { th: "เดินทางสู่ตานตง เมืองชายแดนริมแม่น้ำยาลู", en: "Drive to Dandong, the border city on the Yalu River", stopId: "dandong" },
         ],
         hotel: { name: "DANDONG PEARL ISLAND HOTEL", star: 4, cityId: "dandong", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -2497,8 +2501,8 @@ export const programs: Program[] = [
         title: { th: "ตานตง – ชายแดนเกาหลีเหนือ – ล่องเรือยาลู – ต้าเหลียน", en: "Dandong – N. Korea border – Yalu cruise – Dalian" },
         stops: ["dandong", "dalian"],
         along: [
-          { th: "ด่านชายแดนจีน–เกาหลีเหนือ ล่องเรือแม่น้ำยาลู และสะพานหัก", en: "China–N.Korea border, Yalu River cruise and the broken bridge" },
-          { th: "เดินทางกลับต้าเหลียน อิสระยามค่ำคืน", en: "Drive back to Dalian, free evening" },
+          { th: "ด่านชายแดนจีน–เกาหลีเหนือ ล่องเรือแม่น้ำยาลู และสะพานหัก", en: "China–N.Korea border, Yalu River cruise and the broken bridge", stopId: "dandong" },
+          { th: "เดินทางกลับต้าเหลียน อิสระยามค่ำคืน", en: "Drive back to Dalian, free evening", stopId: "dalian" },
         ],
         hotel: { name: "DALIAN FURONG INTERNATIONAL HOTEL", star: 4, cityId: "dalian", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -2507,7 +2511,7 @@ export const programs: Program[] = [
         title: { th: "ท่าเรือประมง – พิพิธภัณฑ์ธรรมชาติ – ว่านต๋า – บินกลับเซี่ยงไฮ้", en: "Fishing wharf – Natural History Museum – Wanda – fly to Shanghai" },
         stops: ["dalian"],
         along: [
-          { th: "ท่าเรือประมงต้าเหลียน พิพิธภัณฑ์ธรรมชาติต้าเหลียน และว่านต๋าพลาซ่า", en: "Dalian fishing wharf, the Natural History Museum and Wanda Plaza" },
+          { th: "ท่าเรือประมงต้าเหลียน พิพิธภัณฑ์ธรรมชาติต้าเหลียน และว่านต๋าพลาซ่า", en: "Dalian fishing wharf, the Natural History Museum and Wanda Plaza", stopId: "dalian" },
           { th: "บินต้าเหลียน–เซี่ยงไฮ้ผู่ตง (MU5624)", en: "Fly Dalian–Shanghai Pudong (MU5624)" },
         ],
       },
@@ -2606,7 +2610,7 @@ export const programs: Program[] = [
         stops: ["dalian"],
         along: [
           { th: "บินสุวรรณภูมิ–เซี่ยงไฮ้ผู่ตง (MU548) ต่อเครื่องสู่ต้าเหลียน (MU9095)", en: "Fly Suvarnabhumi–Shanghai Pudong (MU548), connect to Dalian (MU9095)" },
-          { th: "จัตุรัสซิงไห่ ท่าเรือประมง และถนนญี่ปุ่น/รัสเซีย", en: "Xinghai Square, the fishing wharf and the Japan/Russia streets" },
+          { th: "จัตุรัสซิงไห่ ท่าเรือประมง และถนนญี่ปุ่น/รัสเซีย", en: "Xinghai Square, the fishing wharf and the Japan/Russia streets", stopId: "dalian" },
         ],
         hotel: { name: "DALIAN FURONG INTERNATIONAL HOTEL", star: 4, cityId: "dalian", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -2615,8 +2619,8 @@ export const programs: Program[] = [
         title: { th: "ต้าเหลียน – ฮาร์บิน (รถไฟความเร็วสูง) – มนุษย์หิมะยักษ์ – ถนนบาร็อค", en: "Dalian – Harbin (bullet train) – giant snowman – Baroque Street" },
         stops: ["harbin"],
         along: [
-          { th: "นั่งรถไฟความเร็วสูงต้าเหลียน–ฮาร์บิน แวะร้านผลิตภัณฑ์กันหนาว", en: "Dalian–Harbin bullet train, with a winter-gear shop stop" },
-          { th: "ตุ๊กตามนุษย์หิมะยักษ์ และถนนบาร็อคจงหัว", en: "The giant snowman and China Baroque Street" },
+          { th: "นั่งรถไฟความเร็วสูงต้าเหลียน–ฮาร์บิน แวะร้านผลิตภัณฑ์กันหนาว", en: "Dalian–Harbin bullet train, with a winter-gear shop stop", stopId: "dalian" },
+          { th: "ตุ๊กตามนุษย์หิมะยักษ์ และถนนบาร็อคจงหัว", en: "The giant snowman and China Baroque Street", stopId: "harbin" },
         ],
         hotel: { name: "HARBIN HUIMA HOTEL", star: 4, cityId: "harbin", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -2625,8 +2629,8 @@ export const programs: Program[] = [
         title: { th: "โบสถ์เซนต์โซเฟีย – ถนนจงยาง – เกาะพระอาทิตย์ – เทศกาลน้ำแข็ง", en: "St Sophia – Central Street – Sun Island – Ice & Snow Festival" },
         stops: ["harbin"],
         along: [
-          { th: "จัตุรัสโบสถ์เซนต์โซเฟีย ถนนคนเดินจงยาง (ไอติม 1 แท่ง) และตรอกเซียวเข่อ", en: "St Sophia square, Central Street (with an ice cream) and the Xiaoke alley" },
-          { th: "นิทรรศการแกะสลักหิมะเกาะพระอาทิตย์ และเทศกาลน้ำแข็งฮาร์บิน", en: "Sun Island snow-sculpture expo and the Harbin Ice & Snow Festival" },
+          { th: "จัตุรัสโบสถ์เซนต์โซเฟีย ถนนคนเดินจงยาง (ไอติม 1 แท่ง) และตรอกเซียวเข่อ", en: "St Sophia square, Central Street (with an ice cream) and the Xiaoke alley", stopId: "harbin" },
+          { th: "นิทรรศการแกะสลักหิมะเกาะพระอาทิตย์ และเทศกาลน้ำแข็งฮาร์บิน", en: "Sun Island snow-sculpture expo and the Harbin Ice & Snow Festival", stopId: "harbin" },
         ],
         hotel: { name: "HARBIN HUIMA HOTEL", star: 4, cityId: "harbin", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -2635,8 +2639,8 @@ export const programs: Program[] = [
         title: { th: "สะพานเหล็กซงฮัวเจียง – สวนสตาลิน – ต้าเหลียน (รถไฟความเร็วสูง)", en: "Songhua iron bridge – Stalin Park – Dalian (bullet train)" },
         stops: ["harbin", "dalian"],
         along: [
-          { th: "สะพานเหล็กแม่น้ำซงฮัวเจียง สวนสตาลิน และอนุสาวรีย์ฝั่งหง", en: "The Songhua River iron bridge, Stalin Park and the Flood Control Monument" },
-          { th: "นั่งรถไฟความเร็วสูงกลับต้าเหลียน", en: "High-speed train back to Dalian" },
+          { th: "สะพานเหล็กแม่น้ำซงฮัวเจียง สวนสตาลิน และอนุสาวรีย์ฝั่งหง", en: "The Songhua River iron bridge, Stalin Park and the Flood Control Monument", stopId: "harbin" },
+          { th: "นั่งรถไฟความเร็วสูงกลับต้าเหลียน", en: "High-speed train back to Dalian", stopId: "dalian" },
         ],
         hotel: { name: "DALIAN FURONG INTERNATIONAL HOTEL", star: 4, cityId: "dalian", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -2645,8 +2649,8 @@ export const programs: Program[] = [
         title: { th: "อ่าวหลิงเจียว – ท่าเรือประมง – จัตุรัสซิงไห่ – รถราง – ไนท์มาร์เก็ต", en: "Lingjiao Bay – fishing wharf – Xinghai Square – tram – night market" },
         stops: ["dalian"],
         along: [
-          { th: "อ่าวหลิงเจียว ท่าเรือประมงต้าเหลียน และจัตุรัสซิงไห่", en: "Lingjiao Bay, the Dalian fishing wharf and Xinghai Square" },
-          { th: "นั่งรถรางร้อยปี และเดินต้าเหลียนไนท์มาร์เก็ต", en: "A heritage tram ride and the Dalian night market" },
+          { th: "อ่าวหลิงเจียว ท่าเรือประมงต้าเหลียน และจัตุรัสซิงไห่", en: "Lingjiao Bay, the Dalian fishing wharf and Xinghai Square", stopId: "dalian" },
+          { th: "นั่งรถรางร้อยปี และเดินต้าเหลียนไนท์มาร์เก็ต", en: "A heritage tram ride and the Dalian night market", stopId: "dalian" },
         ],
         hotel: { name: "DALIAN FURONG INTERNATIONAL HOTEL", star: 4, cityId: "dalian", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -2655,7 +2659,7 @@ export const programs: Program[] = [
         title: { th: "เขาเหลียนฮัว – ต้าเหลียน – เซี่ยงไฮ้ – กรุงเทพฯ", en: "Lianhua Mtn – Dalian – Shanghai – Bangkok" },
         stops: ["dalian"],
         along: [
-          { th: "จุดชมวิวเขาเหลียนฮัว ก่อนเดินทางสู่สนามบิน", en: "Lianhua Mountain viewpoint before transferring to the airport" },
+          { th: "จุดชมวิวเขาเหลียนฮัว ก่อนเดินทางสู่สนามบิน", en: "Lianhua Mountain viewpoint before transferring to the airport", stopId: "dalian" },
           { th: "บินต้าเหลียน–เซี่ยงไฮ้ (MU5626) ต่อเครื่องกลับกรุงเทพฯ (FM841)", en: "Fly Dalian–Shanghai (MU5626), connect home to Bangkok (FM841)" },
         ],
       },
@@ -2750,9 +2754,9 @@ export const programs: Program[] = [
         title: { th: "ฮาร์บิน – เซนต์โซเฟีย – ถนนจงยาง – เมืองน้ำแข็ง", en: "Harbin – St Sophia – Central Street – Ice & Snow World" },
         stops: ["harbin"],
         along: [
-          { th: "จัตุรัสโบสถ์เซนต์โซเฟีย และถนนคนเดินจงยาง (แจกไอติมมาเตี๋ยร์ 1 แท่ง)", en: "St Sophia square and Central Street (with a Madieer ice-cream bar)" },
-          { th: "ย่านจงหัวบาร็อค และมนุษย์หิมะยักษ์ที่สวนดนตรี", en: "China Baroque quarter and the giant snowman at Music Park" },
-          { th: "เมืองน้ำแข็งฮาร์บิน (Ice & Snow World) สวนน้ำแข็งที่ใหญ่ที่สุดในโลก", en: "Harbin Ice & Snow World, the planet's largest ice theme park" },
+          { th: "จัตุรัสโบสถ์เซนต์โซเฟีย และถนนคนเดินจงยาง (แจกไอติมมาเตี๋ยร์ 1 แท่ง)", en: "St Sophia square and Central Street (with a Madieer ice-cream bar)", stopId: "harbin" },
+          { th: "ย่านจงหัวบาร็อค และมนุษย์หิมะยักษ์ที่สวนดนตรี", en: "China Baroque quarter and the giant snowman at Music Park", stopId: "harbin" },
+          { th: "เมืองน้ำแข็งฮาร์บิน (Ice & Snow World) สวนน้ำแข็งที่ใหญ่ที่สุดในโลก", en: "Harbin Ice & Snow World, the planet's largest ice theme park", stopId: "harbin" },
         ],
         hotel: { name: "BORRNI HOTEL, HARBIN", star: 4, cityId: "harbin", note: { th: "หรือ Fanhua Lily / Aoxue Four Seasons ระดับ 4★", en: "or Fanhua Lily / Aoxue Four Seasons 4★" } },
       },
@@ -2761,9 +2765,9 @@ export const programs: Program[] = [
         title: { th: "ฮาร์บิน – หมู่บ้านหิมะ (~5 ชม.) – เลื่อนม้า – ถนนเสวี่ยอวิ้น", en: "Harbin – Snow Town (~5h) – horse sled – Xueyun Street" },
         stops: ["snowtown"],
         along: [
-          { th: "นั่งเลื่อนม้าลากบนหิมะ และเข้าหมู่บ้านหิมะ (รวมรถต่อเข้าหมู่บ้าน)", en: "Horse-drawn snow sled and Snow Town (with shuttle transfer)" },
+          { th: "นั่งเลื่อนม้าลากบนหิมะ และเข้าหมู่บ้านหิมะ (รวมรถต่อเข้าหมู่บ้าน)", en: "Horse-drawn snow sled and Snow Town (with shuttle transfer)", stopId: "snowtown" },
           { th: "ทางเดินไม้เขาปั้งฉุย จุดชมป่าหิมะ และสวนเมิ่งฮว่านเจียหยวน", en: "Bangchui Hill boardwalk over the snow forest and Dreamland park" },
-          { th: "ถนนเสวี่ยอวิ้นยามค่ำ ขบวนรถแห่ และเล่นเทน้ำร้อนกลายเป็นน้ำแข็ง", en: "Xueyun Street by night, the float parade and the 'splash-freeze' ice game" },
+          { th: "ถนนเสวี่ยอวิ้นยามค่ำ ขบวนรถแห่ และเล่นเทน้ำร้อนกลายเป็นน้ำแข็ง", en: "Xueyun Street by night, the float parade and the 'splash-freeze' ice game", stopId: "snowtown" },
         ],
         drive: { th: "ฮาร์บิน–หมู่บ้านหิมะ ~5 ชม.", en: "Harbin–Snow Town ~5h" },
         hotel: { name: "SNOW TOWN VILLAGE INN (XUEXIANG)", cityId: "snowtown", note: { th: "ห้องเตียงคู่ หรือเตียงคัง (เตียงอุ่น) ในหมู่บ้าน", en: "Twin room or heated 'kang' bed inside the village" } },
@@ -2784,7 +2788,7 @@ export const programs: Program[] = [
         title: { th: "เหยียนจี๋ – หมู่บ้านเกาหลี – ถูเหมิน – ตุนฮว่า (~2 ชม.)", en: "Yanji – Korean folk village – Tumen – Dunhua (~2h)" },
         stops: ["dunhua"],
         along: [
-          { th: "หมู่บ้านวัฒนธรรมเกาหลี สัมผัสวิถีชนชาติเกาหลีเหยียนเปียน", en: "The Korean folk village, immersed in Yanbian Korean culture" },
+          { th: "หมู่บ้านวัฒนธรรมเกาหลี สัมผัสวิถีชนชาติเกาหลีเหยียนเปียน", en: "The Korean folk village, immersed in Yanbian Korean culture", stopId: "yanji" },
           { th: "เมืองถูเหมิน ด่านชายแดนติดเกาหลีเหนือแห่งเดียวในเขตเมืองของจี๋หลิน", en: "Tumen, Jilin's only in-city border crossing facing North Korea" },
         ],
         drive: { th: "เหยียนจี๋–ตุนฮว่า ~2 ชม.", en: "Yanji–Dunhua ~2h" },
@@ -2795,8 +2799,8 @@ export const programs: Program[] = [
         title: { th: "ตุนฮว่า – พระทองลิ่วติ่งซาน – จี๋หลิน – ลานสกีว่านเคอ", en: "Dunhua – Liudingshan Golden Buddha – Jilin – Vanke ski" },
         stops: ["jilin-city"],
         along: [
-          { th: "พระทองลิ่วติ่งซาน พระศากยมุนีสำริดกลางแจ้งที่สูงที่สุดในโลก", en: "Liudingshan Golden Buddha, the world's tallest outdoor bronze Sakyamuni" },
-          { th: "ลานสกีว่านเคอ เล่นสกีพร้อมชมป่าอู้ซง (น้ำค้างแข็ง)", en: "Vanke ski resort — skiing amid the wusong rime forest" },
+          { th: "พระทองลิ่วติ่งซาน พระศากยมุนีสำริดกลางแจ้งที่สูงที่สุดในโลก", en: "Liudingshan Golden Buddha, the world's tallest outdoor bronze Sakyamuni", stopId: "dunhua" },
+          { th: "ลานสกีว่านเคอ เล่นสกีพร้อมชมป่าอู้ซง (น้ำค้างแข็ง)", en: "Vanke ski resort — skiing amid the wusong rime forest", stopId: "jilin-city" },
         ],
         hotel: { name: "VIENNA HOTEL, JILIN", star: 4, cityId: "jilin-city", note: { th: "หรือ Libo Hotel ระดับ 4★", en: "or Libo Hotel 4★" } },
       },
@@ -2805,7 +2809,7 @@ export const programs: Program[] = [
         title: { th: "ระเบียงอู้ซง – ฉางชุน – เซี่ยงไฮ้ – กรุงเทพฯ", en: "Rime corridor – Changchun – Shanghai – Bangkok" },
         stops: ["changchun"],
         along: [
-          { th: "ระเบียงอู้ซงยามเช้า น้ำค้างแข็งเกาะกิ่งไม้ราวกับแดนสวรรค์", en: "The dawn rime corridor — frost-laden willows like a fairyland" },
+          { th: "ระเบียงอู้ซงยามเช้า น้ำค้างแข็งเกาะกิ่งไม้ราวกับแดนสวรรค์", en: "The dawn rime corridor — frost-laden willows like a fairyland", stopId: "jilin-city" },
           { th: "บินฉางชุน–เซี่ยงไฮ้ผู่ตง (FM9080) ต่อเครื่องกลับกรุงเทพฯ (FM833)", en: "Fly Changchun–Shanghai Pudong (FM9080), connect home to Bangkok (FM833)" },
         ],
       },
@@ -2886,7 +2890,7 @@ export const programs: Program[] = [
         stops: ["yuncheng"],
         along: [
           { th: "บินตรงสุวรรณภูมิ–หยุนเฉิง (ZH282)", en: "Fly direct Suvarnabhumi–Yuncheng (ZH282)" },
-          { th: "ถึงหยุนเฉิง บ้านเกิดเทพเจ้ากวนอู ริมทะเลสาบเกลือ เข้าที่พัก", en: "Arrive Yuncheng, Guan Yu's salt-lake hometown, and check in" },
+          { th: "ถึงหยุนเฉิง บ้านเกิดเทพเจ้ากวนอู ริมทะเลสาบเกลือ เข้าที่พัก", en: "Arrive Yuncheng, Guan Yu's salt-lake hometown, and check in", stopId: "yuncheng" },
         ],
         hotel: { name: "YUNCHENG PARK PLAZA HOTEL", star: 4, cityId: "yuncheng", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -2895,9 +2899,9 @@ export const programs: Program[] = [
         title: { th: "หยุนเฉิง – เมืองโบราณผิงเหยา", en: "Yuncheng – Pingyao Ancient City" },
         stops: ["pingyao"],
         along: [
-          { th: "เมืองโบราณผิงเหยา มรดกโลกที่มีคนอาศัยอยู่จริง", en: "Pingyao Ancient City, a living World Heritage town" },
+          { th: "เมืองโบราณผิงเหยา มรดกโลกที่มีคนอาศัยอยู่จริง", en: "Pingyao Ancient City, a living World Heritage town", stopId: "pingyao" },
           { th: "กำแพงเมืองโบราณ + ถนนคนเดินหมิง–ชิง + ที่ว่าการอำเภอโบราณ", en: "The old city wall + Ming-Qing street + the ancient county yamen" },
-          { th: "โรงแลกเงินยื่อเซิงชาง ต้นกำเนิดธนาคารแห่งแรกของจีน", en: "The Rishengchang exchange house, China's first 'bank'" },
+          { th: "โรงแลกเงินยื่อเซิงชาง ต้นกำเนิดธนาคารแห่งแรกของจีน", en: "The Rishengchang exchange house, China's first 'bank'", stopId: "pingyao" },
         ],
         drive: { th: "หยุนเฉิง → ผิงเหยา ~288 กม. / 4 ชม.", en: "Yuncheng → Pingyao ~288 km / 4h" },
         hotel: { name: "PINGYAO HUIGUAN HOTEL", star: 4, cityId: "pingyao", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -2907,8 +2911,8 @@ export const programs: Program[] = [
         title: { th: "อู่ไถซาน – วัดผู่ซาติ่ง – วัดเสียนทง", en: "Mount Wutai – Pusading & Xiantong temples" },
         stops: ["wutaishan"],
         along: [
-          { th: "วัดผู่ซาติ่ง และวัดถ่าหยวน เจดีย์ขาวสัญลักษณ์ของอู่ไถซาน", en: "Pusading temple and Tayuan temple, the white stupa landmark of Wutai" },
-          { th: "วัดเสียนทง วัดเก่าแก่ที่สุดบนอู่ไถซาน + หอหมื่นพุทธะ", en: "Xiantong, the oldest temple on Wutai + the Hall of Ten Thousand Buddhas" },
+          { th: "วัดผู่ซาติ่ง และวัดถ่าหยวน เจดีย์ขาวสัญลักษณ์ของอู่ไถซาน", en: "Pusading temple and Tayuan temple, the white stupa landmark of Wutai", stopId: "wutaishan" },
+          { th: "วัดเสียนทง วัดเก่าแก่ที่สุดบนอู่ไถซาน + หอหมื่นพุทธะ", en: "Xiantong, the oldest temple on Wutai + the Hall of Ten Thousand Buddhas", stopId: "wutaishan" },
         ],
         hotel: { name: "WUTAI MOUNTAIN HUAHUI JUNLAN MANOR", star: 4, cityId: "wutaishan", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -2917,8 +2921,8 @@ export const programs: Program[] = [
         title: { th: "วัดเสวียนคง – ต้าถง – ผาแกะสลักหยุนกัง", en: "Hanging Temple – Datong – Yungang Grottoes" },
         stops: ["datong"],
         along: [
-          { th: "หุนหยวน วัดเสวียนคง อารามลอยฟ้าเกาะหน้าผา (รวมรถอุทยาน)", en: "Hunyuan's Hanging Temple, clinging to a cliff face" },
-          { th: "ผาแกะสลักหยุนกัง พุทธศิลป์มรดกโลก (รวมรถอุทยาน)", en: "The Yungang Grottoes, a World Heritage Buddhist cliff" },
+          { th: "หุนหยวน วัดเสวียนคง อารามลอยฟ้าเกาะหน้าผา (รวมรถอุทยาน)", en: "Hunyuan's Hanging Temple, clinging to a cliff face", stopId: "datong" },
+          { th: "ผาแกะสลักหยุนกัง พุทธศิลป์มรดกโลก (รวมรถอุทยาน)", en: "The Yungang Grottoes, a World Heritage Buddhist cliff", stopId: "datong" },
         ],
         drive: { th: "อู่ไถซาน → ต้าถง", en: "Mount Wutai → Datong" },
         hotel: { name: "DATONG MEILIHAO HOTEL", star: 4, cityId: "datong", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -2928,8 +2932,8 @@ export const programs: Program[] = [
         title: { th: "ต้าถง – หยุนเฉิง (รถไฟความเร็วสูง) – ศาลกวนอู", en: "Datong – Yuncheng (high-speed rail) – Guandi Temple" },
         stops: ["yuncheng"],
         along: [
-          { th: "นั่งรถไฟความเร็วสูงต้าถง–หยุนเฉิง", en: "High-speed train Datong–Yuncheng" },
-          { th: "ศาลเจ้ากวนอู (กวนตี้) สักการะเทพเจ้าแห่งความซื่อสัตย์", en: "The Guandi Temple, honouring the god of loyalty Guan Yu" },
+          { th: "นั่งรถไฟความเร็วสูงต้าถง–หยุนเฉิง", en: "High-speed train Datong–Yuncheng", stopId: "yuncheng" },
+          { th: "ศาลเจ้ากวนอู (กวนตี้) สักการะเทพเจ้าแห่งความซื่อสัตย์", en: "The Guandi Temple, honouring the god of loyalty Guan Yu", stopId: "yuncheng" },
         ],
         hotel: { name: "YUNCHENG PARK PLAZA HOTEL", star: 4, cityId: "yuncheng", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -3019,7 +3023,7 @@ export const programs: Program[] = [
         stops: ["ordos"],
         along: [
           { th: "บินตรงสุวรรณภูมิ–เออร์ดอส (VZ3534)", en: "Fly direct Suvarnabhumi–Ordos (VZ3534)" },
-          { th: "ถึงเออร์ดอส ‘หมู่พระราชวังอันมากมาย’ เข้าที่พัก", en: "Arrive Ordos, 'the many palaces', and check in" },
+          { th: "ถึงเออร์ดอส ‘หมู่พระราชวังอันมากมาย’ เข้าที่พัก", en: "Arrive Ordos, 'the many palaces', and check in", stopId: "ordos" },
         ],
         hotel: { name: "HOLIDAY INN EXPRESS ORDOS", star: 4, cityId: "ordos", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -3028,7 +3032,7 @@ export const programs: Program[] = [
         title: { th: "ทุ่งหญ้าเออร์ดอส – กิจกรรมแบบชาวมองโกล", en: "Ordos Grassland – Mongol experiences" },
         stops: ["ordos"],
         along: [
-          { th: "ทุ่งหญ้าเออร์ดอส เต็นท์มองโกล 399 หลังผังรูป ‘นกอินทรีกางปีก’", en: "Ordos Grassland with 399 yurts in an 'eagle-spreading-wings' layout" },
+          { th: "ทุ่งหญ้าเออร์ดอส เต็นท์มองโกล 399 หลังผังรูป ‘นกอินทรีกางปีก’", en: "Ordos Grassland with 399 yurts in an 'eagle-spreading-wings' layout", stopId: "ordos" },
           { th: "สวมชุดมองโกล ถ่ายรูปกับน้องแกะ และงานเลี้ยงรอบกองไฟ", en: "Wear Mongol robes, photos with the sheep, and a campfire feast" },
         ],
         drive: { th: "เออร์ดอส → ทุ่งหญ้า ~127 กม. / 3 ชม.", en: "Ordos → grassland ~127 km / 3h" },
@@ -3039,9 +3043,9 @@ export const programs: Program[] = [
         title: { th: "โฮฮอต – สุสานหวังเจาจวิน – อารามต้าเจา – ต้าลาฉี", en: "Hohhot – Wang Zhaojun Tomb – Dazhao – Dalad" },
         stops: ["hohhot", "dalad"],
         along: [
-          { th: "ศูนย์แสดงผลิตภัณฑ์โคนมเหมิงเลี่ยง", en: "The Mengniu dairy products centre" },
-          { th: "สุสานหวังเจาจวิน และอารามต้าเจาในโฮฮอต", en: "The Wang Zhaojun tomb and the Dazhao Monastery in Hohhot" },
-          { th: "เดินทางสู่เมืองต้าลาฉี (ดาลัตแบนเนอร์)", en: "Continue to Dalad Banner" },
+          { th: "ศูนย์แสดงผลิตภัณฑ์โคนมเหมิงเลี่ยง", en: "The Mengniu dairy products centre", stopId: "hohhot" },
+          { th: "สุสานหวังเจาจวิน และอารามต้าเจาในโฮฮอต", en: "The Wang Zhaojun tomb and the Dazhao Monastery in Hohhot", stopId: "hohhot" },
+          { th: "เดินทางสู่เมืองต้าลาฉี (ดาลัตแบนเนอร์)", en: "Continue to Dalad Banner", stopId: "dalad" },
         ],
         hotel: { name: "ZHENJIN INTERNATIONAL HOTEL", star: 4, cityId: "dalad", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -3050,7 +3054,7 @@ export const programs: Program[] = [
         title: { th: "เนินทรายเสี่ยงซาวาน – ขี่อูฐ – เออร์ดอส", en: "Xiangshawan dunes – camel ride – Ordos" },
         stops: ["xiangshawan"],
         along: [
-          { th: "เนินทรายเสี่ยงซาวาน (รวมกระเช้า + ผ้าหุ้มรองเท้า)", en: "Xiangshawan dunes (cable car + shoe covers included)" },
+          { th: "เนินทรายเสี่ยงซาวาน (รวมกระเช้า + ผ้าหุ้มรองเท้า)", en: "Xiangshawan dunes (cable car + shoe covers included)", stopId: "xiangshawan" },
           { th: "ขี่อูฐชมทะเลทราย และชมงานจิตรกรรมทราย", en: "Camel ride across the desert and a sand-art show" },
         ],
         drive: { th: "ต้าลาฉี → เสี่ยงซาวาน → เออร์ดอส", en: "Dalad → Xiangshawan → Ordos" },
@@ -3063,7 +3067,7 @@ export const programs: Program[] = [
         along: [
           { th: "ศูนย์ผลิตภัณฑ์เส้นใยขนอูฐ และอารามซือหนี", en: "The camel-wool centre and the Sini Monastery" },
           { th: "สวนวัฒนธรรมมองโกลหยวนหลิว และวัดพระมหามัยมุนี", en: "The Yuanliu Mongol culture park and the Mahamuni temple" },
-          { th: "เมืองใหม่คังปาสือ เมืองอนาคตกลางที่ราบสูง", en: "The futuristic Kangbashi new town on the plateau" },
+          { th: "เมืองใหม่คังปาสือ เมืองอนาคตกลางที่ราบสูง", en: "The futuristic Kangbashi new town on the plateau", stopId: "ordos" },
         ],
         hotel: { name: "HOLIDAY INN EXPRESS ORDOS", star: 4, cityId: "ordos", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -3072,7 +3076,7 @@ export const programs: Program[] = [
         title: { th: "สุสานเจงกิสข่าน – เออร์ดอส – กรุงเทพฯ", en: "Genghis Khan Mausoleum – Ordos – Bangkok" },
         stops: ["ordos"],
         along: [
-          { th: "สุสานเจงกิสข่าน และถนนคนเดินเออร์ดอส", en: "The Genghis Khan Mausoleum and the Ordos pedestrian street" },
+          { th: "สุสานเจงกิสข่าน และถนนคนเดินเออร์ดอส", en: "The Genghis Khan Mausoleum and the Ordos pedestrian street", stopId: "ordos" },
           { th: "บินตรงเออร์ดอส–สุวรรณภูมิ (VZ3535)", en: "Fly direct Ordos–Suvarnabhumi (VZ3535)" },
         ],
       },
@@ -3156,7 +3160,7 @@ export const programs: Program[] = [
         stops: ["taiyuan"],
         along: [
           { th: "บินตรงสุวรรณภูมิ–ไท่หยวน (MU5068)", en: "Fly direct Suvarnabhumi–Taiyuan (MU5068)" },
-          { th: "ถึงไท่หยวน เมืองเอกของซานซี เข้าที่พัก", en: "Arrive Taiyuan, Shanxi's capital, and check in" },
+          { th: "ถึงไท่หยวน เมืองเอกของซานซี เข้าที่พัก", en: "Arrive Taiyuan, Shanxi's capital, and check in", stopId: "taiyuan" },
         ],
         hotel: { name: "TAIYUAN YIHE HOTEL", star: 4, cityId: "taiyuan", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -3165,8 +3169,8 @@ export const programs: Program[] = [
         title: { th: "ไท่หยวน – เจดีย์ไม้วัดฝอกวง – ต้าถง", en: "Taiyuan – Fogong wooden pagoda – Datong" },
         stops: ["datong"],
         along: [
-          { th: "เจดีย์ไม้วัดฝอกวง เจดีย์ไม้อายุกว่า 1,000 ปี", en: "The Fogong Temple wooden pagoda, over 1,000 years old" },
-          { th: "กำแพงเก้ามังกร และกำแพงเมืองโบราณต้าถง", en: "The Nine-Dragon Wall and Datong's ancient city wall" },
+          { th: "เจดีย์ไม้วัดฝอกวง เจดีย์ไม้อายุกว่า 1,000 ปี", en: "The Fogong Temple wooden pagoda, over 1,000 years old", stopId: "datong" },
+          { th: "กำแพงเก้ามังกร และกำแพงเมืองโบราณต้าถง", en: "The Nine-Dragon Wall and Datong's ancient city wall", stopId: "datong" },
         ],
         drive: { th: "ไท่หยวน → ต้าถง ~275 กม. / 4 ชม.", en: "Taiyuan → Datong ~275 km / 4h" },
         hotel: { name: "DATONG TIANGUI HOTEL", star: 4, cityId: "datong", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -3176,8 +3180,8 @@ export const programs: Program[] = [
         title: { th: "ต้าถง – ผาแกะสลักหยุนกัง – วัดเสียนคง – อู่ไถซาน", en: "Datong – Yungang – Hanging Temple – Wutai" },
         stops: ["wutaishan"],
         along: [
-          { th: "ผาแกะสลักหยุนกัง พุทธศิลป์มรดกโลก (รวมรถอุทยาน)", en: "The Yungang Grottoes, a World Heritage Buddhist cliff" },
-          { th: "วัดเสียนคง อารามริมผาจุดรวม 3 ศาสนา", en: "The Hanging Temple, a cliff shrine of three religions" },
+          { th: "ผาแกะสลักหยุนกัง พุทธศิลป์มรดกโลก (รวมรถอุทยาน)", en: "The Yungang Grottoes, a World Heritage Buddhist cliff", stopId: "datong" },
+          { th: "วัดเสียนคง อารามริมผาจุดรวม 3 ศาสนา", en: "The Hanging Temple, a cliff shrine of three religions", stopId: "datong" },
         ],
         drive: { th: "ต้าถง → วัดเสียนคง ~97 กม. / 1.5 ชม. → อู่ไถซาน", en: "Datong → Hanging Temple ~97 km / 1.5h → Wutai" },
         hotel: { name: "WUTAISHAN FRIENDSHIP HOTEL", star: 4, cityId: "wutaishan", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -3187,8 +3191,8 @@ export const programs: Program[] = [
         title: { th: "อู่ไถซาน – ยอดพระโพธิสัตว์ – ไท่หยวน", en: "Mount Wutai – Bodhisattva Peak – Taiyuan" },
         stops: ["taiyuan"],
         along: [
-          { th: "ยอดพระโพธิสัตว์ วัดเสียนทง วัดถ่าหยวน และอารามหมื่นพระพุทธ", en: "Bodhisattva Peak, Xiantong, Tayuan and the Wanfo monastery" },
-          { th: "กลับไท่หยวน เดินถนนคนเดินจงโหลว", en: "Back to Taiyuan, stroll the Zhonglou pedestrian street" },
+          { th: "ยอดพระโพธิสัตว์ วัดเสียนทง วัดถ่าหยวน และอารามหมื่นพระพุทธ", en: "Bodhisattva Peak, Xiantong, Tayuan and the Wanfo monastery", stopId: "wutaishan" },
+          { th: "กลับไท่หยวน เดินถนนคนเดินจงโหลว", en: "Back to Taiyuan, stroll the Zhonglou pedestrian street", stopId: "taiyuan" },
         ],
         drive: { th: "อู่ไถซาน → ไท่หยวน", en: "Mount Wutai → Taiyuan" },
         hotel: { name: "TAIYUAN YIHE HOTEL", star: 4, cityId: "taiyuan", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -3209,8 +3213,8 @@ export const programs: Program[] = [
         title: { th: "น้ำตกหูโข่ว – คฤหาสน์ตระกูลหวัง", en: "Hukou Waterfall – Wang Family Compound" },
         stops: ["hukou", "pingyao"],
         along: [
-          { th: "น้ำตกหูโข่ว น้ำตกที่ใหญ่ที่สุดบนแม่น้ำเหลือง", en: "Hukou Waterfall, the largest on the Yellow River" },
-          { th: "คฤหาสน์ตระกูลหวัง ‘พระราชวังของสามัญชน’ สมัยชิง", en: "The Wang Family Compound, a Qing-era 'commoner's palace'" },
+          { th: "น้ำตกหูโข่ว น้ำตกที่ใหญ่ที่สุดบนแม่น้ำเหลือง", en: "Hukou Waterfall, the largest on the Yellow River", stopId: "hukou" },
+          { th: "คฤหาสน์ตระกูลหวัง ‘พระราชวังของสามัญชน’ สมัยชิง", en: "The Wang Family Compound, a Qing-era 'commoner's palace'", stopId: "pingyao" },
         ],
         drive: { th: "จี๋เซี่ยน → หูโข่ว → ผิงเหยา", en: "Jixian → Hukou → Pingyao" },
         hotel: { name: "PINGYAO TRADITION HOTEL", star: 4, cityId: "pingyao", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -3220,8 +3224,8 @@ export const programs: Program[] = [
         title: { th: "เมืองโบราณผิงเหยา – วัดจิ้นฉือ – ไท่หยวน", en: "Pingyao Ancient City – Jinci Temple – Taiyuan" },
         stops: ["pingyao", "taiyuan"],
         along: [
-          { th: "กำแพงเมืองโบราณผิงเหยา ถนนหมิง–ชิง และโรงแลกเงิน", en: "Pingyao's old wall, the Ming-Qing street and the exchange house" },
-          { th: "วัดจิ้นฉือ วัดสวนโบราณริมแม่น้ำเฝินที่ไท่หยวน", en: "The Jinci Temple, an ancient garden shrine on the Fen River in Taiyuan" },
+          { th: "กำแพงเมืองโบราณผิงเหยา ถนนหมิง–ชิง และโรงแลกเงิน", en: "Pingyao's old wall, the Ming-Qing street and the exchange house", stopId: "pingyao" },
+          { th: "วัดจิ้นฉือ วัดสวนโบราณริมแม่น้ำเฝินที่ไท่หยวน", en: "The Jinci Temple, an ancient garden shrine on the Fen River in Taiyuan", stopId: "taiyuan" },
         ],
         drive: { th: "ผิงเหยา → ไท่หยวน", en: "Pingyao → Taiyuan" },
         hotel: { name: "PULLMAN TAIYUAN HOTEL", star: 5, cityId: "taiyuan", note: { th: "หรือเทียบเท่า 4–5 ดาว (มาตรฐานจีน)", en: "or equivalent 4–5 star (China standard)" } },
@@ -3315,7 +3319,7 @@ export const programs: Program[] = [
         stops: ["xining"],
         along: [
           { th: "บินตรงสุวรรณภูมิ–ซีหนิง (VZ3690)", en: "Fly direct Suvarnabhumi–Xining (VZ3690)" },
-          { th: "ถึงซีหนิง ประตูสู่ที่ราบสูงชิงไห่–ทิเบต เข้าที่พัก", en: "Arrive Xining, gateway to the Qinghai–Tibet plateau, and check in" },
+          { th: "ถึงซีหนิง ประตูสู่ที่ราบสูงชิงไห่–ทิเบต เข้าที่พัก", en: "Arrive Xining, gateway to the Qinghai–Tibet plateau, and check in", stopId: "xining" },
         ],
         hotel: { name: "XINING YONGHE INTERNATIONAL HOTEL", star: 4, cityId: "xining", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -3325,7 +3329,7 @@ export const programs: Program[] = [
         stops: ["zhangye"],
         along: [
           { th: "ทุ่งหญ้าฉีเหลียนซาน รอยต่อชิงไห่–กานซู และฟาร์มอี้เป่า (ชุดทิเบต + ยิงธนู)", en: "The Qilian grassland on the Qinghai–Gansu border and Yibao farm (Tibetan dress + archery)" },
-          { th: "ถ้ำพุทธศิลป์หม่าถีซาน (ถ้ำเกือกม้า)", en: "The Mati Temple 'Horseshoe' Buddhist grottoes" },
+          { th: "ถ้ำพุทธศิลป์หม่าถีซาน (ถ้ำเกือกม้า)", en: "The Mati Temple 'Horseshoe' Buddhist grottoes", stopId: "zhangye" },
         ],
         drive: { th: "ซีหนิง → ฉีเหลียน ~135 กม. / 2 ชม. → จางเย่", en: "Xining → Qilian ~135 km / 2h → Zhangye" },
         hotel: { name: "HOLIDAY INN EXPRESS ZHANGYE", star: 4, cityId: "zhangye", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -3335,8 +3339,8 @@ export const programs: Program[] = [
         title: { th: "หุบเขาสายรุ้งจางเย่ – เจียยี่กวน", en: "Zhangye Rainbow Mountains – Jiayuguan" },
         stops: ["jiayuguan"],
         along: [
-          { th: "หุบเขาสายรุ้งจางเย่ตันเซี่ย ภูเขาหลากสีมรดกโลก (รวมรถอุทยาน)", en: "The Zhangye Danxia rainbow mountains, World Heritage multicolour hills" },
-          { th: "เดินทางสู่เจียยี่กวน เมืองปลายกำแพงเมืองจีน", en: "On to Jiayuguan, the Great Wall's western frontier city" },
+          { th: "หุบเขาสายรุ้งจางเย่ตันเซี่ย ภูเขาหลากสีมรดกโลก (รวมรถอุทยาน)", en: "The Zhangye Danxia rainbow mountains, World Heritage multicolour hills", stopId: "zhangye" },
+          { th: "เดินทางสู่เจียยี่กวน เมืองปลายกำแพงเมืองจีน", en: "On to Jiayuguan, the Great Wall's western frontier city", stopId: "jiayuguan" },
         ],
         drive: { th: "จางเย่ → เจียยี่กวน", en: "Zhangye → Jiayuguan" },
         hotel: { name: "JIAYUGUAN CHENGFENG HOTEL", star: 4, cityId: "jiayuguan", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -3346,7 +3350,7 @@ export const programs: Program[] = [
         title: { th: "ด่านเจียยี่กวน – ตุนหวง", en: "Jiayuguan Great Wall fort – Dunhuang" },
         stops: ["dunhuang"],
         along: [
-          { th: "กำแพงเมืองจีนด่านเจียยี่กวน ‘ด่านแรกใต้หล้า’ (รวมรถอุทยาน)", en: "The Jiayuguan Great Wall fort, the 'First Pass under Heaven'" },
+          { th: "กำแพงเมืองจีนด่านเจียยี่กวน ‘ด่านแรกใต้หล้า’ (รวมรถอุทยาน)", en: "The Jiayuguan Great Wall fort, the 'First Pass under Heaven'", stopId: "jiayuguan" },
           { th: "ประติมากรรมทารกแห่งแผ่นดิน + พระพักตร์จักรพรรดิฮั่นอู่ตี้", en: "The 'Baby of the Earth' sculpture + the Emperor Han Wudi face" },
         ],
         drive: { th: "เจียยี่กวน → ตุนหวง", en: "Jiayuguan → Dunhuang" },
@@ -3357,9 +3361,9 @@ export const programs: Program[] = [
         title: { th: "ถ้ำม่อเกาคู – เนินทรายครวญ – สระน้ำวงพระจันทร์", en: "Mogao Caves – Singing-Sand Dunes – Crescent Lake" },
         stops: ["dunhuang"],
         along: [
-          { th: "ถ้ำพุทธศิลป์ม่อเกาคู มรดกโลก (รวมรถอุทยาน)", en: "The Mogao Caves, World Heritage Buddhist art" },
-          { th: "เนินทรายครวญหมิงซาซาน + สระน้ำวงพระจันทร์ (ขี่อูฐ – ออปชัน)", en: "Mingsha Singing-Sand Dunes + Crescent Moon Lake (optional camel ride)" },
-          { th: "เจดีย์ม้าขาว และตลาดกลางคืนซาโจว", en: "The White Horse Pagoda and the Shazhou night market" },
+          { th: "ถ้ำพุทธศิลป์ม่อเกาคู มรดกโลก (รวมรถอุทยาน)", en: "The Mogao Caves, World Heritage Buddhist art", stopId: "dunhuang" },
+          { th: "เนินทรายครวญหมิงซาซาน + สระน้ำวงพระจันทร์ (ขี่อูฐ – ออปชัน)", en: "Mingsha Singing-Sand Dunes + Crescent Moon Lake (optional camel ride)", stopId: "dunhuang" },
+          { th: "เจดีย์ม้าขาว และตลาดกลางคืนซาโจว", en: "The White Horse Pagoda and the Shazhou night market", stopId: "dunhuang" },
         ],
         hotel: { name: "DUNHUANG TIANRUN YIBO HOTEL", star: 4, cityId: "dunhuang", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -3368,8 +3372,8 @@ export const programs: Program[] = [
         title: { th: "ซีหนิง (รถไฟความเร็วสูง) – ทะเลสาบชิงไห่ – ฉาข่า", en: "Xining (high-speed rail) – Qinghai Lake – Chaka" },
         stops: ["xining", "qinghai-lake", "chaka"],
         along: [
-          { th: "นั่งรถไฟความเร็วสูงกลับสู่ซีหนิง", en: "High-speed train back to Xining" },
-          { th: "ทะเลสาบชิงไห่ ทะเลสาบน้ำเค็มที่ใหญ่ที่สุดของจีน (ล่องเรือ – ออปชัน)", en: "Qinghai Lake, China's largest saltwater lake (optional boat cruise)" },
+          { th: "นั่งรถไฟความเร็วสูงกลับสู่ซีหนิง", en: "High-speed train back to Xining", stopId: "xining" },
+          { th: "ทะเลสาบชิงไห่ ทะเลสาบน้ำเค็มที่ใหญ่ที่สุดของจีน (ล่องเรือ – ออปชัน)", en: "Qinghai Lake, China's largest saltwater lake (optional boat cruise)", stopId: "qinghai-lake" },
           { th: "เดินทางสู่ฉาข่า", en: "Continue to Chaka" },
         ],
         drive: { th: "ซีหนิง → ทะเลสาบชิงไห่ → ฉาข่า", en: "Xining → Qinghai Lake → Chaka" },
@@ -3380,8 +3384,8 @@ export const programs: Program[] = [
         title: { th: "ทะเลสาบเกลือฉาข่า – ตลาดกลางคืนซีหนิง", en: "Chaka Salt Lake – Xining night market" },
         stops: ["chaka", "xining"],
         along: [
-          { th: "ทะเลสาบเกลือฉาข่า ‘กระจกส่องฟ้า’ (รวมผ้าหุ้มรองเท้า + รถไฟชมวิว 1 ขา)", en: "Chaka Salt Lake, the 'Mirror of the Sky' (shoe covers + a one-way sightseeing train)" },
-          { th: "กลับซีหนิง เดินตลาดกลางคืน", en: "Back to Xining for the night market" },
+          { th: "ทะเลสาบเกลือฉาข่า ‘กระจกส่องฟ้า’ (รวมผ้าหุ้มรองเท้า + รถไฟชมวิว 1 ขา)", en: "Chaka Salt Lake, the 'Mirror of the Sky' (shoe covers + a one-way sightseeing train)", stopId: "chaka" },
+          { th: "กลับซีหนิง เดินตลาดกลางคืน", en: "Back to Xining for the night market", stopId: "xining" },
         ],
         drive: { th: "ฉาข่า → ซีหนิง", en: "Chaka → Xining" },
         hotel: { name: "XINING YONGHE INTERNATIONAL HOTEL", star: 4, cityId: "xining", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -3391,7 +3395,7 @@ export const programs: Program[] = [
         title: { th: "ซีหนิง – วัดถ่าเอ๋อร์ – กรุงเทพฯ", en: "Xining – Kumbum Monastery – Bangkok" },
         stops: ["xining"],
         along: [
-          { th: "วัดถ่าเอ๋อร์ (คุมบุม) วัดเกลุกสำคัญ บ้านเกิดท่านจงคาปา", en: "Kumbum (Ta'er) Monastery, a major Gelug temple at Tsongkhapa's birthplace" },
+          { th: "วัดถ่าเอ๋อร์ (คุมบุม) วัดเกลุกสำคัญ บ้านเกิดท่านจงคาปา", en: "Kumbum (Ta'er) Monastery, a major Gelug temple at Tsongkhapa's birthplace", stopId: "kumbum" },
           { th: "ถนนคนเดินเซี่ยหนานกวน แล้วบินตรงกลับสุวรรณภูมิ (VZ3691)", en: "The Xiananguan pedestrian street, then fly direct home (VZ3691)" },
         ],
       },
@@ -3473,7 +3477,7 @@ export const programs: Program[] = [
         stops: ["xian"],
         along: [
           { th: "บินตรงดอนเมือง–ซีอาน (SL950) ถึงหลังเที่ยงคืน", en: "Fly direct Don Muang–Xi'an (SL950), arriving after midnight" },
-          { th: "ถึงซีอาน อดีตราชธานี ‘ฉางอาน’ เข้าที่พัก", en: "Arrive Xi'an, the ancient capital 'Chang'an', and check in" },
+          { th: "ถึงซีอาน อดีตราชธานี ‘ฉางอาน’ เข้าที่พัก", en: "Arrive Xi'an, the ancient capital 'Chang'an', and check in", stopId: "xian" },
         ],
         hotel: { name: "XI'AN JIANGUO AIRPORT HOTEL", star: 4, cityId: "xian", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -3482,9 +3486,9 @@ export const programs: Program[] = [
         title: { th: "ซีอาน – กำแพงเมืองโบราณ – เจดีย์ห่านป่าใหญ่", en: "Xi'an – City Wall – Big Wild Goose Pagoda" },
         stops: ["xian"],
         along: [
-          { th: "ขึ้นกำแพงเมืองโบราณซีอาน และจัตุรัสหอกลอง–หอระฆัง", en: "Climb the Xi'an city wall and the Bell & Drum Tower square" },
-          { th: "ถนนมุสลิม และเจดีย์ห่านป่าใหญ่", en: "The Muslim Quarter and the Big Wild Goose Pagoda" },
-          { th: "ถนนต้าถังไร้นิทรา ย่านราชวงศ์ถังยามค่ำคืน", en: "Datang Everbright City, the Tang-dynasty night district" },
+          { th: "ขึ้นกำแพงเมืองโบราณซีอาน และจัตุรัสหอกลอง–หอระฆัง", en: "Climb the Xi'an city wall and the Bell & Drum Tower square", stopId: "xian" },
+          { th: "ถนนมุสลิม และเจดีย์ห่านป่าใหญ่", en: "The Muslim Quarter and the Big Wild Goose Pagoda", stopId: "xian" },
+          { th: "ถนนต้าถังไร้นิทรา ย่านราชวงศ์ถังยามค่ำคืน", en: "Datang Everbright City, the Tang-dynasty night district", stopId: "xian" },
         ],
         hotel: { name: "HOLIDAY INN EXPRESS XI'AN HOTEL", star: 4, cityId: "xian", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
       },
@@ -3493,8 +3497,8 @@ export const programs: Program[] = [
         title: { th: "ทหารดินเผาจิ๋นซี – ซานเหมินเสีย – หมู่บ้านใต้ดิน", en: "Terracotta Army – Sanmenxia – underground village" },
         stops: ["sanmenxia"],
         along: [
-          { th: "พิพิธภัณฑ์ทหารดินเผาจิ๋นซี (รวมรถอุทยาน)", en: "The Terracotta Army museum of Qin Shi Huang" },
-          { th: "ซานเหมินเสีย และหมู่บ้านใต้ดินส่านโจว บ้านถ้ำดินโบราณ", en: "Sanmenxia and the Shanzhou underground village of pit-cave homes" },
+          { th: "พิพิธภัณฑ์ทหารดินเผาจิ๋นซี (รวมรถอุทยาน)", en: "The Terracotta Army museum of Qin Shi Huang", stopId: "xian" },
+          { th: "ซานเหมินเสีย และหมู่บ้านใต้ดินส่านโจว บ้านถ้ำดินโบราณ", en: "Sanmenxia and the Shanzhou underground village of pit-cave homes", stopId: "sanmenxia" },
         ],
         drive: { th: "ซีอาน → ซานเหมินเสีย", en: "Xi'an → Sanmenxia" },
         hotel: { name: "SANMENXIA SWAN LAKE HOTEL", star: 4, cityId: "sanmenxia", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -3504,8 +3508,8 @@ export const programs: Program[] = [
         title: { th: "ลั่วหยาง – ถ้ำหลงเหมิน – ศาลกวนอู", en: "Luoyang – Longmen Grottoes – Guanlin Temple" },
         stops: ["luoyang"],
         along: [
-          { th: "ถ้ำแกะสลักหลงเหมิน มรดกโลกพุทธศิลป์ (รวมรถอุทยาน)", en: "The Longmen Grottoes, World Heritage Buddhist carvings" },
-          { th: "ศาลกวนอู (กวนหลิน) และประตูอิ้งเทียนเหมิน", en: "The Guanlin temple of Guan Yu and the Yingtianmen gate" },
+          { th: "ถ้ำแกะสลักหลงเหมิน มรดกโลกพุทธศิลป์ (รวมรถอุทยาน)", en: "The Longmen Grottoes, World Heritage Buddhist carvings", stopId: "luoyang" },
+          { th: "ศาลกวนอู (กวนหลิน) และประตูอิ้งเทียนเหมิน", en: "The Guanlin temple of Guan Yu and the Yingtianmen gate", stopId: "luoyang" },
         ],
         drive: { th: "ซานเหมินเสีย → ลั่วหยาง", en: "Sanmenxia → Luoyang" },
         hotel: { name: "EASEHOUSE HOTEL LUOYANG", star: 4, cityId: "luoyang", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -3515,8 +3519,8 @@ export const programs: Program[] = [
         title: { th: "เติงเฟิง – วัดเส้าหลิน – ป่าเจดีย์ – หยุนไถซาน", en: "Dengfeng – Shaolin Temple – Pagoda Forest – Yuntaishan" },
         stops: ["dengfeng", "jiaozuo"],
         along: [
-          { th: "วัดเส้าหลิน ต้นกำเนิดกังฟู + ป่าเจดีย์ + ชมการแสดงกังฟู", en: "The Shaolin Temple, kung fu's birthplace + the Pagoda Forest + a kung fu show" },
-          { th: "เดินทางสู่เจียวจั่ว เข้าสู่อุทยานหยุนไถซาน", en: "Continue to Jiaozuo for the Yuntaishan geopark" },
+          { th: "วัดเส้าหลิน ต้นกำเนิดกังฟู + ป่าเจดีย์ + ชมการแสดงกังฟู", en: "The Shaolin Temple, kung fu's birthplace + the Pagoda Forest + a kung fu show", stopId: "dengfeng" },
+          { th: "เดินทางสู่เจียวจั่ว เข้าสู่อุทยานหยุนไถซาน", en: "Continue to Jiaozuo for the Yuntaishan geopark", stopId: "jiaozuo" },
         ],
         drive: { th: "ลั่วหยาง → เติงเฟิง → เจียวจั่ว", en: "Luoyang → Dengfeng → Jiaozuo" },
         hotel: { name: "JIAOZUO WANDA JINWUZHI HOTEL", star: 4, cityId: "jiaozuo", note: { th: "หรือเทียบเท่า 4 ดาว (มาตรฐานจีน)", en: "or equivalent 4-star (China standard)" } },
@@ -3526,7 +3530,7 @@ export const programs: Program[] = [
         title: { th: "เจิ้งโจว – ทะเลสาบหรูอี้ – จัตุรัส 27 – กรุงเทพฯ", en: "Zhengzhou – Ruyi Lake – Feb 27 Square – Bangkok" },
         stops: ["zhengzhou"],
         along: [
-          { th: "ทะเลสาบหรูอี้ เช็คอิน ‘ตึกข้าวโพด’ และจัตุรัส 27", en: "Ruyi Lake, the 'Corn Tower' check-in and February 27 Square" },
+          { th: "ทะเลสาบหรูอี้ เช็คอิน ‘ตึกข้าวโพด’ และจัตุรัส 27", en: "Ruyi Lake, the 'Corn Tower' check-in and February 27 Square", stopId: "zhengzhou" },
           { th: "ถนนคนเดินเต๋อหัว แล้วบินตรงเจิ้งโจว–ดอนเมือง (SL965)", en: "The Dehua pedestrian street, then fly direct Zhengzhou–Don Muang (SL965)" },
         ],
       },

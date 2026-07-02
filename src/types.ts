@@ -155,6 +155,14 @@ export type ProgramHotel = {
   note?: Localized;
 };
 
+/**
+ * One attraction/activity line in a day's itinerary. It is a plain localized
+ * line, optionally carrying a `stopId`: when set (and the stop exists), the
+ * line renders as a clickable chip that flies the map to that pin and opens
+ * its detail card (where photos/video live).
+ */
+export type ItineraryStep = Localized & { stopId?: string };
+
 /** One day of the program's day-by-day itinerary. */
 export type ItineraryDay = {
   /** Day number, starting at 1. */
@@ -163,8 +171,8 @@ export type ItineraryDay = {
   title: Localized;
   /** Anchor stop ids for the day (first one drives the temperature chip). */
   stops?: string[];
-  /** Attractions / activities visited along the way, as text lines. */
-  along: Localized[];
+  /** Attractions / activities visited along the way (clickable when linked). */
+  along: ItineraryStep[];
   /** Optional drive summary, e.g. "Ghez Canyon 54 km · 1.5h". */
   drive?: Localized;
   /** Overnight hotel for the day. */
@@ -188,6 +196,11 @@ export type PlaceVideo = {
   /** YouTube watch/embed URL, or a static path like "/media/<id>.mp4". */
   url: string;
   title?: Localized;
+  /**
+   * Aspect orientation hint. "vertical" (9:16, e.g. RedNote / Xiaohongshu
+   * clips) is rendered in a portrait container; defaults to horizontal.
+   */
+  orientation?: "vertical" | "horizontal";
 };
 
 /**
@@ -217,6 +230,40 @@ export type AttractionMedia = {
   credit?: string;
   sourceUrl?: string;
   extract?: string;
+};
+
+/**
+ * Per-stop gallery + vertical video pulled from a RedNote / Xiaohongshu note
+ * chosen by the admin in src/data/rednote.ts and downloaded into public/ by
+ * scripts/build-rednote.ts. Committed to src/data/media/rednote.json so the
+ * deployed app stays static and keyless. Every field is optional.
+ */
+export type RednoteMedia = {
+  /** Local /attractions/<id>-N.jpg paths (max 4), downloaded at build time. */
+  gallery?: string[];
+  /** Local vertical mp4 (+ orientation), downloaded at build time. */
+  video?: PlaceVideo;
+  /** Author handle / source label for attribution. */
+  credit?: string;
+  /** Original RedNote note URL. */
+  sourceUrl?: string;
+};
+
+/**
+ * Unified per-location media manifest (src/data/media/media.json). One entry
+ * exists for every stop — an empty entry is a placeholder to fill over time.
+ * Images are committed repo paths; video is an external URL (kept out of git).
+ * Scaffolded/refreshed by scripts/build-media-manifest.ts.
+ */
+export type LocationMedia = {
+  /** Repo image paths, e.g. "/attractions/<id>-1.jpg" (hero first, max 4). */
+  images?: string[];
+  /** Externally-hosted video (mp4 URL or YouTube); null = slot empty. */
+  video?: PlaceVideo | null;
+  /** Attribution / source label. */
+  credit?: string;
+  /** Where the media came from (URL). */
+  sourceUrl?: string;
 };
 
 /** One month of climatology for a stop. */
