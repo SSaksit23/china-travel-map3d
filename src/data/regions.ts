@@ -46,6 +46,36 @@ export const regions: Region[] = [
     name: { th: "จงหยวน (ส่านซี–เหอหนาน)", en: "Central China (Shaanxi–Henan)", zh: "中原 (陕西-河南)" },
     color: "#c2185b",
   },
+  {
+    id: "fujian",
+    name: { th: "ฝูเจี้ยน–แต้จิ๋ว (ชายฝั่งหมินหนาน)", en: "Fujian–Chaoshan coast", zh: "福建-潮汕" },
+    color: "#00acc1",
+  },
+  {
+    id: "chongqing",
+    name: { th: "ฉงชิ่งและเมืองโดยรอบ", en: "Chongqing & surrounds", zh: "重庆及周边" },
+    color: "#3949ab",
+  },
+  {
+    id: "hunan",
+    name: { th: "ฉางซา–หูหนาน–เจียงซี", en: "Changsha & Hunan–Jiangxi", zh: "长沙-湖南-江西" },
+    color: "#7cb342",
+  },
+  {
+    id: "yunnan",
+    name: { th: "ยูนนาน", en: "Yunnan", zh: "云南" },
+    color: "#f9a825",
+  },
+  {
+    id: "beijing",
+    name: { th: "ปักกิ่ง–เซี่ยงไฮ้", en: "Beijing–Shanghai", zh: "北京-上海" },
+    color: "#546e7a",
+  },
+  {
+    id: "jiangnan",
+    name: { th: "หังโจว–เจียงหนาน–อันฮุย", en: "Hangzhou & Jiangnan (Zhejiang–Anhui)", zh: "杭州-江南-安徽" },
+    color: "#ec407a",
+  },
 ];
 
 export const getRegion = (id: string) => regions.find((r) => r.id === id);

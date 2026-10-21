@@ -15,7 +15,7 @@
  *
  * Run with: npm run build:dayroutes
  */
-import { writeFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { greatCircle, bezierSpline, lineString, distance } from "@turf/turf";
@@ -87,10 +87,14 @@ function lastOf<T>(arr: T[]): T | undefined {
 }
 
 async function main() {
-  const out: Record<string, DayRoute[]> = {};
+  // `--only=ID,ID` rebuilds just those programs and merges into dayroutes.json.
+  const only = process.argv.find((a) => a.startsWith("--only="))?.slice(7).split(",").filter(Boolean);
+  const outPath = resolve(DATA_DIR, "dayroutes.json");
+  const out: Record<string, DayRoute[]> = only ? JSON.parse(await readFile(outPath, "utf8")) : {};
   let warnings = 0;
 
   for (const program of programs) {
+    if (only && !only.includes(program.id)) continue;
     if (!program.itinerary?.length) continue;
 
     // Segment lookup keyed on "from|to" (both directions) from the route spine,
@@ -192,7 +196,7 @@ async function main() {
     console.log(`✓ ${program.id}: ${days.length} day routes`);
   }
 
-  await writeFile(resolve(DATA_DIR, "dayroutes.json"), JSON.stringify(out));
+  await writeFile(outPath, JSON.stringify(out));
   console.log(`✓ dayroutes.json (${Object.keys(out).length} programs)`);
   console.log(warnings ? `Done with ${warnings} warning(s).` : "Done, no warnings.");
 }

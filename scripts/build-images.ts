@@ -9,7 +9,7 @@
  * calls. Run with: npm run build:images
  */
 import { existsSync } from "node:fs";
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { stops } from "../src/data/stops.ts";
@@ -49,8 +49,15 @@ type Summary = {
 
 async function fetchSummary(title: string): Promise<AttractionMedia | null> {
   const url = `${REST}/${encodeURIComponent(title)}`;
+  const headers = { "User-Agent": UA, accept: "application/json" };
   try {
-    const res = await fetch(url, { headers: { "User-Agent": UA, accept: "application/json" } });
+    let res = await fetch(url, { headers });
+    // Wikipedia rate-limits bursts (429); back off rather than misreport "no image".
+    for (let attempt = 0; !res.ok && attempt < 4; attempt++) {
+      if (res.status !== 429 && res.status < 500) break;
+      await sleep(3000 * (attempt + 1));
+      res = await fetch(url, { headers });
+    }
     if (!res.ok) return null;
     const j = (await res.json()) as Summary;
     if (!j.thumbnail && !j.extract) return null;
@@ -68,11 +75,16 @@ async function fetchSummary(title: string): Promise<AttractionMedia | null> {
 
 async function main() {
   await mkdir(OUT_DIR, { recursive: true });
-  const out: Record<string, AttractionMedia> = {};
+  // `--missing` keeps the existing images.json and only fetches stops absent from it.
+  const missingOnly = process.argv.includes("--missing");
+  const out: Record<string, AttractionMedia> = missingOnly
+    ? JSON.parse(await readFile(resolve(OUT_DIR, "images.json"), "utf8"))
+    : {};
   let ok = 0;
   let miss = 0;
 
   for (const stop of stops) {
+    if (missingOnly && out[stop.id]) continue;
     const local = localImage(stop.id);
     if (local) {
       out[stop.id] = local;

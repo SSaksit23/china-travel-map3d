@@ -909,6 +909,912 @@ export const stops: Stop[] = [
       en: "The 'Mirror of the Sky' — a salt lake that reflects sky and clouds like glass, with a sightseeing mini-train across the salt flats.",
     },
   },
+  // Fujian–Chaoshan coast
+  {
+    id: "xiamen",
+    name: { th: "เซียะเหมิน", en: "Xiamen", zh: "厦门" },
+    coords: [118.0798, 24.458],
+    category: "city",
+    wiki: "Xiamen",
+    blurb: {
+      th: "‘สวนสวรรค์กลางทะเล’ เมืองท่าฝูเจี้ยน ตึกแถวฉีโหลวสไตล์หนานหยางบนถนนจงซาน อาหารหมินหนาน และประตูสู่เกาะกู่ล่างอวี่",
+      en: "Fujian's 'garden on the sea' — a breezy port of qilou arcades on Zhongshan Road, Minnan food, and the gateway to Gulangyu.",
+    },
+  },
+  {
+    id: "gulangyu",
+    name: { th: "เกาะกู่ล่างอวี่ (เกาะเปียโน)", en: "Gulangyu (Piano Island)", zh: "鼓浪屿" },
+    coords: [118.0625, 24.4475],
+    category: "heritage",
+    wiki: "Gulangyu",
+    blurb: {
+      th: "เกาะมรดกโลก UNESCO ปลอดรถยนต์ คฤหาสน์โคโลเนียล สวนซูจวง และพิพิธภัณฑ์เปียโน",
+      en: "A car-free UNESCO island of colonial villas, the seaside Shuzhuang Garden and a museum of antique pianos.",
+    },
+  },
+  {
+    id: "nanputuo",
+    name: { th: "วัดหนานผู่โถว", en: "Nanputuo Temple", zh: "南普陀寺" },
+    coords: [118.0916, 24.4431],
+    category: "temple",
+    wiki: "Nanputuo Temple",
+    blurb: {
+      th: "วัดพันปีสมัยราชวงศ์ถังที่ชาวจีนโพ้นทะเลมาไหว้เจ้าแม่กวนอิมก่อนล่องเรือ มีอักษร ‘佛’ ยักษ์บนหน้าผา",
+      en: "A Tang-era temple where emigrants prayed to Guanyin before sailing south, with a giant '佛' carved on the cliff above.",
+    },
+  },
+  {
+    id: "shantou",
+    name: { th: "ซัวเถา", en: "Shantou", zh: "汕头" },
+    coords: [116.6695, 23.3578],
+    category: "city",
+    wiki: "Shantou",
+    blurb: {
+      th: "เมืองท่าแต้จิ๋ว รากเหง้าของชาวไทยเชื้อสายจีน ย่านเมืองเก่าเสี่ยวกงหยวนผังรูปพัดและตึกแถวสไตล์หนานหยาง",
+      en: "The Teochew port many Thai-Chinese families trace their roots to — its fan-shaped Xiaogongyuan old town of Nanyang-style arcades.",
+    },
+  },
+  {
+    id: "mayu-island",
+    name: { th: "เกาะหม่าอวี่ (ไฮตังม่า)", en: "Mayu Island", zh: "妈屿岛" },
+    coords: [116.7475, 23.3372],
+    category: "heritage",
+    blurb: {
+      th: "เกาะปากอ่าวซัวเถา จุดลาจากของชาวแต้จิ๋วก่อนลงเรือสำเภาหัวแดงสู่สยาม มีศาลเจ้าแม่ทับทิมเก่าแก่",
+      en: "An islet at the mouth of Shantou harbour — the Teochew emigrants' last stop to pray to Mazu before sailing to Siam.",
+    },
+  },
+  {
+    // APPROX — verify: Huafu village, Shanghua town, Chenghai; placed at the town centre.
+    id: "taksin-tomb",
+    name: { th: "สุสานพระเจ้าตากสินมหาราช", en: "King Taksin Memorial Tomb", zh: "郑信衣冠墓" },
+    coords: [116.7135, 23.5228],
+    category: "heritage",
+    blurb: {
+      th: "สุสานฉลองพระองค์และพระมาลาของสมเด็จพระเจ้าตากสินมหาราช ณ บ้านเกิดพระราชบิดาในเขตเฉิงไห่",
+      en: "The memorial tomb holding King Taksin's robes and hat, in his father's home village in Chenghai.",
+    },
+  },
+  {
+    id: "chaozhou",
+    name: { th: "เมืองโบราณแต้จิ๋ว", en: "Chaozhou Ancient City", zh: "潮州古城" },
+    coords: [116.6379, 23.6651],
+    category: "city",
+    wiki: "Chaozhou",
+    blurb: {
+      th: "เมืองเก่า 1,600 ปีริมแม่น้ำหานเจียง ถนนผายฝ่างที่มีซุ้มประตูหิน 23 ซุ้ม วัดไคหยวน และชากังฟู",
+      en: "A 1,600-year-old city on the Han River — Paifang Street's 23 stone arches, Kaiyuan Temple and gongfu tea.",
+    },
+  },
+  {
+    id: "guangji-bridge",
+    name: { th: "สะพานเซียงจื่อ (กว่างจี้)", en: "Guangji (Xiangzi) Bridge", zh: "广济桥" },
+    coords: [116.6505, 23.6632],
+    category: "heritage",
+    wiki: "Guangji Bridge",
+    blurb: {
+      th: "สะพานโบราณ 800 ปี หนึ่งในสี่มหาสะพานของจีน กลางสะพานเป็นเรือไม้ 18 ลำเปิด-ปิดได้",
+      en: "An 800-year-old bridge, one of China's four great ancient bridges, with a middle of 18 moored boats that open and close.",
+    },
+  },
+  {
+    id: "xuanwushan",
+    name: { th: "เอียงบู๊ซัว (เขาเสวียนอู่)", en: "Xuanwu Mountain (Jieshi)", zh: "玄武山" },
+    coords: [115.8291, 22.8206],
+    category: "temple",
+    blurb: {
+      th: "ภูเขาศักดิ์สิทธิ์ริมทะเลลู่เฟิง ที่ตั้งวัดหยวนซานสมัยซ่งใต้ ประดิษฐานองค์ตั่วเล่าเอี้ย (เจ้าพ่อเสือ)",
+      en: "A sacred seaside hill at Jieshi, Lufeng, home to the Southern Song Yuanshan Temple of Xuantian Shangdi.",
+    },
+  },
+  {
+    // APPROX — verify: Heping town, Chaoyang district; placed at the district centre.
+    id: "daifeng-temple",
+    name: { th: "ศาลเจ้าไต่ฮงกง (เหอผิง)", en: "Tai Hong Kong Shrine (Heping)", zh: "大峰祖师庙" },
+    coords: [116.596, 23.266],
+    category: "temple",
+    blurb: {
+      th: "ศาลเจ้าหลวงปู่ไต้ฮงกง พระภิกษุสมัยซ่งผู้เป็นแรงบันดาลใจของมูลนิธิป่อเต็กตึ๊งในไทย",
+      en: "The shrine of the Song-dynasty monk Tai Hong Kong, the inspiration behind Thailand's Poh Teck Tung Foundation.",
+    },
+  },
+  {
+    id: "yongding-tulou",
+    name: { th: "บ้านดินหย่งติ้ง (ราชาบ้านดิน)", en: "Yongding Tulou (Chengqi Lou)", zh: "永定土楼 · 承启楼" },
+    coords: [117.004, 24.6635],
+    category: "heritage",
+    wiki: "Fujian tulou",
+    blurb: {
+      th: "บ้านดินฮากกามรดกโลก ‘ราชาบ้านดิน’ เฉิงฉี่โหลว วงกลมซ้อน 4 ชั้น กว่า 400 ห้อง",
+      en: "UNESCO Hakka earthen roundhouses — Chengqi Lou, the 'King of Tulou', has four concentric rings and some 400 rooms.",
+    },
+  },
+  {
+    id: "tianluokeng",
+    name: { th: "กลุ่มบ้านดินเถียนหลัวเคิง", en: "Tianluokeng Tulou Cluster", zh: "田螺坑土楼群" },
+    coords: [117.0553, 24.5872],
+    category: "heritage",
+    wiki: "Tianluokeng Tulou cluster",
+    blurb: {
+      th: "‘สี่กับข้าวหนึ่งชามซุป’ บ้านดินทรงกลม 3 หลัง ทรงรี 1 หลัง ล้อมบ้านดินทรงสี่เหลี่ยมกลางหุบเขาหนานจิ้ง",
+      en: "The 'four dishes and a soup' — three round, one oval and one square earthen house in a Nanjing County valley.",
+    },
+  },
+  {
+    id: "zhangzhou",
+    name: { th: "เมืองโบราณจางโจว", en: "Zhangzhou Ancient City", zh: "漳州古城" },
+    coords: [117.6482, 24.5095],
+    category: "city",
+    wiki: "Zhangzhou",
+    blurb: {
+      th: "หัวใจวัฒนธรรมหมินหนานอายุกว่า 1,300 ปี ตึกแถวอิฐแดง ซุ้มประตูหินหมิง–ชิง และโชว์ ‘หวนคืนถิ่นหมินหนาน’",
+      en: "A 1,300-year-old heart of Minnan culture — red-brick arcades, Ming–Qing stone arches and the 'Return to Minnan' show.",
+    },
+  },
+  // Chongqing & surrounds
+  {
+    id: "chongqing",
+    name: { th: "ฉงชิ่ง", en: "Chongqing", zh: "重庆" },
+    coords: [106.5734, 29.5601],
+    category: "city",
+    wiki: "Chongqing",
+    blurb: {
+      th: "‘มหานคร 8 มิติ’ บนขุนเขาริมแม่น้ำแยงซีและเจียหลิง ตึกขุยซิง ตรอกบันได 18 ขั้น และหม้อไฟหม่าล่า",
+      en: "The '8D mountain city' at the Yangtze–Jialing confluence — the Kuixing building, the Shibati stairways and mala hotpot.",
+    },
+  },
+  {
+    id: "hongyadong",
+    name: { th: "หงหยาต้ง", en: "Hongyadong", zh: "洪崖洞" },
+    coords: [106.5753, 29.5651],
+    category: "heritage",
+    wiki: "Hongya Cave",
+    blurb: {
+      th: "หมู่ตึกไม้แบบเตี้ยวเจี่ยวโหลซ้อนชั้นบนหน้าผาริมแม่น้ำเจียหลิง เปิดไฟสีทองยามค่ำดั่งเมืองในแอนิเมชัน",
+      en: "Stilted diaojiaolou buildings stacked up a Jialing River cliff, glowing gold at night like a scene from an animated film.",
+    },
+  },
+  {
+    id: "ciqikou",
+    name: { th: "เมืองโบราณฉือชี่โข่ว", en: "Ciqikou Ancient Town", zh: "磁器口古镇" },
+    coords: [106.4497, 29.5812],
+    category: "heritage",
+    wiki: "Ciqikou, Chongqing",
+    blurb: {
+      th: "‘เมืองท่าเครื่องเคลือบ’ สมัยหมิง–ชิงริมแม่น้ำเจียหลิง ถนนหินโบราณ โรงน้ำชา และขนมเกลียวเฉินหมาฮวา",
+      en: "A Ming–Qing 'porcelain port' on the Jialing — old stone lanes, teahouses and Chen Mahua's fried dough twists.",
+    },
+  },
+  {
+    id: "liziba",
+    name: { th: "สถานีรถไฟทะลุตึกหลี่จื่อป้า", en: "Liziba (train-through-building)", zh: "李子坝站" },
+    coords: [106.5353, 29.5508],
+    category: "city",
+    wiki: "Liziba station",
+    blurb: {
+      th: "โมโนเรลสาย 2 แล่นทะลุอาคารสูง 19 ชั้น ภาพจำสุดแปลกของเมืองบนภูเขา มีจุดชมวิวถ่ายรูปด้านล่าง",
+      en: "Line 2 monorail runs straight through a 19-storey apartment block — Chongqing's most surreal photo stop.",
+    },
+  },
+  {
+    // APPROX — city centre; the bullet-train arrival point before Tenglong Cave.
+    id: "lichuan",
+    name: { th: "หลี่ชวน", en: "Lichuan", zh: "利川" },
+    coords: [108.935, 30.293],
+    category: "city",
+    wiki: "Lichuan, Hubei",
+    blurb: {
+      th: "‘เมืองแห่งความเย็นสบาย’ บนที่สูงทางตะวันตกของหูเป่ย์ ประตูสู่ถ้ำเถิงหลงต้ง",
+      en: "Western Hubei's cool upland 'city of fresh air' and the gateway to Tenglong Cave.",
+    },
+  },
+  {
+    id: "tenglong-cave",
+    name: { th: "ถ้ำเถิงหลงต้ง (ถ้ำมังกรทะยาน)", en: "Tenglong Cave", zh: "腾龙洞" },
+    coords: [108.9828, 30.3364],
+    category: "nature",
+    wiki: "Tenglong Cave",
+    blurb: {
+      th: "หนึ่งในระบบถ้ำหินปูนที่ใหญ่ที่สุดของเอเชีย ปากถ้ำสูง 74 ม. น้ำตกไหลลงอุโมงค์ใต้ดิน",
+      en: "One of Asia's largest karst cave systems — a 74 m-high mouth swallowing a roaring underground waterfall.",
+    },
+  },
+  {
+    id: "xuanen",
+    name: { th: "ซวนเอิน", en: "Xuan'en", zh: "宣恩" },
+    coords: [109.491, 29.987],
+    category: "city",
+    wiki: "Xuan'en County",
+    blurb: {
+      th: "เมืองริมแม่น้ำก้งสุ่ยแห่งวัฒนธรรมถู่เจียและเหมียว ยามค่ำมีแพไม้ไผ่มังกรประดับไฟยาวกว่า 250 ม.",
+      en: "A Tujia and Miao riverside town on the Gongshui, where a 250 m illuminated bamboo 'dragon raft' glides by night.",
+    },
+  },
+  {
+    // APPROX — verify: Pingshan village, Hefeng County; placed ~10 km NE of the county seat.
+    id: "pingshan-canyon",
+    name: { th: "แกรนด์แคนยอนผิงซาน (เรือลอยฟ้า)", en: "Pingshan Canyon ('floating boats')", zh: "屏山峡谷" },
+    coords: [110.088, 29.974],
+    category: "nature",
+    blurb: {
+      th: "หุบผาหินปูนที่น้ำใสจนเรือไม้ดูเหมือนลอยกลางอากาศ ล่องผ่านช่องเขา ‘ท้องฟ้าเส้นเดียว’",
+      en: "A limestone gorge whose water is so clear the wooden boats seem to float in mid-air through its 'one-thread sky' narrows.",
+    },
+  },
+  {
+    id: "enshi",
+    name: { th: "เอินซือ", en: "Enshi", zh: "恩施" },
+    coords: [109.4746, 30.2975],
+    category: "city",
+    wiki: "Enshi City",
+    blurb: {
+      th: "เมืองหลวงเขตปกครองตนเองถู่เจียและม้ง ขุนเขาหินปูนลำธารมรกต และ ‘เมืองลูกสาว’ ถู่เจีย",
+      en: "Capital of the Tujia–Miao autonomous prefecture — karst peaks, emerald streams and the Tujia 'Girls' City'.",
+    },
+  },
+  {
+    id: "xingwen",
+    name: { th: "ซิ่งเหวิน", en: "Xingwen", zh: "兴文" },
+    coords: [105.2331, 28.3072],
+    category: "city",
+    wiki: "Xingwen County",
+    blurb: {
+      th: "อำเภอทางใต้ของเสฉวนบนรอยต่อที่ราบสูงยูนนาน–กุ้ยโจว ดินแดนอุทยานธรณีโลกและวัฒนธรรมชาวเหมียว",
+      en: "A southern Sichuan county on the edge of the Yunnan–Guizhou plateau — UNESCO geopark country with Miao heritage.",
+    },
+  },
+  {
+    id: "xingwen-stone-sea",
+    name: { th: "ทะเลหินซิงเหวิน & ถ้ำเทียนฉวนต้ง", en: "Xingwen Stone Sea & Tianquan Cave", zh: "兴文石海 · 天泉洞" },
+    coords: [105.1429, 28.1832],
+    category: "nature",
+    blurb: {
+      th: "อุทยานธรณีโลก UNESCO คลื่นหินดำ หลุมยุบยักษ์ และถ้ำเทียนฉวนต้งที่มีปล่องแสงและแม่น้ำใต้ดินให้ล่องเรือ",
+      en: "A UNESCO geopark of black stone waves, giant sinkholes and Tianquan Cave, with a light shaft and an underground river boat ride.",
+    },
+  },
+  {
+    id: "bowangshan",
+    name: { th: "เขาป้อหวัง (ถ้ำหมอกบิน)", en: "Bowang Mountain", zh: "僰王山" },
+    coords: [105.062, 28.3202],
+    category: "nature",
+    blurb: {
+      th: "ทะเลไผ่และหุบเขาคาสต์ถิ่นชาวป้อผู้ลึกลับเจ้าของโลงศพแขวน มีถ้ำหมอกบินปล่องคู่และน้ำตก",
+      en: "Bamboo-sea karst country of the vanished Bo people of hanging-coffin fame, with the twin-shaft Flying Mist Cave and its falls.",
+    },
+  },
+  {
+    id: "suining",
+    name: { th: "ซุ่ยหนิง (บ้านเกิดเจ้าแม่กวนอิม)", en: "Suining", zh: "遂宁" },
+    coords: [105.5733, 30.508],
+    category: "temple",
+    wiki: "Suining",
+    blurb: {
+      th: "‘บ้านเกิดแห่งวัฒนธรรมเจ้าแม่กวนอิม’ ริมแม่น้ำฝูเจียง วัดหลิงเฉวียน วัดกว่างเต๋อ และเมืองโบราณหลงเฟิ่ง",
+      en: "The legendary 'hometown of Guanyin' on the Fu River — Lingquan Temple, Guangde Temple and Longfeng ancient town.",
+    },
+  },
+  {
+    id: "bazhong",
+    name: { th: "ปาจง", en: "Bazhong", zh: "巴中" },
+    coords: [106.7478, 31.8691],
+    category: "city",
+    wiki: "Bazhong",
+    blurb: {
+      th: "เมืองขุนเขาตะวันออกเฉียงเหนือของเสฉวน บนเส้นทางโบราณส่านซี–เสฉวน ฐานพักก่อนขึ้นหลงโถวซาน",
+      en: "A mountain city in north-east Sichuan on the old Shaanxi–Sichuan road — the base for Longtoushan.",
+    },
+  },
+  {
+    id: "longtoushan",
+    name: { th: "ภูเขาหิมะหลงโถวซาน", en: "Longtoushan Snow Mountain", zh: "龙头山" },
+    coords: [106.9849, 32.7623],
+    category: "nature",
+    blurb: {
+      th: "ยอดเขา 2,336 ม. บนรอยต่อเสฉวน–ส่านซี ขึ้นกระเช้าและบันไดเลื่อนกลางแจ้ง 180 ม. เดินระเบียงกระจกเลียบผา 3.5 กม.",
+      en: "A 2,336 m peak on the Sichuan–Shaanxi border, reached by cable car and a 180 m open-air escalator, with a 3.5 km cliff walkway.",
+    },
+  },
+  {
+    id: "langzhong",
+    name: { th: "เมืองโบราณล่างจง", en: "Langzhong Ancient City", zh: "阆中古城" },
+    coords: [105.9651, 31.5774],
+    category: "heritage",
+    wiki: "Langzhong",
+    blurb: {
+      th: "หนึ่งในสี่เมืองโบราณที่สมบูรณ์ที่สุดของจีน อายุกว่า 2,300 ปี ผังฮวงจุ้ยอันดับหนึ่ง หอจงเทียนโหลว",
+      en: "One of China's four best-preserved ancient cities — 2,300 years old, laid out on textbook feng shui around the Zhongtian Tower.",
+    },
+  },
+  // Changsha & Hunan–Jiangxi
+  {
+    id: "changsha",
+    name: { th: "ฉางซา", en: "Changsha", zh: "长沙" },
+    coords: [113.2384, 28.1451],
+    category: "city",
+    wiki: "Changsha",
+    blurb: {
+      th: "เมืองเอกหูหนาน ถนนคนเดินหวงซิงลู่ ทะเลสาบซงย่า วัดไคฝู และศูนย์การค้า IFS ประตูสู่ภาคกลางตอนใต้ของจีน",
+      en: "Hunan's capital — Huangxing Road, Songya Lake, Kaifu Temple and the IFS tower; the gateway to central-south China.",
+    },
+  },
+  {
+    id: "nanchang",
+    name: { th: "หนานชาง (หอเถิงหวัง)", en: "Nanchang (Tengwang Pavilion)", zh: "南昌 · 滕王阁" },
+    coords: [115.8729, 28.6767],
+    category: "heritage",
+    wiki: "Pavilion of Prince Teng",
+    blurb: {
+      th: "เมืองเอกเจียงซีริมแม่น้ำก้านเจียง ที่ตั้งหอเถิงหวังเก๋อ หนึ่งในสามหอโบราณแห่งเจียงหนาน",
+      en: "Jiangxi's capital on the Gan River, home of the Tengwang Pavilion, one of the three great towers of Jiangnan.",
+    },
+  },
+  {
+    id: "wuyuan",
+    name: { th: "อู้หยวน", en: "Wuyuan", zh: "婺源" },
+    coords: [117.7543, 29.3234],
+    category: "city",
+    wiki: "Wuyuan County, Jiangxi",
+    blurb: {
+      th: "‘ชนบทที่งดงามที่สุดของจีน’ บ้านสไตล์ฮุยโจวผนังขาวหลังคาเทา และโชว์แสงสีอู้หนี่โจว",
+      en: "'China's most beautiful countryside' — white-walled Huizhou villages and the Wunüzhou light show.",
+    },
+  },
+  {
+    id: "huangling",
+    name: { th: "หมู่บ้านหวงหลิง", en: "Huangling Village", zh: "篁岭" },
+    coords: [118.1133, 29.3236],
+    category: "heritage",
+    blurb: {
+      th: "หมู่บ้านลอยฟ้าบนไหล่เขา ขึ้นกระเช้า ชมประเพณีตากผลผลิตสีสด และสะพานแขวนกระจกเหล่ยซิน",
+      en: "A cliffside village reached by cable car, famous for its colourful harvest-drying roofs and the Leixin glass bridge.",
+    },
+  },
+  {
+    id: "shangrao",
+    name: { th: "ซ่างเหยา", en: "Shangrao", zh: "上饶" },
+    coords: [117.4054, 28.7436],
+    category: "city",
+    wiki: "Shangrao",
+    blurb: {
+      th: "เมืองโบราณทางตะวันออกเฉียงเหนือของเจียงซี ฐานเที่ยวเขาหลิงซานและหุบเขาวั่งเซียนกู่",
+      en: "An old city in north-east Jiangxi and the base for Lingshan and Wangxian Valley.",
+    },
+  },
+  {
+    id: "lingshan",
+    name: { th: "เขาหลิงซาน", en: "Lingshan Mountain", zh: "灵山" },
+    coords: [117.7534, 28.5785],
+    category: "nature",
+    blurb: {
+      th: "ขุนเขาแกรนิตศักดิ์สิทธิ์ลัทธิเต๋า ขึ้นกระเช้าและบันไดเลื่อน ‘บันไดสวรรค์หยุนติ่ง’ จุดชมวิวกระจกแห่งท้องฟ้า",
+      en: "A sacred Daoist granite range climbed by cable car and the Yunding 'sky ladder' escalator, with a sky-mirror viewpoint.",
+    },
+  },
+  {
+    // APPROX — verify: Wangxian township, Guangxin District; placed at the township centre.
+    id: "wangxian-valley",
+    name: { th: "หุบเขาเทวดาวั่งเซียนกู่", en: "Wangxian Valley", zh: "望仙谷" },
+    coords: [117.8097, 28.6573],
+    category: "nature",
+    blurb: {
+      th: "หมู่บ้านไม้เกาะหน้าผาในหุบเขา ‘แดนเซียน’ เปิดไฟสวยยามค่ำ",
+      en: "A 'fairyland' valley of wooden houses clinging to the cliffs, lit up spectacularly after dark.",
+    },
+  },
+  {
+    id: "langshan",
+    name: { th: "เขาล่างซาน", en: "Langshan", zh: "崀山" },
+    coords: [110.7879, 26.333],
+    category: "nature",
+    blurb: {
+      th: "มรดกโลกภูมิทัศน์หินทรายแดงตันเซีย ยอดเขาพริก ยอดเขาโหนกอูฐ ยอดเขาปาเจี่ยวจ้าย และล่องแพแม่น้ำฟูอี้",
+      en: "A UNESCO danxia landscape — Chilli Peak, Camel Peak, Bajiaozhai's 'whales in a sea of cloud' and rafting on the Fuyi River.",
+    },
+  },
+  {
+    id: "fenghuang",
+    name: { th: "เมืองโบราณเฟิ่งหวง", en: "Fenghuang Ancient Town", zh: "凤凰古城" },
+    coords: [109.5992, 28.0205],
+    category: "heritage",
+    wiki: "Fenghuang County",
+    blurb: {
+      th: "เมืองโบราณริมแม่น้ำถัวเจียง บ้านเสาสูงเตี้ยวเจี่ยวโหลว และสะพานสายรุ้งเปิดไฟยามค่ำ",
+      en: "An old riverside town on the Tuo River — stilted houses and the Rainbow Bridge lit at night.",
+    },
+  },
+  {
+    id: "shiziguan",
+    name: { th: "อุทยานซือจื่อกวน", en: "Shiziguan", zh: "狮子关" },
+    coords: [109.5432, 29.9785],
+    category: "nature",
+    blurb: {
+      th: "หุบผาและผืนน้ำในอำเภอซวนเอิน นั่งรถเปิดประทุนข้าม ‘สะพานล้อคลื่น’ ที่ลอยเรี่ยน้ำ",
+      en: "A gorge-and-lake park in Xuan'en County, crossed by open-top car over a floating 'wave bridge'.",
+    },
+  },
+  {
+    id: "longshan",
+    name: { th: "หลงซาน", en: "Longshan", zh: "龙山" },
+    coords: [109.4966, 29.2312],
+    category: "city",
+    wiki: "Longshan County",
+    blurb: {
+      th: "อำเภอบนเทือกเขาอู่หลิงในเซียงซี สถานีรถไฟความเร็วสูงกลับฉางซา",
+      en: "A Wuling-mountain county in western Hunan with a bullet-train station back to Changsha.",
+    },
+  },
+  {
+    id: "changde",
+    name: { th: "ฉางเต๋อ (วัดเฉียนหมิง)", en: "Changde", zh: "常德" },
+    coords: [111.6929, 29.0346],
+    category: "city",
+    wiki: "Changde",
+    blurb: {
+      th: "เมืองโบราณ ‘อู๋หลิง’ ดินแดนต้นกำเนิดนิทานท้อพันลี้ วัดเซนเฉียนหมิง",
+      en: "The ancient 'Wuling' city of the Peach Blossom Spring legend, with the Zen Qianming Temple.",
+    },
+  },
+  {
+    id: "furong-town",
+    name: { th: "เมืองโบราณฝูหรงเจิ้น", en: "Furong Ancient Town", zh: "芙蓉镇" },
+    coords: [109.9561, 28.7621],
+    category: "heritage",
+    blurb: {
+      th: "เมืองเก่าสองพันปีบนหน้าผาริมน้ำตก ‘เมืองแขวนบนน้ำตก’",
+      en: "A 2,000-year-old town perched on a cliff beside a waterfall — the 'town hanging on a waterfall'.",
+    },
+  },
+  {
+    id: "biancheng",
+    name: { th: "เมืองโบราณเปียนเฉิง", en: "Biancheng (Chadong)", zh: "边城 · 茶峒" },
+    coords: [109.2747, 28.5048],
+    category: "heritage",
+    blurb: {
+      th: "เมืองชายแดนสามมณฑลจากนวนิยาย ‘เปียนเฉิง’ เกาะฉุ้ยฉุ้ย และเรือลากเชือกลาลาตู้",
+      en: "The three-province border town of the novel 'Border Town' — Cuicui Island and the rope-pulled Lalatu ferry.",
+    },
+  },
+  {
+    id: "yunshe",
+    name: { th: "หมู่บ้านม้งหยุนซือ", en: "Yunshe Village", zh: "云舍" },
+    coords: [108.8153, 27.7476],
+    category: "heritage",
+    blurb: {
+      th: "หมู่บ้านถู่เจียโบราณริมลำธารใสเชิงเขาฟานจิ้งซาน",
+      en: "An old Tujia village by a clear stream at the foot of Fanjingshan.",
+    },
+  },
+  {
+    id: "fanjingshan",
+    name: { th: "ภูเขาฟานจิ้งซาน", en: "Fanjingshan", zh: "梵净山" },
+    coords: [108.6921, 27.9194],
+    category: "nature",
+    wiki: "Fanjingshan",
+    blurb: {
+      th: "มรดกโลกทางธรรมชาติ ยอดเขาจินติ่ง 2,336 ม. วิหารบนยอดหิน และ ‘หินเห็ด’ อายุพันล้านปี",
+      en: "A UNESCO natural site — the 2,336 m Red Clouds Golden Summit with temples on top and the billion-year-old Mushroom Rock.",
+    },
+  },
+  {
+    id: "tongren",
+    name: { th: "ถงเหริน", en: "Tongren", zh: "铜仁" },
+    coords: [108.584, 27.9529],
+    category: "city",
+    wiki: "Tongren",
+    blurb: {
+      th: "เมืองเอกตะวันออกเฉียงเหนือของกุ้ยโจว ประตูสู่ฟานจิ้งซาน และแกรนด์แคนยอนถงเหริน",
+      en: "North-east Guizhou's main city — gateway to Fanjingshan and the Tongren Grand Canyon.",
+    },
+  },
+  // North Xinjiang (via Chengdu)
+  {
+    id: "luodai",
+    name: { th: "เมืองโบราณลั่วไต้", en: "Luodai Ancient Town", zh: "洛带古镇" },
+    coords: [104.326, 30.6391],
+    category: "heritage",
+    wiki: "Luodai",
+    blurb: {
+      th: "ชุมชนฮากกา (จีนแคะ) ที่ใหญ่ที่สุดของจีนตะวันตก ชานเมืองเฉิงตู",
+      en: "The largest Hakka community in western China, on the edge of Chengdu.",
+    },
+  },
+  // Yunnan
+  {
+    id: "kunming",
+    name: { th: "คุนหมิง", en: "Kunming", zh: "昆明" },
+    coords: [102.7169, 25.0399],
+    category: "city",
+    wiki: "Kunming",
+    blurb: {
+      th: "‘เมืองแห่งฤดูใบไม้ผลิ’ เมืองเอกยูนนาน ถนนหนานผิง และวัดหยวนทง",
+      en: "Yunnan's 'city of eternal spring' — Nanping Street and Yuantong Temple.",
+    },
+  },
+  {
+    id: "dali",
+    name: { th: "เมืองโบราณต้าหลี่", en: "Dali Old Town", zh: "大理古城" },
+    coords: [100.1625, 25.6983],
+    category: "heritage",
+    wiki: "Dali Old Town",
+    blurb: {
+      th: "เมืองหลวงเก่าอาณาจักรน่านเจ้าริมทะเลสาบเอ๋อร์ไห่ เจดีย์สามองค์ และโค้ง S",
+      en: "The old Nanzhao capital by Erhai Lake — the Three Pagodas and Erhai's S-bend.",
+    },
+  },
+  {
+    id: "shangrila",
+    name: { th: "แชงกรีล่า (เมืองโบราณ)", en: "Shangri-La Old Town", zh: "独克宗古城" },
+    coords: [99.7076, 27.8105],
+    category: "city",
+    wiki: "Dukezong",
+    blurb: {
+      th: "เมืองโบราณทิเบตจงเตี้ยน กงล้อมนตร์ยักษ์วัดต้าฝอ บนที่สูง ~3,300 ม.",
+      en: "The Tibetan old town of Zhongdian with the giant prayer wheel at Dafo Temple, ~3,300 m up.",
+    },
+  },
+  {
+    id: "songzanlin",
+    name: { th: "วัดลามะซงจ้านหลิน", en: "Songzanlin Monastery", zh: "松赞林寺" },
+    coords: [99.7042, 27.8636],
+    category: "temple",
+    wiki: "Songzanlin Monastery",
+    blurb: {
+      th: "วัดลามะใหญ่ที่สุดในยูนนาน ‘โปตาลาน้อย’ สร้างปี ค.ศ. 1679",
+      en: "Yunnan's largest Tibetan monastery, the 'little Potala', founded in 1679.",
+    },
+  },
+  {
+    id: "tiger-leaping-gorge",
+    name: { th: "ช่องแคบเสือกระโจน", en: "Tiger Leaping Gorge", zh: "虎跳峡" },
+    coords: [100.1206, 27.2044],
+    category: "nature",
+    wiki: "Tiger Leaping Gorge",
+    blurb: {
+      th: "หุบเหวลึกของแม่น้ำจินซา (แยงซีตอนบน) มีบันไดเลื่อนลงจุดชมวิว",
+      en: "A deep gorge of the upper Yangtze (Jinsha), with escalators down to the viewpoint.",
+    },
+  },
+  {
+    id: "lijiang",
+    name: { th: "เมืองโบราณลี่เจียง", en: "Lijiang Old Town", zh: "丽江古城" },
+    coords: [100.2353, 26.8739],
+    category: "heritage",
+    wiki: "Old Town of Lijiang",
+    blurb: {
+      th: "เมืองมรดกโลกของชาวน่าซี สระน้ำมังกรดำ และหมู่บ้านไป๋ซา",
+      en: "The UNESCO Naxi old town, Black Dragon Pool and Baisha village.",
+    },
+  },
+  {
+    id: "jade-dragon",
+    name: { th: "ภูเขาหิมะมังกรหยก", en: "Jade Dragon Snow Mountain", zh: "玉龙雪山" },
+    coords: [100.1767, 27.0984],
+    category: "nature",
+    wiki: "Jade Dragon Snow Mountain",
+    blurb: {
+      th: "ภูเขาหิมะตลอดปี ขึ้นกระเช้าใหญ่ ชมโชว์ Impression Lijiang และหุบเขาสีน้ำเงิน",
+      en: "Year-round snow peaks by cable car, the Impression Lijiang show and Blue Moon Valley.",
+    },
+  },
+  {
+    // APPROX — verify: Yiliang county seat; the cherry-blossom valley itself is not pinned exactly.
+    id: "yiliang",
+    name: { th: "หยีเหลียง (หุบเขาซากุระ)", en: "Yiliang (cherry valley)", zh: "宜良" },
+    coords: [103.2016, 24.9765],
+    category: "nature",
+    blurb: {
+      th: "หุบเขาซากุระบานสะพรั่งช่วง ก.พ.–มี.ค. ห่างคุนหมิง ~70 กม.",
+      en: "A valley of cherry blossom in Feb–Mar, about 70 km from Kunming.",
+    },
+  },
+  // Sichuan
+  {
+    id: "dujiangyan",
+    name: { th: "ตูเจียงเอี้ยน", en: "Dujiangyan", zh: "都江堰" },
+    coords: [103.6143, 30.9965],
+    category: "heritage",
+    wiki: "Dujiangyan",
+    blurb: {
+      th: "ระบบชลประทานโบราณมรดกโลก เมืองโบราณกวนเสี้ยน และสะพานหนานเฉียวเปิดไฟยามค่ำ",
+      en: "The UNESCO ancient irrigation system, Guanxian old town and the illuminated Nanqiao Bridge.",
+    },
+  },
+  {
+    id: "siguniang",
+    name: { th: "ภูเขาสี่ดรุณี (ซวงเฉียวโกว)", en: "Mount Siguniang (Shuangqiao)", zh: "四姑娘山 · 双桥沟" },
+    coords: [102.7678, 30.9817],
+    category: "nature",
+    wiki: "Mount Siguniang",
+    blurb: {
+      th: "ยอดเขาหิมะสี่ยอด หุบเขาซวงเฉียวโกวยาว 35 กม. ป่าใบไม้เปลี่ยนสี",
+      en: "Four snow peaks above the 35 km Shuangqiao Valley and its autumn forests.",
+    },
+  },
+  {
+    id: "maoxian",
+    name: { th: "เม่าเสี้ยน", en: "Maoxian", zh: "茂县" },
+    coords: [103.6446, 31.8567],
+    category: "city",
+    wiki: "Mao County",
+    blurb: {
+      th: "อำเภอชาวเชียงริมแม่น้ำหมิน ทางผ่านสู่หวงหลงและจิ่วจ้ายโกว",
+      en: "A Qiang-people county on the Min River, on the road to Huanglong and Jiuzhaigou.",
+    },
+  },
+  {
+    id: "huanglong",
+    name: { th: "อุทยานหวงหลง", en: "Huanglong", zh: "黄龙" },
+    coords: [103.9282, 32.7806],
+    category: "nature",
+    wiki: "Huanglong Scenic and Historic Interest Area",
+    blurb: {
+      th: "มรดกโลก แอ่งหินปูนสีทองไล่ระดับเป็นขั้นบันได บนที่สูง ~3,500 ม.",
+      en: "A UNESCO valley of golden travertine terraces and pools, at ~3,500 m.",
+    },
+  },
+  // Beijing–Shanghai
+  {
+    id: "beijing",
+    name: { th: "ปักกิ่ง", en: "Beijing", zh: "北京" },
+    coords: [116.4053, 39.9069],
+    category: "city",
+    wiki: "Beijing",
+    blurb: {
+      th: "เมืองหลวงจีน ถนนหวังฝูจิ่ง วัดลามะ ถนนเฉียนเหมิน และสนามกีฬารังนก",
+      en: "China's capital — Wangfujing, the Lama Temple, Qianmen Street and the Bird's Nest.",
+    },
+  },
+  {
+    id: "forbidden-city",
+    name: { th: "จัตุรัสเทียนอันเหมิน & พระราชวังต้องห้าม", en: "Tiananmen & the Forbidden City", zh: "天安门 · 故宫" },
+    coords: [116.3908, 39.9174],
+    category: "heritage",
+    wiki: "Forbidden City",
+    blurb: {
+      th: "จัตุรัสใหญ่ที่สุดในโลกและพระราชวังของจักรพรรดิหมิง–ชิง มรดกโลก",
+      en: "The world's largest square and the UNESCO palace of the Ming and Qing emperors.",
+    },
+  },
+  {
+    id: "summer-palace",
+    name: { th: "พระราชวังฤดูร้อนอี้เหอหยวน", en: "Summer Palace", zh: "颐和园" },
+    coords: [116.2647, 39.9901],
+    category: "heritage",
+    wiki: "Summer Palace",
+    blurb: {
+      th: "อุทยานหลวงริมทะเลสาบคุนหมิง มรดกโลก",
+      en: "The UNESCO imperial garden on Kunming Lake.",
+    },
+  },
+  {
+    id: "juyongguan",
+    name: { th: "กำแพงเมืองจีนด่านจวียงกวน", en: "Great Wall at Juyongguan", zh: "居庸关长城" },
+    coords: [116.0604, 40.2994],
+    category: "heritage",
+    wiki: "Juyong Pass",
+    blurb: {
+      th: "ด่านกำแพงเมืองจีนใกล้ปักกิ่ง ปีนป้อมบนสันเขา",
+      en: "A Great Wall pass near Beijing with forts climbing the ridges.",
+    },
+  },
+  {
+    id: "temple-of-heaven",
+    name: { th: "หอฟ้าเทียนถาน", en: "Temple of Heaven", zh: "天坛" },
+    coords: [116.4029, 39.8799],
+    category: "heritage",
+    wiki: "Temple of Heaven",
+    blurb: {
+      th: "ศาสนสถานที่จักรพรรดิบวงสรวงขอพรการเก็บเกี่ยว มรดกโลก",
+      en: "Where emperors prayed for good harvests — a UNESCO site.",
+    },
+  },
+  {
+    id: "shanghai",
+    name: { th: "เซี่ยงไฮ้", en: "Shanghai", zh: "上海" },
+    coords: [121.471, 31.2339],
+    category: "city",
+    wiki: "Shanghai",
+    blurb: {
+      th: "มหานครใหญ่ที่สุดของจีน ถนนนานกิง Starbucks Reserve อาคารพันต้นไม้ และตลาดเฉิงหวังเมี่ยว",
+      en: "China's biggest city — Nanjing Road, the Starbucks Reserve Roastery, 1000 Trees and the City God Temple bazaar.",
+    },
+  },
+  {
+    id: "the-bund",
+    name: { th: "หาดไว่ทาน (เดอะบันด์)", en: "The Bund", zh: "外滩" },
+    coords: [121.4876, 31.2353],
+    category: "heritage",
+    wiki: "The Bund",
+    blurb: {
+      th: "ริมแม่น้ำหวงผู่ ตึกยุคอาณานิคมฝั่งหนึ่ง วิวหอไข่มุกและผู่ตงอีกฝั่ง",
+      en: "The Huangpu riverfront — colonial buildings on one side, the Pearl Tower and Pudong skyline on the other.",
+    },
+  },
+  {
+    id: "zhujiajiao",
+    name: { th: "เมืองโบราณจูเจียเจี่ยว", en: "Zhujiajiao Water Town", zh: "朱家角" },
+    coords: [121.0439, 31.1025],
+    category: "heritage",
+    wiki: "Zhujiajiao",
+    blurb: {
+      th: "‘เวนิสตะวันออก’ เมืองน้ำโบราณของเซี่ยงไฮ้ ล่องเรือลอดสะพานหิน",
+      en: "Shanghai's 'Venice of the East' — a canal town explored by boat under stone bridges.",
+    },
+  },
+  // Hangzhou & Jiangnan
+  {
+    id: "hangzhou",
+    name: { th: "หังโจว", en: "Hangzhou", zh: "杭州" },
+    coords: [120.2052, 30.249],
+    category: "city",
+    wiki: "Hangzhou",
+    blurb: {
+      th: "‘สวรรค์บนดิน’ เมืองหลวงซ่งใต้ ถนนเหอฝางเจีย และย่านช้อปปิ้งทันสมัย",
+      en: "'Heaven on earth' — the Southern Song capital, Hefang Street and modern shopping.",
+    },
+  },
+  {
+    id: "west-lake",
+    name: { th: "ทะเลสาบซีหู", en: "West Lake", zh: "西湖" },
+    coords: [120.1431, 30.246],
+    category: "nature",
+    wiki: "West Lake",
+    blurb: {
+      th: "มรดกโลก สะพานต้วนเฉียว เขากูซาน และถนนเป่ยซานลู่ช่วงใบไม้เปลี่ยนสี",
+      en: "The UNESCO lake — Broken Bridge, Gushan Island and Beishan Road in autumn colour.",
+    },
+  },
+  {
+    id: "zhoushan",
+    name: { th: "โจวซาน", en: "Zhoushan", zh: "舟山" },
+    coords: [122.203, 29.9873],
+    category: "city",
+    wiki: "Zhoushan",
+    blurb: {
+      th: "เมืองหมู่เกาะริมทะเลจีนตะวันออก ท่าเรือสู่เกาะผู่โถวซาน",
+      en: "An East China Sea island city and the ferry port for Putuoshan.",
+    },
+  },
+  {
+    id: "putuoshan",
+    name: { th: "เกาะผู่โถวซาน", en: "Mount Putuo", zh: "普陀山" },
+    coords: [122.3863, 30.0113],
+    category: "temple",
+    wiki: "Mount Putuo",
+    blurb: {
+      th: "หนึ่งในสี่พุทธคีรี ดินแดนเจ้าแม่กวนอิม วัดผู่จี้ เจ้าแม่กวนอิมหนานไห่ และวัดไผ่ม่วง",
+      en: "One of China's four sacred Buddhist mountains — Guanyin's island, with Puji Temple and the Nanhai Guanyin.",
+    },
+  },
+  {
+    id: "xuedou-temple",
+    name: { th: "วัดเสวี่ยโต้ว", en: "Xuedou Temple", zh: "雪窦寺" },
+    coords: [121.2176, 29.6875],
+    category: "temple",
+    blurb: {
+      th: "วัดโบราณในหุบเขาเสวี่ยโต้วซาน หนิงปอ ประดิษฐานพระศรีอาริย์องค์ใหญ่",
+      en: "An ancient temple in the Xuedou hills of Ningbo, home to a giant Maitreya Buddha.",
+    },
+  },
+  {
+    id: "ningbo",
+    name: { th: "หนิงปอ", en: "Ningbo", zh: "宁波" },
+    coords: [121.5565, 29.8792],
+    category: "city",
+    wiki: "Ningbo",
+    blurb: {
+      th: "เมืองท่าเก่า หอกลองสมัยถัง ถนนหนานถัง และย่านเหล่าไว่ทานริมสามแม่น้ำ",
+      en: "An old port — the Tang-era Drum Tower, Nantang Street and the Laowaitan riverside quarter.",
+    },
+  },
+  {
+    id: "hengdian",
+    name: { th: "เหิงเตี้ยน เวิลด์สตูดิโอ", en: "Hengdian World Studios", zh: "横店影视城" },
+    coords: [120.3104, 29.1454],
+    category: "heritage",
+    wiki: "Hengdian World Studios",
+    blurb: {
+      th: "โรงถ่ายภาพยนตร์ใหญ่ที่สุดในโลก ฉากพระราชวังและเมืองจำลอง ‘ฮอลลีวูดเมืองจีน’",
+      en: "The world's largest film studio — palace and city sets of 'China's Hollywood'.",
+    },
+  },
+  {
+    id: "yiwu",
+    name: { th: "อี้อู", en: "Yiwu", zh: "义乌" },
+    coords: [120.0704, 29.3093],
+    category: "city",
+    wiki: "Yiwu",
+    blurb: {
+      th: "‘ซูเปอร์มาร์เก็ตของโลก’ ศูนย์ค้าส่งสินค้าเล็กที่ใหญ่ที่สุดในโลก",
+      en: "'The world's supermarket' — the planet's biggest small-goods wholesale market.",
+    },
+  },
+  {
+    id: "shaoxing",
+    name: { th: "เส้าซิง", en: "Shaoxing", zh: "绍兴" },
+    coords: [120.5875, 30.0024],
+    category: "heritage",
+    wiki: "Shaoxing",
+    blurb: {
+      th: "เมืองน้ำเจียงหนาน สะพานป้าจื้อมรดกโลก และถนนคนเดินชางเฉียว",
+      en: "A Jiangnan water city — the UNESCO-listed Bazi Bridge and Cangqiao Street.",
+    },
+  },
+  {
+    id: "anchang",
+    name: { th: "เมืองโบราณอันชาง", en: "Anchang Ancient Town", zh: "安昌古镇" },
+    coords: [120.487, 30.1402],
+    category: "heritage",
+    blurb: {
+      th: "เมืองน้ำที่ยังมีชีวิตจริง ไส้กรอกตากแห้งและตลาดริมคลอง",
+      en: "A still-lived-in water town of canal-side markets and air-dried sausages.",
+    },
+  },
+  {
+    id: "tunxi",
+    name: { th: "ถนนโบราณถุนซี (เมืองหวงซาน)", en: "Tunxi Old Street (Huangshan city)", zh: "屯溪老街" },
+    coords: [118.3009, 29.7106],
+    category: "city",
+    wiki: "Tunxi District",
+    blurb: {
+      th: "ถนนคนเดินสถาปัตยกรรมฮุยโจว และการแสดง ‘ฮุ่ยซิ่ว’",
+      en: "A Huizhou-style old street and the 'Huixiu' cultural show.",
+    },
+  },
+  {
+    id: "huangshan",
+    name: { th: "อุทยานเขาหวงซาน", en: "Huangshan (Yellow Mountain)", zh: "黄山" },
+    coords: [118.1868, 30.0845],
+    category: "nature",
+    wiki: "Huangshan",
+    blurb: {
+      th: "มรดกโลก ทะเลเมฆ สนรูปทรงแปลก ยอดเขาซื่อซิ่น และกระเช้าไท่ผิง (ที่พักเมืองถังโข่ว)",
+      en: "UNESCO's Yellow Mountain — seas of cloud, sculpted pines, Shixin Peak and the Taiping cable car (stay in Tangkou).",
+    },
+  },
+  {
+    id: "jiuhuashan",
+    name: { th: "เขาจิ่วหัวซาน", en: "Mount Jiuhua", zh: "九华山" },
+    coords: [117.8182, 30.4634],
+    category: "temple",
+    wiki: "Mount Jiuhua",
+    blurb: {
+      th: "หนึ่งในสี่พุทธคีรี ดินแดนพระกษิติครรภ์ วัดเทียนไถ วัดไป่ซุ่ยกง และวัดฮว่าเฉิง",
+      en: "One of the four sacred Buddhist mountains, devoted to Ksitigarbha — Tiantai, Baisui Gong and Huacheng temples.",
+    },
+  },
+  {
+    id: "taiping-lake",
+    name: { th: "ทะเลสาบไท่ผิง", en: "Taiping Lake", zh: "太平湖" },
+    coords: [117.9996, 30.328],
+    category: "nature",
+    blurb: {
+      th: "ทะเลสาบน้ำเขียวใสกลางขุนเขาอันฮุย ล่องเรือชมวิว",
+      en: "A clear green lake among the Anhui hills, seen by boat.",
+    },
+  },
+  {
+    id: "hongcun",
+    name: { th: "หมู่บ้านโบราณหงชุน", en: "Hongcun Village", zh: "宏村" },
+    coords: [117.9847, 30.0048],
+    category: "heritage",
+    wiki: "Hongcun",
+    blurb: {
+      th: "หมู่บ้านมรดกโลกอายุ 900 ปี ‘หมู่บ้านในภาพวาด’ บ้านฮุยโจวสะท้อนบ่อน้ำ",
+      en: "A 900-year-old UNESCO village — 'the village in a painting', its Huizhou houses mirrored in ponds.",
+    },
+  },
+  {
+    id: "qingshan-lake",
+    name: { th: "ป่าในน้ำทะเลสาบชิงซาน", en: "Qingshan Lake Water Forest", zh: "青山湖水上森林" },
+    coords: [119.7506, 30.2583],
+    category: "nature",
+    blurb: {
+      th: "ป่าต้นไม้ที่ขึ้นกลางน้ำในหลินอัน ใบเปลี่ยนสีแดงส้มช่วงปลายปี",
+      en: "A forest growing out of the water in Lin'an, turning red-orange late in the year.",
+    },
+  },
 ];
 
 const stopMap = new Map(stops.map((s) => [s.id, s]));

@@ -326,5 +326,337 @@
   "chaka": {
     "images": [],
     "video": null
+  },
+  "xiamen": {
+    "images": [],
+    "video": null
+  },
+  "gulangyu": {
+    "images": [],
+    "video": null
+  },
+  "nanputuo": {
+    "images": [],
+    "video": null
+  },
+  "shantou": {
+    "images": [],
+    "video": null
+  },
+  "mayu-island": {
+    "images": [],
+    "video": null
+  },
+  "taksin-tomb": {
+    "images": [],
+    "video": null
+  },
+  "chaozhou": {
+    "images": [],
+    "video": null
+  },
+  "guangji-bridge": {
+    "images": [],
+    "video": null
+  },
+  "xuanwushan": {
+    "images": [],
+    "video": null
+  },
+  "daifeng-temple": {
+    "images": [],
+    "video": null
+  },
+  "yongding-tulou": {
+    "images": [],
+    "video": null
+  },
+  "tianluokeng": {
+    "images": [],
+    "video": null
+  },
+  "zhangzhou": {
+    "images": [],
+    "video": null
+  },
+  "chongqing": {
+    "images": [],
+    "video": null
+  },
+  "hongyadong": {
+    "images": [],
+    "video": null
+  },
+  "ciqikou": {
+    "images": [],
+    "video": null
+  },
+  "liziba": {
+    "images": [],
+    "video": null
+  },
+  "lichuan": {
+    "images": [],
+    "video": null
+  },
+  "tenglong-cave": {
+    "images": [],
+    "video": null
+  },
+  "xuanen": {
+    "images": [],
+    "video": null
+  },
+  "pingshan-canyon": {
+    "images": [],
+    "video": null
+  },
+  "enshi": {
+    "images": [],
+    "video": null
+  },
+  "xingwen": {
+    "images": [],
+    "video": null
+  },
+  "xingwen-stone-sea": {
+    "images": [],
+    "video": null
+  },
+  "bowangshan": {
+    "images": [],
+    "video": null
+  },
+  "suining": {
+    "images": [],
+    "video": null
+  },
+  "bazhong": {
+    "images": [],
+    "video": null
+  },
+  "longtoushan": {
+    "images": [],
+    "video": null
+  },
+  "langzhong": {
+    "images": [],
+    "video": null
+  },
+  "changsha": {
+    "images": [],
+    "video": null
+  },
+  "nanchang": {
+    "images": [],
+    "video": null
+  },
+  "wuyuan": {
+    "images": [],
+    "video": null
+  },
+  "huangling": {
+    "images": [],
+    "video": null
+  },
+  "shangrao": {
+    "images": [],
+    "video": null
+  },
+  "lingshan": {
+    "images": [],
+    "video": null
+  },
+  "wangxian-valley": {
+    "images": [],
+    "video": null
+  },
+  "langshan": {
+    "images": [],
+    "video": null
+  },
+  "fenghuang": {
+    "images": [],
+    "video": null
+  },
+  "shiziguan": {
+    "images": [],
+    "video": null
+  },
+  "longshan": {
+    "images": [],
+    "video": null
+  },
+  "changde": {
+    "images": [],
+    "video": null
+  },
+  "furong-town": {
+    "images": [],
+    "video": null
+  },
+  "biancheng": {
+    "images": [],
+    "video": null
+  },
+  "yunshe": {
+    "images": [],
+    "video": null
+  },
+  "fanjingshan": {
+    "images": [],
+    "video": null
+  },
+  "tongren": {
+    "images": [],
+    "video": null
+  },
+  "luodai": {
+    "images": [],
+    "video": null
+  },
+  "kunming": {
+    "images": [],
+    "video": null
+  },
+  "dali": {
+    "images": [],
+    "video": null
+  },
+  "shangrila": {
+    "images": [],
+    "video": null
+  },
+  "songzanlin": {
+    "images": [],
+    "video": null
+  },
+  "tiger-leaping-gorge": {
+    "images": [],
+    "video": null
+  },
+  "lijiang": {
+    "images": [],
+    "video": null
+  },
+  "jade-dragon": {
+    "images": [],
+    "video": null
+  },
+  "yiliang": {
+    "images": [],
+    "video": null
+  },
+  "dujiangyan": {
+    "images": [],
+    "video": null
+  },
+  "siguniang": {
+    "images": [],
+    "video": null
+  },
+  "maoxian": {
+    "images": [],
+    "video": null
+  },
+  "huanglong": {
+    "images": [],
+    "video": null
+  },
+  "beijing": {
+    "images": [],
+    "video": null
+  },
+  "forbidden-city": {
+    "images": [],
+    "video": null
+  },
+  "summer-palace": {
+    "images": [],
+    "video": null
+  },
+  "juyongguan": {
+    "images": [],
+    "video": null
+  },
+  "temple-of-heaven": {
+    "images": [],
+    "video": null
+  },
+  "shanghai": {
+    "images": [],
+    "video": null
+  },
+  "the-bund": {
+    "images": [],
+    "video": null
+  },
+  "zhujiajiao": {
+    "images": [],
+    "video": null
+  },
+  "hangzhou": {
+    "images": [],
+    "video": null
+  },
+  "west-lake": {
+    "images": [],
+    "video": null
+  },
+  "zhoushan": {
+    "images": [],
+    "video": null
+  },
+  "putuoshan": {
+    "images": [],
+    "video": null
+  },
+  "xuedou-temple": {
+    "images": [],
+    "video": null
+  },
+  "ningbo": {
+    "images": [],
+    "video": null
+  },
+  "hengdian": {
+    "images": [],
+    "video": null
+  },
+  "yiwu": {
+    "images": [],
+    "video": null
+  },
+  "shaoxing": {
+    "images": [],
+    "video": null
+  },
+  "anchang": {
+    "images": [],
+    "video": null
+  },
+  "tunxi": {
+    "images": [],
+    "video": null
+  },
+  "huangshan": {
+    "images": [],
+    "video": null
+  },
+  "jiuhuashan": {
+    "images": [],
+    "video": null
+  },
+  "taiping-lake": {
+    "images": [],
+    "video": null
+  },
+  "hongcun": {
+    "images": [],
+    "video": null
+  },
+  "qingshan-lake": {
+    "images": [],
+    "video": null
   }
 }

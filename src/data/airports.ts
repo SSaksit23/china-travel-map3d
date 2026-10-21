@@ -144,6 +144,68 @@ export const airports: Airport[] = [
     regionId: "central",
     gateway: true,
   },
+  // Fujian–Chaoshan coast
+  {
+    id: "XMN",
+    iata: "XMN",
+    name: { th: "ท่าอากาศยานเซียะเหมิน เกาฉี", en: "Xiamen Gaoqi Intl", zh: "厦门高崎机场" },
+    coords: [118.1277, 24.544],
+    regionId: "fujian",
+    gateway: true,
+  },
+  // Chongqing & surrounds
+  {
+    id: "CKG",
+    iata: "CKG",
+    name: { th: "ท่าอากาศยานฉงชิ่ง เจียงเป่ย", en: "Chongqing Jiangbei Intl", zh: "重庆江北机场" },
+    coords: [106.6417, 29.7192],
+    regionId: "chongqing",
+    gateway: true,
+  },
+  // Changsha & Hunan–Jiangxi
+  {
+    id: "CSX",
+    iata: "CSX",
+    name: { th: "ท่าอากาศยานฉางซา หวงฮัว", en: "Changsha Huanghua Intl", zh: "长沙黄花机场" },
+    coords: [113.22, 28.1892],
+    regionId: "hunan",
+    gateway: true,
+  },
+  // Yunnan
+  {
+    id: "KMG",
+    iata: "KMG",
+    name: { th: "ท่าอากาศยานคุนหมิง ฉางสุ่ย", en: "Kunming Changshui Intl", zh: "昆明长水机场" },
+    coords: [102.929, 24.992],
+    regionId: "yunnan",
+    gateway: true,
+  },
+  // Beijing–Shanghai
+  {
+    id: "PEK",
+    iata: "PEK",
+    name: { th: "ท่าอากาศยานนานาชาติปักกิ่ง", en: "Beijing Capital Intl", zh: "北京首都机场" },
+    coords: [116.597, 40.072],
+    regionId: "beijing",
+    gateway: true,
+  },
+  {
+    id: "PVG",
+    iata: "PVG",
+    name: { th: "ท่าอากาศยานเซี่ยงไฮ้ ผู่ตง", en: "Shanghai Pudong Intl", zh: "上海浦东机场" },
+    coords: [121.805, 31.143],
+    regionId: "beijing",
+    gateway: true,
+  },
+  // Hangzhou & Jiangnan
+  {
+    id: "HGH",
+    iata: "HGH",
+    name: { th: "ท่าอากาศยานหังโจว เสี่ยวซาน", en: "Hangzhou Xiaoshan Intl", zh: "杭州萧山机场" },
+    coords: [120.4344, 30.2295],
+    regionId: "jiangnan",
+    gateway: true,
+  },
   // International gateway
   {
     id: "CTU",

@@ -12,7 +12,7 @@
  *
  * Run with: npm run build:routes
  */
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { greatCircle, bezierSpline, lineString, distance } from "@turf/turf";
@@ -79,9 +79,16 @@ function makeFeature(
 async function main() {
   await mkdir(OUT_DIR, { recursive: true });
   let warnings = 0;
-  const legMeta: Record<string, LegMeta[]> = {};
+  // `--only=ID,ID` rebuilds just those programs and merges into the existing
+  // legmeta.json, leaving every other program's geometry untouched.
+  const only = process.argv.find((a) => a.startsWith("--only="))?.slice(7).split(",").filter(Boolean);
+  const legMetaPath = resolve(DATA_DIR, "legmeta.json");
+  const legMeta: Record<string, LegMeta[]> = only
+    ? JSON.parse(await readFile(legMetaPath, "utf8"))
+    : {};
 
   for (const program of programs) {
+    if (only && !only.includes(program.id)) continue;
     const features: Feature<LineString>[] = [];
     const legs: LegMeta[] = [];
 
@@ -146,7 +153,7 @@ async function main() {
     console.log(`✓ ${program.id}: ${features.length} segments -> ${program.id}.json`);
   }
 
-  await writeFile(resolve(DATA_DIR, "legmeta.json"), JSON.stringify(legMeta, null, 0));
+  await writeFile(legMetaPath, JSON.stringify(legMeta, null, 0));
   console.log(`✓ legmeta.json (${Object.keys(legMeta).length} programs)`);
   console.log(warnings ? `Done with ${warnings} warning(s).` : "Done, no warnings.");
 }

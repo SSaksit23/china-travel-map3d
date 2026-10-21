@@ -15,7 +15,13 @@ export type RegionId =
   | "shandong"
   | "shanxi"
   | "innermongolia"
-  | "central";
+  | "central"
+  | "fujian"
+  | "chongqing"
+  | "hunan"
+  | "yunnan"
+  | "beijing"
+  | "jiangnan";
 
 /** Toggleable overlay layers on the map. */
 export type MapLayers = {
