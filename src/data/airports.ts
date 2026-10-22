@@ -127,7 +127,7 @@ export const airports: Airport[] = [
     coords: [109.8615, 39.49],
     regionId: "innermongolia",
   },
-  // Central China (Shaanxi–Henan)
+  // Xi'an – Henan
   {
     id: "XIY",
     iata: "XIY",
