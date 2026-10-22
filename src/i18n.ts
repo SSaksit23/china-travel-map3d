@@ -28,6 +28,8 @@ const resources = {
       clearFilters: "ล้างตัวกรอง",
       hideFilters: "ซ่อนตัวกรอง",
       showFilters: "แสดงตัวกรอง",
+      hideRegions: "ย่อรายการภูมิภาค",
+      showRegions: "ดูทุกภูมิภาค",
       resultsCount: "{{count}} โปรแกรม",
 
       // List
@@ -157,6 +159,8 @@ const resources = {
       clearFilters: "Clear filters",
       hideFilters: "Hide filters",
       showFilters: "Show filters",
+      hideRegions: "Collapse region list",
+      showRegions: "Show all regions",
       resultsCount: "{{count}} programs",
 
       // List

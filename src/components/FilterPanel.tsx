@@ -20,23 +20,8 @@ export default function FilterPanel({ filters, setFilters, lang, resultCount }: 
 
   const patch = (p: Partial<Filters>) => setFilters({ ...filters, ...p });
 
-  // Collapsed state is a per-viewer convenience; remembered when storage allows.
-  const [collapsed, setCollapsed] = useState(() => {
-    try {
-      return localStorage.getItem(COLLAPSE_KEY) === "1";
-    } catch {
-      return false;
-    }
-  });
-  const toggleCollapsed = () => {
-    const next = !collapsed;
-    setCollapsed(next);
-    try {
-      localStorage.setItem(COLLAPSE_KEY, next ? "1" : "0");
-    } catch {
-      /* storage blocked — keep in-memory state only */
-    }
-  };
+  const [collapsed, toggleCollapsed] = usePersistedFlag(COLLAPSE_KEY);
+  const [regionsCollapsed, toggleRegions] = usePersistedFlag(REGIONS_COLLAPSE_KEY);
 
   const activeRegion = regions.find((r) => r.id === filters.region);
   const activeSeason = filters.season !== "all" ? filters.season : null;
@@ -95,25 +80,51 @@ export default function FilterPanel({ filters, setFilters, lang, resultCount }: 
         <>
           {/* Region chips */}
           <div>
-            <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-wide text-muted">
+            <button
+              type="button"
+              onClick={toggleRegions}
+              aria-expanded={!regionsCollapsed}
+              title={regionsCollapsed ? t("showRegions") : t("hideRegions")}
+              className="group mb-1.5 inline-flex items-center gap-1 text-[11px] font-semibold uppercase tracking-wide text-muted hover:text-ink"
+            >
               {t("region")}
-            </p>
-            <div className="flex flex-wrap gap-1.5">
-              <Chip
-                active={filters.region === "all"}
-                onClick={() => patch({ region: "all" })}
-                label={t("allRegions")}
-              />
-              {regions.map((r) => (
+              {regionsCollapsed ? <ChevronDown size={12} /> : <ChevronUp size={12} />}
+            </button>
+            {regionsCollapsed ? (
+              // Minimised: just the current choice; tapping it reopens the list.
+              <div className="flex flex-wrap items-center gap-1.5">
                 <Chip
-                  key={r.id}
-                  active={filters.region === r.id}
-                  onClick={() => patch({ region: r.id as RegionId })}
-                  label={L(r.name, lang)}
-                  color={r.color}
+                  active
+                  onClick={toggleRegions}
+                  label={activeRegion ? L(activeRegion.name, lang) : t("allRegions")}
+                  color={activeRegion?.color}
                 />
-              ))}
-            </div>
+                <button
+                  type="button"
+                  onClick={toggleRegions}
+                  className="text-xs font-semibold text-region-north hover:underline"
+                >
+                  {t("showRegions")}
+                </button>
+              </div>
+            ) : (
+              <div className="flex flex-wrap gap-1.5">
+                <Chip
+                  active={filters.region === "all"}
+                  onClick={() => patch({ region: "all" })}
+                  label={t("allRegions")}
+                />
+                {regions.map((r) => (
+                  <Chip
+                    key={r.id}
+                    active={filters.region === r.id}
+                    onClick={() => patch({ region: r.id as RegionId })}
+                    label={L(r.name, lang)}
+                    color={r.color}
+                  />
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Season chips */}
@@ -149,6 +160,28 @@ export default function FilterPanel({ filters, setFilters, lang, resultCount }: 
 }
 
 const COLLAPSE_KEY = "ctm.filtersCollapsed";
+const REGIONS_COLLAPSE_KEY = "ctm.regionsCollapsed";
+
+/** Boolean UI preference remembered per browser (falls back to memory if storage is blocked). */
+function usePersistedFlag(key: string): [boolean, () => void] {
+  const [value, setValue] = useState(() => {
+    try {
+      return localStorage.getItem(key) === "1";
+    } catch {
+      return false;
+    }
+  });
+  const toggle = () => {
+    const next = !value;
+    setValue(next);
+    try {
+      localStorage.setItem(key, next ? "1" : "0");
+    } catch {
+      /* storage blocked — keep in-memory state only */
+    }
+  };
+  return [value, toggle];
+}
 
 function Chip({
   active,
