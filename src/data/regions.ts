@@ -43,7 +43,7 @@ export const regions: Region[] = [
   },
   {
     id: "central",
-    name: { th: "จงหยวน (ส่านซี–เหอหนาน)", en: "Central China (Shaanxi–Henan)", zh: "中原 (陕西-河南)" },
+    name: { th: "ซีอาน–เหอหนาน", en: "Xi'an – Henan", zh: "西安-河南" },
     color: "#c2185b",
   },
   {

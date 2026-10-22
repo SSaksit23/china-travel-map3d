@@ -785,7 +785,7 @@ export const stops: Stop[] = [
     },
   },
 
-  // Central China (Shaanxi–Henan)
+  // Xi'an – Henan
   {
     id: "xian",
     name: { th: "ซีอาน", en: "Xi'an", zh: "西安" },
@@ -850,6 +850,221 @@ export const stops: Stop[] = [
     blurb: {
       th: "เมืองเอกของเหอหนานริมแม่น้ำเหลือง ทะเลสาบหรูอี้ ‘ตึกข้าวโพด’ และจัตุรัส 27 ประตูสู่จงหยวน",
       en: "Henan's capital on the Yellow River — Ruyi Lake, the 'Corn Tower' and February 27 Square, the gateway to the Central Plains.",
+    },
+  },
+  {
+    id: "terracotta-army",
+    name: { th: "พิพิธภัณฑ์กองทัพทหารดินเผาจิ๋นซี", en: "Terracotta Army Museum", zh: "秦始皇兵马俑博物馆" },
+    coords: [109.2785, 34.3846],
+    category: "heritage",
+    wiki: "Terracotta Army",
+    blurb: {
+      th: "มรดกโลกปี 1987 หุ่นทหารดินเผาขนาดเท่าคนจริงกว่า 8,000 ตัว ใบหน้าไม่ซ้ำกัน เฝ้าสุสานจักรพรรดิจิ๋นซีฮ่องเต้",
+      en: "A 1987 World Heritage site — over 8,000 life-size clay soldiers, each with a different face, guarding the tomb of Qin Shi Huang.",
+    },
+  },
+  {
+    id: "big-wild-goose-pagoda",
+    name: { th: "เจดีย์ห่านป่าใหญ่", en: "Big Wild Goose Pagoda", zh: "大雁塔" },
+    coords: [108.964, 34.2196],
+    category: "temple",
+    wiki: "Giant Wild Goose Pagoda",
+    blurb: {
+      th: "เจดีย์สมัยถัง (ค.ศ. 652) ในวัดต้าฉือเอิน สร้างเก็บพระคัมภีร์ที่พระถังซัมจั๋งอัญเชิญจากอินเดีย สูงกว่า 64 เมตร",
+      en: "A Tang pagoda (AD 652) in the Da Ci'en Temple, built to hold the scriptures Xuanzang brought back from India — over 64 m tall.",
+    },
+  },
+  {
+    id: "xian-city-wall",
+    name: { th: "กำแพงเมืองโบราณซีอาน", en: "Xi'an City Wall", zh: "西安城墙" },
+    coords: [108.947, 34.2512],
+    category: "heritage",
+    wiki: "Fortifications of Xi'an",
+    blurb: {
+      th: "กำแพงเมืองสมัยหมิง (ค.ศ. 1370) ยาว 13.7 กม. สมบูรณ์ที่สุดในจีน เดินหรือปั่นจักรยานชมเมืองบนกำแพงได้",
+      en: "A Ming city wall (1370), 13.7 km around and the best preserved in China — walk or cycle along the top.",
+    },
+  },
+  {
+    id: "bell-drum-tower",
+    name: { th: "จัตุรัสหอระฆัง–หอกลอง", en: "Bell & Drum Tower Square", zh: "钟鼓楼广场" },
+    coords: [108.9458, 34.2614],
+    category: "heritage",
+    wiki: "Bell Tower of Xi'an",
+    blurb: {
+      th: "หอระฆัง (ค.ศ. 1384) และหอกลองสมัยหมิง ใจกลางเมืองซีอาน ลานกว้างที่คึกคักยามค่ำ",
+      en: "The Ming Bell Tower (1384) and Drum Tower at the heart of Xi'an, with a square that comes alive at night.",
+    },
+  },
+  {
+    id: "muslim-quarter",
+    name: { th: "ถนนมุสลิม (ย่านหุยหมิน)", en: "Muslim Quarter", zh: "回民街" },
+    coords: [108.942, 34.2648],
+    category: "city",
+    wiki: "Muslim Quarter, Xi'an",
+    blurb: {
+      th: "ย่านชาวหุยกว่าพันปี ตรอกซอกซอยอาคารหมิง–ชิง อาหารฮาลาล เคบับแกะ และหมั่นโถวจุ่มซุปเนื้อ",
+      en: "A thousand-year-old Hui neighbourhood of Ming–Qing lanes, halal food, lamb skewers and paomo bread soup.",
+    },
+  },
+  {
+    id: "datang-everbright",
+    name: { th: "ถนนคนเดินต้าถังไร้นิทรา", en: "Datang Everbright City", zh: "大唐不夜城" },
+    coords: [108.9645, 34.211],
+    category: "city",
+    blurb: {
+      th: "ถนนคนเดินสไตล์ราชวงศ์ถังยาวกว่า 2 กม. ใต้เจดีย์ห่านป่าใหญ่ แสงสี การแสดง และร้านค้ายามค่ำคืน",
+      en: "A 2 km Tang-style boulevard below the Big Wild Goose Pagoda — lights, street shows and shops after dark.",
+    },
+  },
+  {
+    id: "huashan",
+    name: { th: "เขาหัวซาน", en: "Mount Hua (Huashan)", zh: "华山" },
+    coords: [110.0835, 34.4925],
+    category: "nature",
+    wiki: "Mount Hua",
+    blurb: {
+      th: "หนึ่งในห้าขุนเขาศักดิ์สิทธิ์ของจีน ศูนย์กลางลัทธิเต๋า หน้าผาหินแกรนิตสูงชัน ขึ้นกระเช้าสู่ยอดเป่ยเฟิง (1,614 ม.)",
+      en: "One of China's Five Great Mountains and a Taoist centre of sheer granite cliffs — ride the cable car to the North Peak (1,614 m).",
+    },
+  },
+  {
+    id: "hancheng",
+    name: { th: "เมืองโบราณหานเฉิง", en: "Hancheng Ancient City", zh: "韩城古城" },
+    coords: [110.452, 35.479],
+    category: "heritage",
+    wiki: "Hancheng",
+    blurb: {
+      th: "เมืองเก่าริมแม่น้ำเหลือง บ้านเกิดซือหม่าเชียน นักประวัติศาสตร์ผู้ยิ่งใหญ่ ตรอกและบ้านเรือนสมัยหมิง–ชิง",
+      en: "An old Yellow River town, home of the great historian Sima Qian, with Ming–Qing lanes and courtyard houses.",
+    },
+  },
+  {
+    id: "dangjia-village",
+    name: { th: "หมู่บ้านโบราณตั่งเจีย", en: "Dangjia Village", zh: "党家村" },
+    coords: [110.515, 35.5355],
+    category: "heritage",
+    wiki: "Dangjiacun",
+    blurb: {
+      th: "หมู่บ้านอายุเกือบ 700 ปี (ค.ศ. 1331) บ้านสี่ประสานตามหลักฮวงจุ้ยที่สมบูรณ์ที่สุดแห่งหนึ่งของจีน",
+      en: "A village nearly 700 years old (1331), with some of China's best-preserved feng shui courtyard houses.",
+    },
+  },
+  {
+    id: "yanan",
+    name: { th: "เหยียนอัน", en: "Yan'an", zh: "延安" },
+    coords: [109.4897, 36.5853],
+    category: "city",
+    wiki: "Yan'an",
+    blurb: {
+      th: "เมืองบนที่ราบสูงดินเหลืองทางเหนือของส่านซี ฐานที่มั่นสำคัญในประวัติศาสตร์จีนสมัยใหม่ และตลาดกลางคืนเอ้อเต้าเจีย",
+      en: "A city on the northern Shaanxi loess plateau, a key base in modern Chinese history, with the Erdaojie night market.",
+    },
+  },
+  {
+    id: "baota-pagoda",
+    name: { th: "เจดีย์เป่าถ่าซาน", en: "Baota Pagoda", zh: "宝塔山" },
+    coords: [109.493, 36.601],
+    category: "heritage",
+    wiki: "Baota Pagoda",
+    blurb: {
+      th: "เจดีย์แปดเหลี่ยมเก้าชั้นสมัยถัง สูง 44 เมตร บนเนินเขา สัญลักษณ์และจุดชมวิวเมืองเหยียนอัน",
+      en: "A nine-storey octagonal Tang pagoda, 44 m tall on its hill — Yan'an's emblem and viewpoint.",
+    },
+  },
+  {
+    id: "wave-valley",
+    name: { th: "หุบเขาเกลียวคลื่น (แกรนด์แคนยอนอวี่ฉ่า)", en: "Wave Valley (Yucha Grand Canyon)", zh: "雨岔大峡谷" },
+    coords: [109.05, 36.14],
+    category: "nature",
+    blurb: {
+      th: "‘แอนทีโลปแคนยอนแห่งจีน’ ร่องหินทรายแดงยุคจูราสสิกที่ลมและน้ำกัดเซาะเป็นลอนคลื่น พิกัดโดยประมาณ",
+      en: "'China's Antelope Canyon' — Jurassic red-sandstone slots carved into frozen waves by wind and water. Approximate pin.",
+    },
+  },
+  {
+    id: "longmen-grottoes",
+    name: { th: "ผาแกะสลักหลงเหมิน", en: "Longmen Grottoes", zh: "龙门石窟" },
+    coords: [112.4718, 34.556],
+    category: "temple",
+    wiki: "Longmen Grottoes",
+    blurb: {
+      th: "มรดกโลกริมแม่น้ำอีเหอ ถ้ำกว่า 2,100 ถ้ำ พระพุทธรูปกว่า 100,000 องค์ ไฮไลต์พระใหญ่ถ้ำเฟิ่งเซียน 17 เมตร",
+      en: "A World Heritage cliff on the Yi River — 2,100+ caves and 100,000+ Buddhas, crowned by the 17 m Fengxian Buddha.",
+    },
+  },
+  {
+    id: "guanlin-temple",
+    name: { th: "ศาลเจ้ากวนอู (กวนหลิน)", en: "Guanlin Temple", zh: "关林" },
+    coords: [112.4835, 34.5865],
+    category: "temple",
+    wiki: "Guanlin Temple",
+    blurb: {
+      th: "สุสานฝังศีรษะกวนอู ขุนพลสามก๊ก อาคารสมัยหมิง นิยมมาขอพรเรื่องการงาน ยศตำแหน่ง และโชคลาภ",
+      en: "The burial place of Guan Yu's head, with Ming halls — visitors pray here for career success and fortune.",
+    },
+  },
+  {
+    id: "yingtianmen",
+    name: { th: "ประตูอิ้งเทียนเหมิน", en: "Yingtianmen Gate", zh: "应天门" },
+    coords: [112.4447, 34.6765],
+    category: "heritage",
+    blurb: {
+      th: "ประตูวังสมัยสุย–ถัง (ค.ศ. 605) ที่พระนางบูเช็กเทียนขึ้นครองราชย์ บูรณะเป็นพิพิธภัณฑ์ สวยมากยามค่ำ",
+      en: "The Sui–Tang palace gate (605) where Empress Wu Zetian was enthroned, rebuilt as a museum and beautifully lit at night.",
+    },
+  },
+  {
+    id: "lijingmen",
+    name: { th: "ถนนคนเดินลี่จิงเหมิน", en: "Lijingmen Old Street", zh: "丽景门" },
+    coords: [112.474, 34.6825],
+    category: "city",
+    blurb: {
+      th: "ประตูเมืองเก่าลั่วหยางและถนนคนเดินย่านเมืองเก่า ร้านขนมและอาหารพื้นเมือง",
+      en: "Luoyang's old city gate and the walking streets of its old town, full of snacks and local food.",
+    },
+  },
+  {
+    id: "white-horse-temple",
+    name: { th: "วัดม้าขาว", en: "White Horse Temple", zh: "白马寺" },
+    coords: [112.5986, 34.7231],
+    category: "temple",
+    wiki: "White Horse Temple",
+    blurb: {
+      th: "วัดพุทธแห่งแรกของจีน (ค.ศ. 68) สร้างเมื่อพระภิกษุอินเดียนำพระคัมภีร์บรรทุกม้าขาวมาถึงลั่วหยาง",
+      en: "China's first Buddhist temple (AD 68), founded when Indian monks brought the scriptures to Luoyang on a white horse.",
+    },
+  },
+  {
+    id: "shaolin-temple",
+    name: { th: "วัดเส้าหลิน & ป่าเจดีย์", en: "Shaolin Temple & Pagoda Forest", zh: "少林寺 · 塔林" },
+    coords: [112.9357, 34.5076],
+    category: "temple",
+    wiki: "Shaolin Monastery",
+    blurb: {
+      th: "ต้นกำเนิดกังฟูเส้าหลินและนิกายเซน ป่าเจดีย์กว่า 240 องค์จากหลายราชวงศ์ และโชว์กังฟู",
+      en: "The birthplace of Shaolin kung fu and Chan Buddhism, with a forest of 240+ stupas and a kung fu show.",
+    },
+  },
+  {
+    id: "shanzhou-pit-village",
+    name: { th: "หมู่บ้านใต้ดินส่านโจว", en: "Shanzhou Underground Village", zh: "陕州地坑院" },
+    coords: [111.105, 34.684],
+    category: "heritage",
+    wiki: "Yaodong",
+    blurb: {
+      th: "บ้านถ้ำดินขุดลงใต้ดินรอบลานสี่เหลี่ยม อบอุ่นในหน้าหนาว เย็นในหน้าร้อน ‘เห็นต้นไม้ไม่เห็นบ้าน’ พิกัดโดยประมาณ",
+      en: "Pit-cave homes dug down around sunken courtyards — warm in winter, cool in summer: 'you see trees but no houses'. Approximate pin.",
+    },
+  },
+  {
+    id: "qinwei-ancient-town",
+    name: { th: "เมืองโบราณฉินเหว่ย", en: "Qinwei Ancient Town", zh: "溱洧古城" },
+    coords: [113.73, 34.42],
+    category: "heritage",
+    blurb: {
+      th: "เมืองโบราณจำลองริมแม่น้ำฉินสุ่ย–เหว่ยสุ่ย ใกล้สนามบินเจิ้งโจว ถ่ายทอดบทกวีรักโบราณแห่งแคว้นเจิ้ง พิกัดโดยประมาณ",
+      en: "A recreated old town on the Qin and Wei rivers near Zhengzhou airport, staging the ancient love poems of the State of Zheng. Approximate pin.",
     },
   },
 
