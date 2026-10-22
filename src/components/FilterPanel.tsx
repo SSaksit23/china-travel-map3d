@@ -1,5 +1,6 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { RotateCcw } from "lucide-react";
+import { ChevronDown, ChevronUp, RotateCcw } from "lucide-react";
 import type { Lang, RegionId } from "../types";
 import { regions } from "../data/regions";
 import { L } from "../lib/localize";
@@ -19,73 +20,135 @@ export default function FilterPanel({ filters, setFilters, lang, resultCount }: 
 
   const patch = (p: Partial<Filters>) => setFilters({ ...filters, ...p });
 
+  // Collapsed state is a per-viewer convenience; remembered when storage allows.
+  const [collapsed, setCollapsed] = useState(() => {
+    try {
+      return localStorage.getItem(COLLAPSE_KEY) === "1";
+    } catch {
+      return false;
+    }
+  });
+  const toggleCollapsed = () => {
+    const next = !collapsed;
+    setCollapsed(next);
+    try {
+      localStorage.setItem(COLLAPSE_KEY, next ? "1" : "0");
+    } catch {
+      /* storage blocked — keep in-memory state only */
+    }
+  };
+
+  const activeRegion = regions.find((r) => r.id === filters.region);
+  const activeSeason = filters.season !== "all" ? filters.season : null;
+
   return (
-    <div className={`space-y-4 ${thai ? "lang-th" : ""}`}>
-      <div className="flex items-center justify-between">
-        <h2 className="text-sm font-bold text-ink">{t("filtersTitle")}</h2>
+    <div className={`${collapsed ? "space-y-2" : "space-y-4"} ${thai ? "lang-th" : ""}`}>
+      <div className="flex items-center justify-between gap-2">
+        <button
+          type="button"
+          onClick={toggleCollapsed}
+          aria-expanded={!collapsed}
+          aria-label={collapsed ? t("showFilters") : t("hideFilters")}
+          title={collapsed ? t("showFilters") : t("hideFilters")}
+          className="group inline-flex min-w-0 items-center gap-1.5 text-left"
+        >
+          <h2 className="truncate text-sm font-bold text-ink">{t("filtersTitle")}</h2>
+          <span className="rounded-full border border-line bg-white p-0.5 text-muted group-hover:border-ink/30 group-hover:text-ink">
+            {collapsed ? <ChevronDown size={14} /> : <ChevronUp size={14} />}
+          </span>
+        </button>
         {isFilterActive(filters) && (
           <button
             type="button"
             onClick={() => setFilters({ ...emptyFilters })}
-            className="inline-flex items-center gap-1 text-xs font-semibold text-region-north hover:underline"
+            className="inline-flex shrink-0 items-center gap-1 text-xs font-semibold text-region-north hover:underline"
           >
             <RotateCcw size={13} /> {t("clearFilters")}
           </button>
         )}
       </div>
 
-      {/* Region chips */}
-      <div>
-        <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-wide text-muted">
-          {t("region")}
-        </p>
-        <div className="flex flex-wrap gap-1.5">
-          <Chip
-            active={filters.region === "all"}
-            onClick={() => patch({ region: "all" })}
-            label={t("allRegions")}
-          />
-          {regions.map((r) => (
+      {collapsed ? (
+        // Minimised: one line with the active selections + result count.
+        <div className="flex flex-wrap items-center gap-1.5">
+          {activeRegion && (
             <Chip
-              key={r.id}
-              active={filters.region === r.id}
-              onClick={() => patch({ region: r.id as RegionId })}
-              label={L(r.name, lang)}
-              color={r.color}
+              active
+              onClick={toggleCollapsed}
+              label={L(activeRegion.name, lang)}
+              color={activeRegion.color}
             />
-          ))}
-        </div>
-      </div>
-
-      {/* Season chips */}
-      <div>
-        <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-wide text-muted">
-          {t("seasonFilter")}
-        </p>
-        <div className="flex flex-wrap gap-1.5">
-          <Chip
-            active={filters.season === "all"}
-            onClick={() => patch({ season: "all" })}
-            label={t("seasonAll")}
-          />
-          {SEASON_ORDER.map((s) => (
+          )}
+          {activeSeason && (
             <Chip
-              key={s}
-              active={filters.season === s}
-              onClick={() => patch({ season: s as SeasonId })}
-              label={L(SEASON_LABEL[s], lang)}
-              color={SEASON_COLOR[s]}
+              active
+              onClick={toggleCollapsed}
+              label={L(SEASON_LABEL[activeSeason], lang)}
+              color={SEASON_COLOR[activeSeason]}
             />
-          ))}
+          )}
+          <p className="text-xs font-semibold text-muted">
+            {t("resultsCount", { count: resultCount })}
+          </p>
         </div>
-      </div>
+      ) : (
+        <>
+          {/* Region chips */}
+          <div>
+            <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-wide text-muted">
+              {t("region")}
+            </p>
+            <div className="flex flex-wrap gap-1.5">
+              <Chip
+                active={filters.region === "all"}
+                onClick={() => patch({ region: "all" })}
+                label={t("allRegions")}
+              />
+              {regions.map((r) => (
+                <Chip
+                  key={r.id}
+                  active={filters.region === r.id}
+                  onClick={() => patch({ region: r.id as RegionId })}
+                  label={L(r.name, lang)}
+                  color={r.color}
+                />
+              ))}
+            </div>
+          </div>
 
-      <p className="text-xs font-semibold text-muted">
-        {t("resultsCount", { count: resultCount })}
-      </p>
+          {/* Season chips */}
+          <div>
+            <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-wide text-muted">
+              {t("seasonFilter")}
+            </p>
+            <div className="flex flex-wrap gap-1.5">
+              <Chip
+                active={filters.season === "all"}
+                onClick={() => patch({ season: "all" })}
+                label={t("seasonAll")}
+              />
+              {SEASON_ORDER.map((s) => (
+                <Chip
+                  key={s}
+                  active={filters.season === s}
+                  onClick={() => patch({ season: s as SeasonId })}
+                  label={L(SEASON_LABEL[s], lang)}
+                  color={SEASON_COLOR[s]}
+                />
+              ))}
+            </div>
+          </div>
+
+          <p className="text-xs font-semibold text-muted">
+            {t("resultsCount", { count: resultCount })}
+          </p>
+        </>
+      )}
     </div>
   );
 }
+
+const COLLAPSE_KEY = "ctm.filtersCollapsed";
 
 function Chip({
   active,

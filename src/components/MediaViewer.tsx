@@ -1,16 +1,19 @@
-import { useState } from "react";
+import { useRef, useState, type DragEvent } from "react";
 import { useTranslation } from "react-i18next";
 import {
   ChevronLeft,
   ChevronRight,
   Expand,
-  ImageOff,
+  ImagePlus,
   Maximize2,
   Minimize2,
   Play,
+  Trash2,
+  Upload,
   X,
 } from "lucide-react";
 import type { Lang } from "../types";
+import type { LocalImage } from "../lib/localImages";
 import MediaLightbox, { type Slide } from "./MediaLightbox";
 
 /** YouTube thumbnail for a watch/short URL (for the strip + compact poster). */
@@ -34,6 +37,11 @@ type Props = {
   accentColor: string;
   /** Localised category label for the corner chip (optional). */
   categoryLabel?: string;
+  /** Photos uploaded in this browser (removable; their urls also appear in `slides`). */
+  localImages?: LocalImage[];
+  /** Enables the upload drop zone / "add photo" button. */
+  onUpload?: (files: File[]) => void;
+  onRemoveLocal?: (id: string) => void;
   /** Close the whole detail card. */
   onClose: () => void;
 };
@@ -45,16 +53,51 @@ type Props = {
  * Enlarging uses object-contain so nothing is cropped; vertical (9:16) clips get
  * a portrait box. Falls back to a "no image yet" placeholder when empty.
  */
-export default function MediaViewer({ slides, alt, lang, accentColor, categoryLabel, onClose }: Props) {
+export default function MediaViewer({
+  slides,
+  alt,
+  lang,
+  accentColor,
+  categoryLabel,
+  localImages = [],
+  onUpload,
+  onRemoveLocal,
+  onClose,
+}: Props) {
   const { t } = useTranslation();
   const [index, setIndex] = useState(0);
   const [expanded, setExpanded] = useState(false);
   const [full, setFull] = useState(false);
+  const [dragging, setDragging] = useState(false);
+  const fileInput = useRef<HTMLInputElement>(null);
 
   const count = slides.length;
   const active = slides[Math.min(index, Math.max(count - 1, 0))];
   const isVertical = active?.kind === "video" && active.video.orientation === "vertical";
   const go = (delta: number) => setIndex((i) => (i + delta + count) % count);
+  const activeLocal =
+    active?.kind === "image" ? localImages.find((img) => img.url === active.src) : undefined;
+
+  const upload = (files: FileList | null) => {
+    if (!onUpload || !files?.length) return;
+    onUpload(Array.from(files));
+  };
+  const dropProps = onUpload
+    ? {
+        onDragOver: (e: DragEvent) => {
+          e.preventDefault();
+          setDragging(true);
+        },
+        onDragLeave: (e: DragEvent) => {
+          if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setDragging(false);
+        },
+        onDrop: (e: DragEvent) => {
+          e.preventDefault();
+          setDragging(false);
+          upload(e.dataTransfer.files);
+        },
+      }
+    : {};
 
   const cornerBtn =
     "rounded-full bg-black/45 p-1.5 text-white shadow hover:bg-black/70";
@@ -70,15 +113,39 @@ export default function MediaViewer({ slides, alt, lang, accentColor, categoryLa
 
   return (
     <>
-      <div className={`relative shrink-0 overflow-hidden ${viewportCls}`}>
+      <div className={`relative shrink-0 overflow-hidden ${viewportCls}`} {...dropProps}>
+        {onUpload && (
+          <input
+            ref={fileInput}
+            type="file"
+            accept="image/*"
+            multiple
+            hidden
+            onChange={(e) => {
+              upload(e.target.files);
+              e.target.value = "";
+            }}
+          />
+        )}
         {count === 0 ? (
-          <div
-            className="flex h-full w-full flex-col items-center justify-center gap-1 text-white"
+          // Empty state doubles as the upload container (click or drop images).
+          <button
+            type="button"
+            disabled={!onUpload}
+            onClick={() => fileInput.current?.click()}
+            className="flex h-full w-full flex-col items-center justify-center gap-1 text-white disabled:cursor-default"
             style={{ backgroundColor: accentColor }}
           >
-            <ImageOff size={22} />
-            <span className="text-[11px] opacity-90">{t("noImage")}</span>
-          </div>
+            <span
+              className={`flex flex-col items-center gap-1 rounded-xl border-2 border-dashed px-5 py-3 transition ${
+                dragging ? "border-white bg-white/15" : "border-white/50 hover:border-white hover:bg-white/10"
+              }`}
+            >
+              <Upload size={22} />
+              <span className="text-xs font-semibold">{t("uploadImage")}</span>
+              <span className="text-[10px] opacity-80">{t("uploadHint")}</span>
+            </span>
+          </button>
         ) : active.kind === "image" ? (
           <button
             type="button"
@@ -157,6 +224,31 @@ export default function MediaViewer({ slides, alt, lang, accentColor, categoryLa
 
         {/* Top-right controls: enlarge/shrink · full-screen · close */}
         <div className="absolute right-2 top-2 flex items-center gap-1.5">
+          {activeLocal && onRemoveLocal && (
+            <button
+              type="button"
+              onClick={() => {
+                onRemoveLocal(activeLocal.id);
+                setIndex((i) => Math.max(0, i - 1));
+              }}
+              aria-label={t("removePhoto")}
+              title={t("removePhoto")}
+              className={cornerBtn}
+            >
+              <Trash2 size={14} />
+            </button>
+          )}
+          {count > 0 && onUpload && (
+            <button
+              type="button"
+              onClick={() => fileInput.current?.click()}
+              aria-label={t("addPhoto")}
+              title={t("addPhoto")}
+              className={cornerBtn}
+            >
+              <ImagePlus size={14} />
+            </button>
+          )}
           {count > 0 && (
             <>
               <button
@@ -194,6 +286,11 @@ export default function MediaViewer({ slides, alt, lang, accentColor, categoryLa
           <span className="absolute bottom-2 right-2 rounded-full bg-black/45 px-2 py-0.5 text-[10px] font-semibold text-white">
             {index + 1}/{count}
           </span>
+        )}
+        {dragging && count > 0 && (
+          <div className="pointer-events-none absolute inset-2 flex items-center justify-center rounded-xl border-2 border-dashed border-white bg-black/40 text-xs font-semibold text-white">
+            {t("uploadHint")}
+          </div>
         )}
       </div>
 

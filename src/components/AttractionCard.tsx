@@ -1,8 +1,12 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
   CalendarRange,
+  CheckCircle2,
+  CloudUpload,
   ExternalLink,
   Hotel,
+  Loader2,
   Sparkles,
   Star,
   Thermometer,
@@ -23,6 +27,8 @@ import {
 } from "../lib/season";
 import { AUDIENCE_ICON, AUDIENCE_LABEL } from "../lib/audience";
 import { L } from "../lib/localize";
+import { type LocalImage, useLocalImages } from "../lib/localImages";
+import { PublishError, type PublishErrorCode, getToken, login, publishPhotos } from "../lib/publishMedia";
 
 type Props = {
   stopId: string;
@@ -56,6 +62,7 @@ const categoryKey: Record<StopCategory, string> = {
 
 export default function AttractionCard({ stopId, lang, months, programHotel, onClose }: Props) {
   const { t } = useTranslation();
+  const local = useLocalImages(stopId, getLocationMedia(stopId)?.images);
   const stop = getStop(stopId);
   if (!stop) return null;
 
@@ -68,8 +75,9 @@ export default function AttractionCard({ stopId, lang, months, programHotel, onC
   // Wikipedia/local hero. Then fold in RedNote + places.ts galleries and videos.
   const heroSrc = media?.full ?? media?.thumb;
   const primary = loc?.images?.length ? loc.images : heroSrc ? [heroSrc] : [];
+  const uploaded = local.images.map((img) => img.url);
   const images: string[] = [];
-  for (const src of [...primary, ...(rednote?.gallery ?? []), ...(place?.gallery ?? [])]) {
+  for (const src of [...primary, ...uploaded, ...(rednote?.gallery ?? []), ...(place?.gallery ?? [])]) {
     if (src && !images.includes(src)) images.push(src);
   }
   const videos: PlaceVideo[] = [];
@@ -109,8 +117,20 @@ export default function AttractionCard({ stopId, lang, months, programHotel, onC
         lang={lang}
         accentColor={catColor}
         categoryLabel={cat ? t(categoryKey[cat]) : undefined}
+        localImages={local.images.filter((img) => !img.publishedPath)}
+        onUpload={local.add}
+        onRemoveLocal={local.remove}
         onClose={onClose}
       />
+
+      {local.images.length > 0 && (
+        <PublishBar
+          key={stopId}
+          stop={{ id: stopId, name: stop.name.en }}
+          images={local.images}
+          onPublished={local.markPublished}
+        />
+      )}
 
       <div className="space-y-2.5 overflow-y-auto p-3.5">
         <div>
@@ -300,6 +320,93 @@ export default function AttractionCard({ stopId, lang, months, programHotel, onC
           </a>
         )}
       </div>
+    </div>
+  );
+}
+
+type PublishStatus =
+  | { kind: "idle" }
+  | { kind: "working" }
+  | { kind: "error"; code: PublishErrorCode };
+
+const publishErrorKey: Record<PublishErrorCode, string> = {
+  auth: "publishErrAuth",
+  forbidden: "publishErrForbidden",
+  notfound: "publishErrForbidden",
+  conflict: "publishErrOther",
+  network: "publishErrNetwork",
+  other: "publishErrOther",
+};
+
+/**
+ * Strip under the photo when this browser holds uploads: publishes them for
+ * everyone (GitHub login → commit to main → auto-deploy), then shows them as
+ * pending until the rebuilt site serves them.
+ */
+function PublishBar({
+  stop,
+  images,
+  onPublished,
+}: {
+  stop: { id: string; name: string };
+  images: LocalImage[];
+  onPublished: (ids: string[], paths: string[]) => Promise<void>;
+}) {
+  const { t } = useTranslation();
+  const [status, setStatus] = useState<PublishStatus>({ kind: "idle" });
+  const pending = images.filter((img) => !img.publishedPath);
+
+  const publish = async () => {
+    setStatus({ kind: "working" });
+    try {
+      // login() must open its popup inside this click, so it is called before any await.
+      const token = getToken() ?? (await login());
+      const paths = await publishPhotos(token, stop, pending.map((img) => img.blob));
+      await onPublished(pending.map((img) => img.id), paths);
+      setStatus({ kind: "idle" });
+    } catch (err) {
+      setStatus({ kind: "error", code: err instanceof PublishError ? err.code : "other" });
+    }
+  };
+
+  const working = status.kind === "working";
+  return (
+    <div className="shrink-0 space-y-1 border-b border-line bg-paper px-3.5 py-2 text-[11px]">
+      {pending.length > 0 ? (
+        <div className="flex items-center justify-between gap-2">
+          <span className="text-muted">{t("localPhotosNote", { count: pending.length })}</span>
+          <button
+            type="button"
+            onClick={publish}
+            disabled={working}
+            className="inline-flex shrink-0 items-center gap-1 rounded-full bg-region-north px-2.5 py-1 font-semibold text-white hover:opacity-90 disabled:opacity-60"
+          >
+            {working ? <Loader2 size={12} className="animate-spin" /> : <CloudUpload size={12} />}
+            {working ? t("publishing") : t("publishAll")}
+          </button>
+        </div>
+      ) : (
+        <p className="inline-flex items-center gap-1 font-semibold text-region-north">
+          <CheckCircle2 size={12} />
+          {t("publishedPending")}
+        </p>
+      )}
+      {status.kind === "error" && (
+        <p className="text-diff-high">
+          {t(publishErrorKey[status.code])}{" "}
+          {status.code === "forbidden" || status.code === "notfound" ? (
+            <a
+              href={`/admin/index.html#/collections/media/entries/${stop.id}`}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="inline-flex items-center gap-0.5 font-semibold underline"
+            >
+              {t("publishViaCms")}
+              <ExternalLink size={10} />
+            </a>
+          ) : null}
+        </p>
+      )}
     </div>
   );
 }
