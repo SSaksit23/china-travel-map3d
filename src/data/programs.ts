@@ -6126,7 +6126,7 @@ export const programs: Program[] = [
       { from: "tokarevsky-lighthouse", to: "vladivostok", mode: "drive" },
       { from: "vladivostok", to: "ussuriysk", mode: "drive", km: 94, hours: 2 },
       { from: "ussuriysk", to: "suifenhe", mode: "train", km: 115 },
-      { from: "suifenhe", to: "harbin", mode: "train", hours: 4 },
+      { from: "suifenhe", to: "harbin", mode: "train", km: 505, hours: 4 },
     ],
     itinerary: [
       {
@@ -6191,7 +6191,7 @@ export const programs: Program[] = [
       {
         day: 6,
         title: { th: "วลาดิวอสต็อก – อุสซูรีสค์ (ช้อปปิ้ง) – สุ่ยเฟินเหอ (รถไฟข้ามแดน) – ฮาร์บิน (รถไฟ)", en: "Vladivostok – Ussuriysk (shopping) – Suifenhe (cross-border train) – Harbin (train)" },
-        stops: ["ussuriysk", "harbin"],
+        stops: ["ussuriysk", "suifenhe", "harbin"],
         along: [
           { th: "แวะอุสซูรี มอลล์ อิสระอาหารกลางวัน", en: "Stop at Ussuri Mall, lunch on your own", stopId: "ussuriysk" },
           { th: "รถไฟข้ามแดนกลับเข้าจีนที่สุ่ยเฟินเหอ", en: "Cross-border train back into China at Suifenhe", stopId: "suifenhe" },
