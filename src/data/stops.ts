@@ -659,6 +659,137 @@ export const stops: Stop[] = [
       en: "Jilin's capital and former Manchukuo capital — a hub of China's auto and film industries.",
     },
   },
+  {
+    id: "harbin-ice-snow-world",
+    name: { th: "เทศกาลแกะสลักน้ำแข็งฮาร์บิน (Ice & Snow World)", en: "Harbin Ice & Snow World", zh: "哈尔滨冰雪大世界" },
+    coords: [126.5603, 45.7853],
+    category: "heritage",
+    wiki: "Harbin International Ice and Snow Sculpture Festival",
+    blurb: {
+      th: "อาณาจักรน้ำแข็งที่ใหญ่ที่สุดในโลก ปราสาทและประติมากรรมน้ำแข็งเปิดไฟหลากสียามค่ำ สไลเดอร์น้ำแข็งยาวเหยียด",
+      en: "The world's biggest ice kingdom — castles and sculptures of ice lit up in colour at night, with giant ice slides.",
+    },
+  },
+  {
+    id: "sun-island-snow",
+    name: { th: "นิทรรศการแกะสลักหิมะ เกาะพระอาทิตย์", en: "Sun Island Snow Sculpture Expo", zh: "太阳岛雪博会" },
+    coords: [126.5803, 45.7895],
+    category: "heritage",
+    wiki: "Sun Island (Harbin)",
+    blurb: {
+      th: "ประติมากรรมหิมะขนาดยักษ์สูงหลายเมตรจากศิลปินทั่วโลก ธีมเปลี่ยนทุกปี",
+      en: "Giant snow sculptures several metres tall by artists from around the world, with a new theme each year.",
+    },
+  },
+  {
+    id: "st-sophia-harbin",
+    name: { th: "จัตุรัสมหาวิหารเซนต์โซเฟีย", en: "St Sophia Cathedral Square", zh: "圣索菲亚教堂" },
+    coords: [126.6267, 45.7653],
+    category: "heritage",
+    wiki: "Saint Sophia Cathedral, Harbin",
+    blurb: {
+      th: "โบสถ์ออร์โธดอกซ์ยอดโดมหัวหอม (ค.ศ. 1923–1932) ใหญ่ที่สุดในเอเชียตะวันออก สัญลักษณ์ ‘มอสโกแห่งตะวันออก’",
+      en: "An onion-domed Orthodox church (1923–1932), the largest in East Asia and the emblem of the 'Moscow of the East'.",
+    },
+  },
+  {
+    id: "zhongyang-street",
+    name: { th: "ถนนคนเดินจงยาง", en: "Central Street (Zhongyang Dajie)", zh: "中央大街" },
+    coords: [126.617, 45.7735],
+    category: "heritage",
+    wiki: "Central Street, Harbin",
+    blurb: {
+      th: "ถนนปูหินยาว 1.4 กม. ตึกสไตล์บาร็อค–อาร์ตนูโว ไอศกรีมหม่าเตี๋ยเอ่อร์ ไปสุดที่ริมแม่น้ำซงฮัว",
+      en: "A 1.4 km cobbled street of baroque and art-nouveau buildings and Modern ice-lollies, ending at the Songhua River.",
+    },
+  },
+  {
+    id: "suifenhe",
+    name: { th: "สุ่ยเฟินเหอ", en: "Suifenhe", zh: "绥芬河" },
+    coords: [131.152, 44.399],
+    category: "border",
+    wiki: "Suifenhe",
+    blurb: {
+      th: "เมืองชายแดนจีน–รัสเซีย จุดเชื่อมทางรถไฟสายตะวันออกของจีนกับทรานส์ไซบีเรีย ตึกรัสเซียเก่าและตลาดสินค้ารัสเซีย",
+      en: "A China–Russia border town where the Chinese Eastern Railway meets the Trans-Siberian, with old Russian buildings and Russian goods markets.",
+    },
+  },
+  {
+    id: "ussuriysk",
+    name: { th: "อุสซูรีสค์ (รัสเซีย)", en: "Ussuriysk (Russia)", zh: "乌苏里斯克" },
+    coords: [131.9513, 43.7979],
+    category: "city",
+    wiki: "Ussuriysk",
+    blurb: {
+      th: "เมืองรัสเซียบนเส้นทางทรานส์ไซบีเรีย ชีวิตชาวรัสเซียแท้ๆ จุดแวะช้อปปิ้งก่อนกลับฝั่งจีน",
+      en: "A Russian city on the Trans-Siberian line — everyday Russian life and a shopping stop before crossing back to China.",
+    },
+  },
+  {
+    id: "vladivostok",
+    name: { th: "วลาดิวอสต็อก (รัสเซีย)", en: "Vladivostok (Russia)", zh: "符拉迪沃斯托克" },
+    coords: [131.8855, 43.1155],
+    category: "city",
+    wiki: "Vladivostok",
+    blurb: {
+      th: "เมืองท่าตะวันออกไกลของรัสเซีย ฐานกองเรือแปซิฟิก ปลายทางรถไฟทรานส์ไซบีเรีย มหาวิหาร จัตุรัส และคาลินา มอลล์",
+      en: "Russia's Far East port, home of the Pacific Fleet and end of the Trans-Siberian — cathedrals, squares and the Kalina Mall.",
+    },
+  },
+  {
+    id: "nicholas-arch",
+    name: { th: "ประตูชัยนิโคลัส", en: "Nicholas Triumphal Arch", zh: "尼古拉凯旋门" },
+    coords: [131.8926, 43.1147],
+    category: "heritage",
+    wiki: "Nicholas Triumphal Arch (Vladivostok)",
+    blurb: {
+      th: "ประตูชัยสร้างปี 1891 รับเสด็จมกุฎราชกุมารนิโคลัส (ซาร์นิโคลัสที่ 2) ระหว่างเสด็จรอบโลก",
+      en: "A triumphal arch built in 1891 to welcome Crown Prince Nicholas, the future Tsar Nicholas II, on his tour of the East.",
+    },
+  },
+  {
+    id: "s56-submarine",
+    name: { th: "พิพิธภัณฑ์เรือดำน้ำ C-56 & อนุสรณ์กองเรือแปซิฟิก", en: "S-56 Submarine & Pacific Fleet Memorial", zh: "C-56潜艇博物馆" },
+    coords: [131.8962, 43.1139],
+    category: "heritage",
+    wiki: "Soviet submarine S-56",
+    blurb: {
+      th: "เรือดำน้ำสมัยสงครามโลกครั้งที่ 2 ที่เปิดเป็นพิพิธภัณฑ์ ข้างอนุสรณ์เปลวไฟนิรันดร์และอาคารกองบัญชาการกองเรือแปซิฟิก",
+      en: "A WWII submarine turned museum, beside the eternal-flame memorial and the Pacific Fleet headquarters.",
+    },
+  },
+  {
+    id: "eagles-nest-hill",
+    name: { th: "จุดชมวิวเนินเขาอินทรี + รถรางไต่เขา", en: "Eagle's Nest Hill & Funicular", zh: "鹰巢山观景台" },
+    coords: [131.8971, 43.1209],
+    category: "nature",
+    blurb: {
+      th: "จุดชมวิวสูง ≈ 199 ม. เห็นสะพานโกลเดนบริดจ์และอ่าวโกลเดนฮอร์น ขึ้นด้วยรถรางเคเบิลไต่เขา",
+      en: "A ~199 m viewpoint over the Golden Bridge and Golden Horn Bay, reached by the funicular railway.",
+    },
+  },
+  {
+    id: "vladivostok-station",
+    name: { th: "สถานีรถไฟวลาดิวอสต็อก", en: "Vladivostok Railway Station", zh: "符拉迪沃斯托克火车站" },
+    coords: [131.8828, 43.1111],
+    category: "heritage",
+    wiki: "Vladivostok railway station",
+    blurb: {
+      th: "สถานีปลายทางรถไฟทรานส์ไซบีเรีย (9,288 กม. จากมอสโก) อาคารสไตล์รัสเซียนีโอคลาสสิก",
+      en: "The terminus of the Trans-Siberian Railway, 9,288 km from Moscow, in a neo-Russian-style building.",
+    },
+  },
+  {
+    id: "tokarevsky-lighthouse",
+    name: { th: "ประภาคารโทคาเรฟสกี", en: "Tokarevsky Lighthouse", zh: "托卡列夫斯基灯塔" },
+    coords: [131.8522, 43.073],
+    category: "nature",
+    wiki: "Tokarevsky Lighthouse",
+    blurb: {
+      th: "ประภาคารสีขาวหลังคาแดงบนสันทรายยื่นลงอ่าวปีเตอร์มหาราช ปลายสุดแผ่นดินใหญ่ยูเรเชีย",
+      en: "A white, red-roofed lighthouse on a sand spit into Peter the Great Gulf, at the edge of mainland Eurasia.",
+    },
+  },
 
   // Shanxi
   {
